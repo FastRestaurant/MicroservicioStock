@@ -1,9 +1,25 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\",
+  "WorkspaceRootPath": "C:\\Users\\nicos\\Documents\\GitHub\\MicroservicioStock\\MicroservicioStock\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1942BF81-3CCD-FDAA-E494-A300CB31F4A0}|MicroservicioStock\\MicroservicioStock.csproj|c:\\proyectos\\microserviciostock\\microserviciostock\\microserviciostock\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|Infrastructure\\Infrastructure.csproj|c:\\users\\nicos\\documents\\github\\microserviciostock\\microserviciostock\\infrastructure\\persistence\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\persistence\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E528BBC3-1C26-8C35-F682-23718816ADCD}|Domain\\Domain.csproj|c:\\users\\nicos\\documents\\github\\microserviciostock\\microserviciostock\\domain\\entities\\ingredientdish.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E528BBC3-1C26-8C35-F682-23718816ADCD}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\ingredientdish.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E528BBC3-1C26-8C35-F682-23718816ADCD}|Domain\\Domain.csproj|c:\\users\\nicos\\documents\\github\\microserviciostock\\microserviciostock\\domain\\entities\\ingredient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E528BBC3-1C26-8C35-F682-23718816ADCD}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\ingredient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E528BBC3-1C26-8C35-F682-23718816ADCD}|Domain\\Domain.csproj|c:\\users\\nicos\\documents\\github\\microserviciostock\\microserviciostock\\domain\\entities\\stock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E528BBC3-1C26-8C35-F682-23718816ADCD}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\stock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1942BF81-3CCD-FDAA-E494-A300CB31F4A0}|MicroservicioStock\\MicroservicioStock.csproj|c:\\users\\nicos\\documents\\github\\microserviciostock\\microserviciostock\\microserviciostock\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{1942BF81-3CCD-FDAA-E494-A300CB31F4A0}|MicroservicioStock\\MicroservicioStock.csproj|solutionrelative:microserviciostock\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
@@ -35,10 +51,62 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\nicos\\Documents\\GitHub\\MicroservicioStock\\MicroservicioStock\\Infrastructure\\Persistence\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Persistence\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\nicos\\Documents\\GitHub\\MicroservicioStock\\MicroservicioStock\\Infrastructure\\Persistence\\AppDbContext.cs",
+              "RelativeToolTip": "Infrastructure\\Persistence\\AppDbContext.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAIwBIAAABRAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-29T02:36:01.97Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IngredientDish.cs",
+              "DocumentMoniker": "C:\\Users\\nicos\\Documents\\GitHub\\MicroservicioStock\\MicroservicioStock\\Domain\\Entities\\IngredientDish.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\IngredientDish.cs",
+              "ToolTip": "C:\\Users\\nicos\\Documents\\GitHub\\MicroservicioStock\\MicroservicioStock\\Domain\\Entities\\IngredientDish.cs",
+              "RelativeToolTip": "Domain\\Entities\\IngredientDish.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA0AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-29T02:31:37.385Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Stock.cs",
+              "DocumentMoniker": "C:\\Users\\nicos\\Documents\\GitHub\\MicroservicioStock\\MicroservicioStock\\Domain\\Entities\\Stock.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\Stock.cs",
+              "ToolTip": "C:\\Users\\nicos\\Documents\\GitHub\\MicroservicioStock\\MicroservicioStock\\Domain\\Entities\\Stock.cs",
+              "RelativeToolTip": "Domain\\Entities\\Stock.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-29T02:30:21.338Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Ingredient.cs",
+              "DocumentMoniker": "C:\\Users\\nicos\\Documents\\GitHub\\MicroservicioStock\\MicroservicioStock\\Domain\\Entities\\Ingredient.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\Ingredient.cs",
+              "ToolTip": "C:\\Users\\nicos\\Documents\\GitHub\\MicroservicioStock\\MicroservicioStock\\Domain\\Entities\\Ingredient.cs",
+              "RelativeToolTip": "Domain\\Entities\\Ingredient.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-29T02:29:44.269Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\appsettings.json",
+              "DocumentMoniker": "C:\\Users\\nicos\\Documents\\GitHub\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\appsettings.json",
               "RelativeDocumentMoniker": "MicroservicioStock\\appsettings.json",
-              "ToolTip": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\appsettings.json",
+              "ToolTip": "C:\\Users\\nicos\\Documents\\GitHub\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\appsettings.json",
               "RelativeToolTip": "MicroservicioStock\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
