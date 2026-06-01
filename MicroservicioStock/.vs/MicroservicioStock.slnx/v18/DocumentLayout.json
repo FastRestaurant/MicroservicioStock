@@ -1,25 +1,113 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\nicos\\Documents\\GitHub\\MicroservicioStock\\MicroservicioStock\\",
+  "WorkspaceRootPath": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|Infrastructure\\Infrastructure.csproj|c:\\users\\nicos\\documents\\github\\microserviciostock\\microserviciostock\\infrastructure\\persistence\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1942BF81-3CCD-FDAA-E494-A300CB31F4A0}|MicroservicioStock\\MicroservicioStock.csproj|c:\\proyectos\\microserviciostock\\microserviciostock\\microserviciostock\\microserviciostock\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1942BF81-3CCD-FDAA-E494-A300CB31F4A0}|MicroservicioStock\\MicroservicioStock.csproj|solutionrelative:microserviciostock\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1942BF81-3CCD-FDAA-E494-A300CB31F4A0}|MicroservicioStock\\MicroservicioStock.csproj|c:\\proyectos\\microserviciostock\\microserviciostock\\microserviciostock\\microserviciostock\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{1942BF81-3CCD-FDAA-E494-A300CB31F4A0}|MicroservicioStock\\MicroservicioStock.csproj|solutionrelative:microserviciostock\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1942BF81-3CCD-FDAA-E494-A300CB31F4A0}|MicroservicioStock\\MicroservicioStock.csproj|c:\\proyectos\\microserviciostock\\microserviciostock\\microserviciostock\\microserviciostock\\controllers\\ingredientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1942BF81-3CCD-FDAA-E494-A300CB31F4A0}|MicroservicioStock\\MicroservicioStock.csproj|solutionrelative:microserviciostock\\controllers\\ingredientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\proyectos\\microserviciostock\\microserviciostock\\microserviciostock\\application\\usecases\\ingredient\\handlers\\updateingredienthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\usecases\\ingredient\\handlers\\updateingredienthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\proyectos\\microserviciostock\\microserviciostock\\microserviciostock\\application\\interfaces\\handlers\\ingredient\\iupdateingredienthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\interfaces\\handlers\\ingredient\\iupdateingredienthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\proyectos\\microserviciostock\\microserviciostock\\microserviciostock\\application\\dtos\\ingredientsdto\\ingredientrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\dtos\\ingredientsdto\\ingredientrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\proyectos\\microserviciostock\\microserviciostock\\microserviciostock\\application\\usecases\\ingredient\\commands\\updateingredientcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\usecases\\ingredient\\commands\\updateingredientcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\proyectos\\microserviciostock\\microserviciostock\\microserviciostock\\application\\usecases\\ingredient\\commands\\deleteingredientcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\usecases\\ingredient\\commands\\deleteingredientcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\proyectos\\microserviciostock\\microserviciostock\\microserviciostock\\application\\usecases\\ingredient\\commands\\createingredientcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\usecases\\ingredient\\commands\\createingredientcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\proyectos\\microserviciostock\\microserviciostock\\microserviciostock\\application\\usecases\\ingredient\\handlers\\deleteingredienthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\usecases\\ingredient\\handlers\\deleteingredienthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|Infrastructure\\Infrastructure.csproj|c:\\proyectos\\microserviciostock\\microserviciostock\\microserviciostock\\infrastructure\\repositories\\ingredientrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\repositories\\ingredientrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\proyectos\\microserviciostock\\microserviciostock\\microserviciostock\\application\\usecases\\ingredient\\handlers\\createingredienthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\usecases\\ingredient\\handlers\\createingredienthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\proyectos\\microserviciostock\\microserviciostock\\microserviciostock\\application\\interfaces\\repositories\\iingredientrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\interfaces\\repositories\\iingredientrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\proyectos\\microserviciostock\\microserviciostock\\microserviciostock\\application\\usecases\\ingredient\\handlers\\getallingredienthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\usecases\\ingredient\\handlers\\getallingredienthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\proyectos\\microserviciostock\\microserviciostock\\microserviciostock\\application\\usecases\\ingredient\\handlers\\getbyidingredienthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\usecases\\ingredient\\handlers\\getbyidingredienthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\proyectos\\microserviciostock\\microserviciostock\\microserviciostock\\application\\usecases\\ingredient\\queries\\getbyidingredientquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\usecases\\ingredient\\queries\\getbyidingredientquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\proyectos\\microserviciostock\\microserviciostock\\microserviciostock\\application\\dtos\\ingredientsdto\\ingredientresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\dtos\\ingredientsdto\\ingredientresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\proyectos\\microserviciostock\\microserviciostock\\microserviciostock\\application\\interfaces\\handlers\\ingredient\\igetbyidingredienthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\interfaces\\handlers\\ingredient\\igetbyidingredienthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\proyectos\\microserviciostock\\microserviciostock\\microserviciostock\\application\\interfaces\\handlers\\ingredient\\igetallingredienthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\interfaces\\handlers\\ingredient\\igetallingredienthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\proyectos\\microserviciostock\\microserviciostock\\microserviciostock\\application\\interfaces\\handlers\\ingredient\\ideleteingredienthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\interfaces\\handlers\\ingredient\\ideleteingredienthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\proyectos\\microserviciostock\\microserviciostock\\microserviciostock\\application\\interfaces\\handlers\\ingredient\\icreateingredienthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\interfaces\\handlers\\ingredient\\icreateingredienthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\proyectos\\microserviciostock\\microserviciostock\\microserviciostock\\application\\usecases\\ingredient\\queries\\getallingredientsquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\usecases\\ingredient\\queries\\getallingredientsquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|Infrastructure\\Infrastructure.csproj|c:\\proyectos\\microserviciostock\\microserviciostock\\microserviciostock\\infrastructure\\persistence\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\persistence\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E528BBC3-1C26-8C35-F682-23718816ADCD}|Domain\\Domain.csproj|c:\\users\\nicos\\documents\\github\\microserviciostock\\microserviciostock\\domain\\entities\\ingredientdish.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E528BBC3-1C26-8C35-F682-23718816ADCD}|Domain\\Domain.csproj|c:\\proyectos\\microserviciostock\\microserviciostock\\microserviciostock\\domain\\entities\\ingredientdish.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E528BBC3-1C26-8C35-F682-23718816ADCD}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\ingredientdish.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E528BBC3-1C26-8C35-F682-23718816ADCD}|Domain\\Domain.csproj|c:\\users\\nicos\\documents\\github\\microserviciostock\\microserviciostock\\domain\\entities\\ingredient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E528BBC3-1C26-8C35-F682-23718816ADCD}|Domain\\Domain.csproj|c:\\proyectos\\microserviciostock\\microserviciostock\\microserviciostock\\domain\\entities\\ingredient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E528BBC3-1C26-8C35-F682-23718816ADCD}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\ingredient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E528BBC3-1C26-8C35-F682-23718816ADCD}|Domain\\Domain.csproj|c:\\users\\nicos\\documents\\github\\microserviciostock\\microserviciostock\\domain\\entities\\stock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E528BBC3-1C26-8C35-F682-23718816ADCD}|Domain\\Domain.csproj|c:\\proyectos\\microserviciostock\\microserviciostock\\microserviciostock\\domain\\entities\\stock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E528BBC3-1C26-8C35-F682-23718816ADCD}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\stock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1942BF81-3CCD-FDAA-E494-A300CB31F4A0}|MicroservicioStock\\MicroservicioStock.csproj|c:\\users\\nicos\\documents\\github\\microserviciostock\\microserviciostock\\microserviciostock\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{1942BF81-3CCD-FDAA-E494-A300CB31F4A0}|MicroservicioStock\\MicroservicioStock.csproj|c:\\proyectos\\microserviciostock\\microserviciostock\\microserviciostock\\microserviciostock\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{1942BF81-3CCD-FDAA-E494-A300CB31F4A0}|MicroservicioStock\\MicroservicioStock.csproj|solutionrelative:microserviciostock\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
@@ -30,8 +118,34 @@
       "DocumentGroups": [
         {
           "DockedWidth": 190,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "MicroservicioStock\\appsettings.Development.json",
+              "ToolTip": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\appsettings.Development.json",
+              "RelativeToolTip": "MicroservicioStock\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAB6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-06-01T02:22:44.954Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Program.cs",
+              "RelativeDocumentMoniker": "MicroservicioStock\\Program.cs",
+              "ToolTip": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Program.cs",
+              "RelativeToolTip": "MicroservicioStock\\Program.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAB8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-01T01:56:35.264Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
@@ -50,68 +164,323 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\nicos\\Documents\\GitHub\\MicroservicioStock\\MicroservicioStock\\Infrastructure\\Persistence\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Persistence\\AppDbContext.cs",
-              "ToolTip": "C:\\Users\\nicos\\Documents\\GitHub\\MicroservicioStock\\MicroservicioStock\\Infrastructure\\Persistence\\AppDbContext.cs",
-              "RelativeToolTip": "Infrastructure\\Persistence\\AppDbContext.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAIwBIAAABRAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "UpdateIngredientCommand.cs",
+              "DocumentMoniker": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Application\\UseCases\\Ingredient\\Commands\\UpdateIngredientCommand.cs",
+              "RelativeDocumentMoniker": "Application\\UseCases\\Ingredient\\Commands\\UpdateIngredientCommand.cs",
+              "ToolTip": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Application\\UseCases\\Ingredient\\Commands\\UpdateIngredientCommand.cs",
+              "RelativeToolTip": "Application\\UseCases\\Ingredient\\Commands\\UpdateIngredientCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-29T02:36:01.97Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "IngredientDish.cs",
-              "DocumentMoniker": "C:\\Users\\nicos\\Documents\\GitHub\\MicroservicioStock\\MicroservicioStock\\Domain\\Entities\\IngredientDish.cs",
-              "RelativeDocumentMoniker": "Domain\\Entities\\IngredientDish.cs",
-              "ToolTip": "C:\\Users\\nicos\\Documents\\GitHub\\MicroservicioStock\\MicroservicioStock\\Domain\\Entities\\IngredientDish.cs",
-              "RelativeToolTip": "Domain\\Entities\\IngredientDish.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA0AAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-29T02:31:37.385Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Stock.cs",
-              "DocumentMoniker": "C:\\Users\\nicos\\Documents\\GitHub\\MicroservicioStock\\MicroservicioStock\\Domain\\Entities\\Stock.cs",
-              "RelativeDocumentMoniker": "Domain\\Entities\\Stock.cs",
-              "ToolTip": "C:\\Users\\nicos\\Documents\\GitHub\\MicroservicioStock\\MicroservicioStock\\Domain\\Entities\\Stock.cs",
-              "RelativeToolTip": "Domain\\Entities\\Stock.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-29T02:30:21.338Z",
+              "WhenOpened": "2026-06-01T02:07:59.247Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Ingredient.cs",
-              "DocumentMoniker": "C:\\Users\\nicos\\Documents\\GitHub\\MicroservicioStock\\MicroservicioStock\\Domain\\Entities\\Ingredient.cs",
-              "RelativeDocumentMoniker": "Domain\\Entities\\Ingredient.cs",
-              "ToolTip": "C:\\Users\\nicos\\Documents\\GitHub\\MicroservicioStock\\MicroservicioStock\\Domain\\Entities\\Ingredient.cs",
-              "RelativeToolTip": "Domain\\Entities\\Ingredient.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABCAAAAAAAAAA==",
+              "Title": "IngredientController.cs",
+              "DocumentMoniker": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Controllers\\IngredientController.cs",
+              "RelativeDocumentMoniker": "MicroservicioStock\\Controllers\\IngredientController.cs",
+              "ToolTip": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Controllers\\IngredientController.cs",
+              "RelativeToolTip": "MicroservicioStock\\Controllers\\IngredientController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAIwCwAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-29T02:29:44.269Z",
+              "WhenOpened": "2026-06-01T01:57:01.24Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IngredientRequestDTO.cs",
+              "DocumentMoniker": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Application\\DTOs\\IngredientsDTO\\IngredientRequestDTO.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\IngredientsDTO\\IngredientRequestDTO.cs",
+              "ToolTip": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Application\\DTOs\\IngredientsDTO\\IngredientRequestDTO.cs",
+              "RelativeToolTip": "Application\\DTOs\\IngredientsDTO\\IngredientRequestDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAgAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-31T23:28:13.939Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "DeleteIngredientCommand.cs",
+              "DocumentMoniker": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Application\\UseCases\\Ingredient\\Commands\\DeleteIngredientCommand.cs",
+              "RelativeDocumentMoniker": "Application\\UseCases\\Ingredient\\Commands\\DeleteIngredientCommand.cs",
+              "ToolTip": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Application\\UseCases\\Ingredient\\Commands\\DeleteIngredientCommand.cs",
+              "RelativeToolTip": "Application\\UseCases\\Ingredient\\Commands\\DeleteIngredientCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-01T00:27:55.817Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UpdateIngredientHandler.cs",
+              "DocumentMoniker": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Application\\UseCases\\Ingredient\\Handlers\\UpdateIngredientHandler.cs",
+              "RelativeDocumentMoniker": "Application\\UseCases\\Ingredient\\Handlers\\UpdateIngredientHandler.cs",
+              "ToolTip": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Application\\UseCases\\Ingredient\\Handlers\\UpdateIngredientHandler.cs",
+              "RelativeToolTip": "Application\\UseCases\\Ingredient\\Handlers\\UpdateIngredientHandler.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAuwBUAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-01T00:46:27.616Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "IUpdateIngredientHandler.cs",
+              "DocumentMoniker": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Application\\Interfaces\\Handlers\\Ingredient\\IUpdateIngredientHandler.cs",
+              "RelativeDocumentMoniker": "Application\\Interfaces\\Handlers\\Ingredient\\IUpdateIngredientHandler.cs",
+              "ToolTip": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Application\\Interfaces\\Handlers\\Ingredient\\IUpdateIngredientHandler.cs",
+              "RelativeToolTip": "Application\\Interfaces\\Handlers\\Ingredient\\IUpdateIngredientHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAwAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-31T23:48:03.616Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CreateIngredientCommand.cs",
+              "DocumentMoniker": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Application\\UseCases\\Ingredient\\Commands\\CreateIngredientCommand.cs",
+              "RelativeDocumentMoniker": "Application\\UseCases\\Ingredient\\Commands\\CreateIngredientCommand.cs",
+              "ToolTip": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Application\\UseCases\\Ingredient\\Commands\\CreateIngredientCommand.cs",
+              "RelativeToolTip": "Application\\UseCases\\Ingredient\\Commands\\CreateIngredientCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-01T00:27:45.884Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "DeleteIngredientHandler.cs",
+              "DocumentMoniker": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Application\\UseCases\\Ingredient\\Handlers\\DeleteIngredientHandler.cs",
+              "RelativeDocumentMoniker": "Application\\UseCases\\Ingredient\\Handlers\\DeleteIngredientHandler.cs",
+              "ToolTip": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Application\\UseCases\\Ingredient\\Handlers\\DeleteIngredientHandler.cs",
+              "RelativeToolTip": "Application\\UseCases\\Ingredient\\Handlers\\DeleteIngredientHandler.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAmwBQAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-01T00:45:41.393Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "IngredientRepository.cs",
+              "DocumentMoniker": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Infrastructure\\Repositories\\IngredientRepository.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Repositories\\IngredientRepository.cs",
+              "ToolTip": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Infrastructure\\Repositories\\IngredientRepository.cs",
+              "RelativeToolTip": "Infrastructure\\Repositories\\IngredientRepository.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAIwCcAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-01T01:52:01.892Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "GetAllIngredientHandler.cs",
+              "DocumentMoniker": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Application\\UseCases\\Ingredient\\Handlers\\GetAllIngredientHandler.cs",
+              "RelativeDocumentMoniker": "Application\\UseCases\\Ingredient\\Handlers\\GetAllIngredientHandler.cs",
+              "ToolTip": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Application\\UseCases\\Ingredient\\Handlers\\GetAllIngredientHandler.cs",
+              "RelativeToolTip": "Application\\UseCases\\Ingredient\\Handlers\\GetAllIngredientHandler.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAwCAAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-01T00:45:57.736Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "GetByIdIngredientHandler.cs",
+              "DocumentMoniker": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Application\\UseCases\\Ingredient\\Handlers\\GetByIdIngredientHandler.cs",
+              "RelativeDocumentMoniker": "Application\\UseCases\\Ingredient\\Handlers\\GetByIdIngredientHandler.cs",
+              "ToolTip": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Application\\UseCases\\Ingredient\\Handlers\\GetByIdIngredientHandler.cs",
+              "RelativeToolTip": "Application\\UseCases\\Ingredient\\Handlers\\GetByIdIngredientHandler.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAqwCQAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-01T00:46:12.614Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "CreateIngredientHandler.cs",
+              "DocumentMoniker": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Application\\UseCases\\Ingredient\\Handlers\\CreateIngredientHandler.cs",
+              "RelativeDocumentMoniker": "Application\\UseCases\\Ingredient\\Handlers\\CreateIngredientHandler.cs",
+              "ToolTip": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Application\\UseCases\\Ingredient\\Handlers\\CreateIngredientHandler.cs",
+              "RelativeToolTip": "Application\\UseCases\\Ingredient\\Handlers\\CreateIngredientHandler.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAYwBwAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-01T00:45:25.733Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "IIngredientRepository.cs",
+              "DocumentMoniker": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Application\\Interfaces\\Repositories\\IIngredientRepository.cs",
+              "RelativeDocumentMoniker": "Application\\Interfaces\\Repositories\\IIngredientRepository.cs",
+              "ToolTip": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Application\\Interfaces\\Repositories\\IIngredientRepository.cs",
+              "RelativeToolTip": "Application\\Interfaces\\Repositories\\IIngredientRepository.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAqwBEAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-31T23:55:51.812Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "GetByIdIngredientQuery.cs",
+              "DocumentMoniker": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Application\\UseCases\\Ingredient\\Queries\\GetByIdIngredientQuery.cs",
+              "RelativeDocumentMoniker": "Application\\UseCases\\Ingredient\\Queries\\GetByIdIngredientQuery.cs",
+              "ToolTip": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Application\\UseCases\\Ingredient\\Queries\\GetByIdIngredientQuery.cs",
+              "RelativeToolTip": "Application\\UseCases\\Ingredient\\Queries\\GetByIdIngredientQuery.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAgAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-01T00:31:46.307Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "IngredientResponseDTO.cs",
+              "DocumentMoniker": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Application\\DTOs\\IngredientsDTO\\IngredientResponseDTO.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\IngredientsDTO\\IngredientResponseDTO.cs",
+              "ToolTip": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Application\\DTOs\\IngredientsDTO\\IngredientResponseDTO.cs",
+              "RelativeToolTip": "Application\\DTOs\\IngredientsDTO\\IngredientResponseDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-31T23:31:42.93Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "IGetAllIngredientHandler.cs",
+              "DocumentMoniker": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Application\\Interfaces\\Handlers\\Ingredient\\IGetAllIngredientHandler.cs",
+              "RelativeDocumentMoniker": "Application\\Interfaces\\Handlers\\Ingredient\\IGetAllIngredientHandler.cs",
+              "ToolTip": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Application\\Interfaces\\Handlers\\Ingredient\\IGetAllIngredientHandler.cs",
+              "RelativeToolTip": "Application\\Interfaces\\Handlers\\Ingredient\\IGetAllIngredientHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAoAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-31T23:48:39.148Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "GetAllIngredientsQuery.cs",
+              "DocumentMoniker": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Application\\UseCases\\Ingredient\\Queries\\GetAllIngredientsQuery.cs",
+              "RelativeDocumentMoniker": "Application\\UseCases\\Ingredient\\Queries\\GetAllIngredientsQuery.cs",
+              "ToolTip": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Application\\UseCases\\Ingredient\\Queries\\GetAllIngredientsQuery.cs",
+              "RelativeToolTip": "Application\\UseCases\\Ingredient\\Queries\\GetAllIngredientsQuery.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-01T00:32:11.098Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "IGetByIdIngredientHandler.cs",
+              "DocumentMoniker": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Application\\Interfaces\\Handlers\\Ingredient\\IGetByIdIngredientHandler.cs",
+              "RelativeDocumentMoniker": "Application\\Interfaces\\Handlers\\Ingredient\\IGetByIdIngredientHandler.cs",
+              "ToolTip": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Application\\Interfaces\\Handlers\\Ingredient\\IGetByIdIngredientHandler.cs",
+              "RelativeToolTip": "Application\\Interfaces\\Handlers\\Ingredient\\IGetByIdIngredientHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAoAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-31T23:49:10.069Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "IDeleteIngredientHandler.cs",
+              "DocumentMoniker": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Application\\Interfaces\\Handlers\\Ingredient\\IDeleteIngredientHandler.cs",
+              "RelativeDocumentMoniker": "Application\\Interfaces\\Handlers\\Ingredient\\IDeleteIngredientHandler.cs",
+              "ToolTip": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Application\\Interfaces\\Handlers\\Ingredient\\IDeleteIngredientHandler.cs",
+              "RelativeToolTip": "Application\\Interfaces\\Handlers\\Ingredient\\IDeleteIngredientHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAkAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-31T23:47:38.697Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ICreateIngredientHandler.cs",
+              "DocumentMoniker": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Application\\Interfaces\\Handlers\\Ingredient\\ICreateIngredientHandler.cs",
+              "RelativeDocumentMoniker": "Application\\Interfaces\\Handlers\\Ingredient\\ICreateIngredientHandler.cs",
+              "ToolTip": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Application\\Interfaces\\Handlers\\Ingredient\\ICreateIngredientHandler.cs",
+              "RelativeToolTip": "Application\\Interfaces\\Handlers\\Ingredient\\ICreateIngredientHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAoAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-31T23:45:04.665Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Infrastructure\\Persistence\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Persistence\\AppDbContext.cs",
+              "ToolTip": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Infrastructure\\Persistence\\AppDbContext.cs",
+              "RelativeToolTip": "Infrastructure\\Persistence\\AppDbContext.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAywBIAAABRAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-29T02:36:01.97Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "IngredientDish.cs",
+              "DocumentMoniker": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Domain\\Entities\\IngredientDish.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\IngredientDish.cs",
+              "ToolTip": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Domain\\Entities\\IngredientDish.cs",
+              "RelativeToolTip": "Domain\\Entities\\IngredientDish.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA0AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-29T02:31:37.385Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Stock.cs",
+              "DocumentMoniker": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Domain\\Entities\\Stock.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\Stock.cs",
+              "ToolTip": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Domain\\Entities\\Stock.cs",
+              "RelativeToolTip": "Domain\\Entities\\Stock.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-29T02:30:21.338Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Ingredient.cs",
+              "DocumentMoniker": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Domain\\Entities\\Ingredient.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\Ingredient.cs",
+              "ToolTip": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Domain\\Entities\\Ingredient.cs",
+              "RelativeToolTip": "Domain\\Entities\\Ingredient.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-29T02:29:44.269Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
               "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\nicos\\Documents\\GitHub\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\appsettings.json",
+              "DocumentMoniker": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\appsettings.json",
               "RelativeDocumentMoniker": "MicroservicioStock\\appsettings.json",
-              "ToolTip": "C:\\Users\\nicos\\Documents\\GitHub\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\appsettings.json",
+              "ToolTip": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\appsettings.json",
               "RelativeToolTip": "MicroservicioStock\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-05-29T02:03:08.393Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-29T02:03:08.393Z"
             }
           ]
         }

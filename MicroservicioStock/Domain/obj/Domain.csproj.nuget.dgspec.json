@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\nicos\\Documents\\GitHub\\MicroservicioStock\\MicroservicioStock\\Domain\\Domain.csproj": {}
+    "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Domain\\Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\nicos\\Documents\\GitHub\\MicroservicioStock\\MicroservicioStock\\Domain\\Domain.csproj": {
+    "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nicos\\Documents\\GitHub\\MicroservicioStock\\MicroservicioStock\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\nicos\\Documents\\GitHub\\MicroservicioStock\\MicroservicioStock\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\nicos\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nicos\\Documents\\GitHub\\MicroservicioStock\\MicroservicioStock\\Domain\\obj\\",
+        "projectPath": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\naguc\\.nuget\\packages\\",
+        "outputPath": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\nicos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\naguc\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
