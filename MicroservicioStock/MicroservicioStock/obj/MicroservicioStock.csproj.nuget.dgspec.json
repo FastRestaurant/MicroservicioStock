@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock.csproj": {}
+    "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock.csproj": {}
   },
   "projects": {
-    "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\Application\\Application.csproj": {
+    "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\Application\\Application.csproj",
+        "projectUniqueName": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\Application\\Application.csproj",
+        "projectPath": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Application\\Application.csproj",
         "packagesPath": "C:\\Users\\naguc\\.nuget\\packages\\",
-        "outputPath": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\Application\\obj\\",
+        "outputPath": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -34,8 +34,8 @@
             "framework": "net8.0",
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\Domain\\Domain.csproj"
+              "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Domain\\Domain.csproj"
               }
             }
           }
@@ -76,14 +76,14 @@
         }
       }
     },
-    "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\Domain\\Domain.csproj": {
+    "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\Domain\\Domain.csproj",
+        "projectPath": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\naguc\\.nuget\\packages\\",
-        "outputPath": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\Domain\\obj\\",
+        "outputPath": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -144,14 +144,14 @@
         }
       }
     },
-    "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\Infrastructure\\Infrastructure.csproj": {
+    "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\Infrastructure\\Infrastructure.csproj",
+        "projectPath": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Infrastructure\\Infrastructure.csproj",
         "packagesPath": "C:\\Users\\naguc\\.nuget\\packages\\",
-        "outputPath": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\Infrastructure\\obj\\",
+        "outputPath": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -174,8 +174,8 @@
             "framework": "net8.0",
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\Application\\Application.csproj": {
-                "projectPath": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\Application\\Application.csproj"
+              "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Application\\Application.csproj": {
+                "projectPath": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Application\\Application.csproj"
               }
             }
           }
@@ -196,6 +196,30 @@
         "net8.0": {
           "framework": "net8.0",
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.27, )"
+            },
+            "Microsoft.EntityFrameworkCore.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.27, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.27, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[8.0.27, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.27, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -216,14 +240,14 @@
         }
       }
     },
-    "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock.csproj": {
+    "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock.csproj",
+        "projectUniqueName": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock.csproj",
         "projectName": "MicroservicioStock",
-        "projectPath": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock.csproj",
+        "projectPath": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock.csproj",
         "packagesPath": "C:\\Users\\naguc\\.nuget\\packages\\",
-        "outputPath": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\obj\\",
+        "outputPath": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -246,8 +270,8 @@
             "framework": "net8.0",
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\Infrastructure\\Infrastructure.csproj"
+              "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Infrastructure\\Infrastructure.csproj"
               }
             }
           }

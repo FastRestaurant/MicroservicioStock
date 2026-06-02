@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\Domain\\Domain.csproj": {}
+    "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Domain\\Domain.csproj": {}
   },
   "projects": {
-    "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\Domain\\Domain.csproj": {
+    "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\Domain\\Domain.csproj",
+        "projectPath": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\naguc\\.nuget\\packages\\",
-        "outputPath": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\Domain\\obj\\",
+        "outputPath": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
