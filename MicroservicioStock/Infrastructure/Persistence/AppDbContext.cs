@@ -39,10 +39,18 @@ namespace Infrastructure.Persistence
             });
             modelBuilder.Entity<Domain.Entities.IngredientDish>(entity =>
             {
-                entity.HasOne<Domain.Entities.Ingredient>(s => s.Ingredient)
-                    .WithMany(g => g.IngredientDishes)
-                    .HasForeignKey(s => s.Id_Ingredient)
+
+                entity.HasKey(x => x.IdIngredientDish);
+
+                entity.HasOne(x => x.Ingredient)
+                    .WithMany(x => x.IngredientDishes)
+                    .HasForeignKey(x => x.Id_Ingredient)
                     .OnDelete(DeleteBehavior.Cascade);
+
+                //entity.HasOne(x => x.Dish)
+                //    .WithMany(x => x.IngredientDishes)
+                //    .HasForeignKey(x => x.Id_Dish)
+                //    .OnDelete(DeleteBehavior.Cascade);
             });
 
             

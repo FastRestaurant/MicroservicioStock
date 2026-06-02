@@ -8,6 +8,7 @@ namespace Domain.Entities
 {
     public class IngredientDish
     {
+        public Guid IdIngredientDish { get; set; }
         public Guid Id_Ingredient { get; set;  } 
         public Guid Id_Dish { get; set; }
 

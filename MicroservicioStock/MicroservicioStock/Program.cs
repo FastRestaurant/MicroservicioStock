@@ -1,9 +1,11 @@
-using Infrastructure.Persistence;
-using Microsoft.EntityFrameworkCore;
-using Application.Interfaces.Repositories;
-using Infrastructure.Repositories;
 using Application.Interfaces.Handlers.Ingredient;
+using Application.Interfaces.Handlers.IngredientDish;
+using Application.Interfaces.Repositories;
 using Application.UseCases.Ingredient.Handlers;
+using Application.UseCases.IngredientDish.Handlers;
+using Infrastructure.Persistence;
+using Infrastructure.Repositories;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,6 +20,7 @@ builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(buil
 
 //Repositories
 builder.Services.AddScoped<IIngredientRepository, IngredientRepository>();
+builder.Services.AddScoped<IIngredientDishRepository, IngredientDishRepository>();
 
 //Handlers
 builder.Services.AddScoped<ICreateIngredientHandler, CreateIngredientHandler>();
@@ -25,6 +28,12 @@ builder.Services.AddScoped<IDeleteIngredientHandler, DeleteIngredientHandler>();
 builder.Services.AddScoped<IUpdateIngredientHandler, UpdateIngredientHandler>();
 builder.Services.AddScoped<IGetAllIngredientHandler, GetAllIngredientHandler>();
 builder.Services.AddScoped<IGetByIdIngredientHandler, GetByIdIngredientHandler>();
+
+
+builder.Services.AddScoped<ICreateIngredientDishHandler, CreateIngredientDishHandler>();
+builder.Services.AddScoped<IDeleteIngredientDishHandler, DeleteIngredientDishHandler>();
+builder.Services.AddScoped<IGetAllIngredientDishHandler, GetAllIngredientDishHandler>();
+builder.Services.AddScoped<IGetByIdIngredientDishHandler, GetByIdIngredientDishHandler>();
 
 
 
