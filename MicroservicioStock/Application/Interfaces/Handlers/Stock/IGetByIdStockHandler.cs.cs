@@ -1,5 +1,5 @@
 ﻿using Application.DTOs.Stock;
-using Application.UseCases.Stock.Commands;
+using Application.UseCases.Stock.Queries;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,8 +8,8 @@ using System.Threading.Tasks;
 
 namespace Application.Interfaces.Handlers.Stock
 {
-    public interface IUpdateStockHandler
+    public interface IGetByIdStockHandler
     {
-        Task<string> Handle(Guid id, UpdateStockCommand command);
+        Task<(StockResponseDTO stock, string message)> Handle(GetByIdStockQuery query);
     }
 }

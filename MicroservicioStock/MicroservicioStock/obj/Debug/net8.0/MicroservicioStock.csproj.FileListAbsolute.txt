@@ -85,3 +85,4 @@ C:\Users\nicos\Documents\GitHub\MicroservicioStock\MicroservicioStock\Microservi
 C:\Users\nicos\Documents\GitHub\MicroservicioStock\MicroservicioStock\MicroservicioStock\obj\Debug\net8.0\MicroservicioStock.pdb
 C:\Users\nicos\Documents\GitHub\MicroservicioStock\MicroservicioStock\MicroservicioStock\obj\Debug\net8.0\MicroservicioStock.genruntimeconfig.cache
 C:\Users\nicos\Documents\GitHub\MicroservicioStock\MicroservicioStock\MicroservicioStock\obj\Debug\net8.0\ref\MicroservicioStock.dll
+C:\Users\nicos\Documents\GitHub\MicroservicioStock\MicroservicioStock\MicroservicioStock\obj\Debug\net8.0\MicroservicioStock.MvcApplicationPartsAssemblyInfo.cs

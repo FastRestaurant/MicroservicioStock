@@ -9,12 +9,11 @@ namespace Application.UseCases.Stock.Commands
     public class UpdateStockCommand
     {
         public int Count { get; }
-        public Guid Id_Drink { get; }
 
-        public UpdateStockCommand(int count, Guid id_Drink)
+        public UpdateStockCommand(int count)
         {
             Count = count;
-            Id_Drink = id_Drink;
+            
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using Application.DTOs.Stock;
+using Application.Interfaces.Handlers.Stock;
 using Application.Interfaces.Repositories;
 using Application.UseCases.Stock.Queries;
 using System;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Application.UseCases.Stock.Handlers
 {
-    public class GetByIdStockHandler
+    public class GetByIdStockHandler : IGetByIdStockHandler
     {
         private readonly IStockRepository _stockRepository;
 
