@@ -45,7 +45,6 @@ namespace Infrastructure.Persistence
                     .OnDelete(DeleteBehavior.Cascade);
             });
 
-            
         }
     }
 }

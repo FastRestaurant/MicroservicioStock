@@ -15,6 +15,6 @@ namespace Domain.Entities
 
         public List<Ingredient> Ingredients { get; set; }
 
-        //public Drink Drink { get; set; }
+        
     }
 }

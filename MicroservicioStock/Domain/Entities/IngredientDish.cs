@@ -13,6 +13,5 @@ namespace Domain.Entities
 
         public Ingredient Ingredient{ get; set; }
 
-        //public Dish Dish { get; set; }
     }
 }
