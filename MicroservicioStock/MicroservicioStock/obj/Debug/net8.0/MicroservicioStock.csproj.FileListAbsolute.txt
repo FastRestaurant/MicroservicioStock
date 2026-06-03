@@ -88,14 +88,7 @@ C:\Users\nicos\Documents\GitHub\MicroservicioStock\MicroservicioStock\Microservi
 C:\Users\nicos\Documents\GitHub\MicroservicioStock\MicroservicioStock\MicroservicioStock\obj\Debug\net8.0\ref\MicroservicioStock.dll
 C:\Users\nicos\Documents\GitHub\MicroservicioStock\MicroservicioStock\MicroservicioStock\obj\Debug\net8.0\MicroservicioStock.MvcApplicationPartsAssemblyInfo.cs
 =======
-C:\Proyectos\MicroservicioStock\MicroservicioStock\MicroservicioStock\MicroservicioStock\obj\Debug\net8.0\MicroservicioStock.csproj.AssemblyReference.cache
-C:\Proyectos\MicroservicioStock\MicroservicioStock\MicroservicioStock\MicroservicioStock\obj\Debug\net8.0\rpswa.dswa.cache.json
-C:\Proyectos\MicroservicioStock\MicroservicioStock\MicroservicioStock\MicroservicioStock\obj\Debug\net8.0\MicroservicioStock.GeneratedMSBuildEditorConfig.editorconfig
-C:\Proyectos\MicroservicioStock\MicroservicioStock\MicroservicioStock\MicroservicioStock\obj\Debug\net8.0\MicroservicioStock.AssemblyInfoInputs.cache
-C:\Proyectos\MicroservicioStock\MicroservicioStock\MicroservicioStock\MicroservicioStock\obj\Debug\net8.0\MicroservicioStock.AssemblyInfo.cs
-C:\Proyectos\MicroservicioStock\MicroservicioStock\MicroservicioStock\MicroservicioStock\obj\Debug\net8.0\MicroservicioStock.csproj.CoreCompileInputs.cache
-C:\Proyectos\MicroservicioStock\MicroservicioStock\MicroservicioStock\MicroservicioStock\obj\Debug\net8.0\MicroservicioStock.MvcApplicationPartsAssemblyInfo.cache
-C:\Proyectos\MicroservicioStock\MicroservicioStock\MicroservicioStock\MicroservicioStock\obj\Debug\net8.0\MicroservicioStock.sourcelink.json
+>>>>>>> main
 C:\Proyectos\MicroservicioStock\MicroservicioStock\MicroservicioStock\MicroservicioStock\bin\Debug\net8.0\appsettings.Development.json
 C:\Proyectos\MicroservicioStock\MicroservicioStock\MicroservicioStock\MicroservicioStock\bin\Debug\net8.0\appsettings.json
 C:\Proyectos\MicroservicioStock\MicroservicioStock\MicroservicioStock\MicroservicioStock\bin\Debug\net8.0\MicroservicioStock.staticwebassets.endpoints.json
@@ -159,6 +152,15 @@ C:\Proyectos\MicroservicioStock\MicroservicioStock\MicroservicioStock\Microservi
 C:\Proyectos\MicroservicioStock\MicroservicioStock\MicroservicioStock\MicroservicioStock\bin\Debug\net8.0\Infrastructure.pdb
 C:\Proyectos\MicroservicioStock\MicroservicioStock\MicroservicioStock\MicroservicioStock\bin\Debug\net8.0\Application.pdb
 C:\Proyectos\MicroservicioStock\MicroservicioStock\MicroservicioStock\MicroservicioStock\bin\Debug\net8.0\Domain.pdb
+C:\Proyectos\MicroservicioStock\MicroservicioStock\MicroservicioStock\MicroservicioStock\obj\Debug\net8.0\MicroservicioStock.csproj.AssemblyReference.cache
+C:\Proyectos\MicroservicioStock\MicroservicioStock\MicroservicioStock\MicroservicioStock\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Proyectos\MicroservicioStock\MicroservicioStock\MicroservicioStock\MicroservicioStock\obj\Debug\net8.0\MicroservicioStock.GeneratedMSBuildEditorConfig.editorconfig
+C:\Proyectos\MicroservicioStock\MicroservicioStock\MicroservicioStock\MicroservicioStock\obj\Debug\net8.0\MicroservicioStock.AssemblyInfoInputs.cache
+C:\Proyectos\MicroservicioStock\MicroservicioStock\MicroservicioStock\MicroservicioStock\obj\Debug\net8.0\MicroservicioStock.AssemblyInfo.cs
+C:\Proyectos\MicroservicioStock\MicroservicioStock\MicroservicioStock\MicroservicioStock\obj\Debug\net8.0\MicroservicioStock.csproj.CoreCompileInputs.cache
+C:\Proyectos\MicroservicioStock\MicroservicioStock\MicroservicioStock\MicroservicioStock\obj\Debug\net8.0\MicroservicioStock.MvcApplicationPartsAssemblyInfo.cs
+C:\Proyectos\MicroservicioStock\MicroservicioStock\MicroservicioStock\MicroservicioStock\obj\Debug\net8.0\MicroservicioStock.MvcApplicationPartsAssemblyInfo.cache
+C:\Proyectos\MicroservicioStock\MicroservicioStock\MicroservicioStock\MicroservicioStock\obj\Debug\net8.0\MicroservicioStock.sourcelink.json
 C:\Proyectos\MicroservicioStock\MicroservicioStock\MicroservicioStock\MicroservicioStock\obj\Debug\net8.0\rjimswa.dswa.cache.json
 C:\Proyectos\MicroservicioStock\MicroservicioStock\MicroservicioStock\MicroservicioStock\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
 C:\Proyectos\MicroservicioStock\MicroservicioStock\MicroservicioStock\MicroservicioStock\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
@@ -175,5 +177,3 @@ C:\Proyectos\MicroservicioStock\MicroservicioStock\MicroservicioStock\Microservi
 C:\Proyectos\MicroservicioStock\MicroservicioStock\MicroservicioStock\MicroservicioStock\obj\Debug\net8.0\MicroservicioStock.pdb
 C:\Proyectos\MicroservicioStock\MicroservicioStock\MicroservicioStock\MicroservicioStock\obj\Debug\net8.0\MicroservicioStock.genruntimeconfig.cache
 C:\Proyectos\MicroservicioStock\MicroservicioStock\MicroservicioStock\MicroservicioStock\obj\Debug\net8.0\ref\MicroservicioStock.dll
-C:\Proyectos\MicroservicioStock\MicroservicioStock\MicroservicioStock\MicroservicioStock\obj\Debug\net8.0\MicroservicioStock.MvcApplicationPartsAssemblyInfo.cs
->>>>>>> main

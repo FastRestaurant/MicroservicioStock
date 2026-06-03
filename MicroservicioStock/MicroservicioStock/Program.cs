@@ -1,18 +1,13 @@
-<<<<<<< HEAD
-using Application.Interfaces.Handlers.Stock;
-using Application.Interfaces.Repositories;
-using Application.UseCases.Stock.Handlers;
-using Infrastructure.Repositories;
-=======
 using Application.Interfaces.Handlers.Ingredient;
 using Application.Interfaces.Handlers.IngredientDish;
+using Application.Interfaces.Handlers.Stock;
 using Application.Interfaces.Repositories;
 using Application.UseCases.Ingredient.Handlers;
 using Application.UseCases.IngredientDish.Handlers;
+using Application.UseCases.Stock.Handlers;
 using Infrastructure.Persistence;
 using Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
->>>>>>> main
 
 var builder = WebApplication.CreateBuilder(args);
 

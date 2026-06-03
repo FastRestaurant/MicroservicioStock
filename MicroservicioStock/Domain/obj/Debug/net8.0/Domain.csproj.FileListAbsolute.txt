@@ -12,6 +12,7 @@ C:\Users\nicos\Documents\GitHub\MicroservicioStock\MicroservicioStock\Domain\obj
 C:\Users\nicos\Documents\GitHub\MicroservicioStock\MicroservicioStock\Domain\obj\Debug\net8.0\Domain.pdb
 C:\Users\nicos\Documents\GitHub\MicroservicioStock\MicroservicioStock\Domain\obj\Debug\net8.0\ref\Domain.dll
 =======
+>>>>>>> main
 C:\Proyectos\MicroservicioStock\MicroservicioStock\MicroservicioStock\Domain\bin\Debug\net8.0\Domain.deps.json
 C:\Proyectos\MicroservicioStock\MicroservicioStock\MicroservicioStock\Domain\bin\Debug\net8.0\Domain.dll
 C:\Proyectos\MicroservicioStock\MicroservicioStock\MicroservicioStock\Domain\bin\Debug\net8.0\Domain.pdb
@@ -24,4 +25,3 @@ C:\Proyectos\MicroservicioStock\MicroservicioStock\MicroservicioStock\Domain\obj
 C:\Proyectos\MicroservicioStock\MicroservicioStock\MicroservicioStock\Domain\obj\Debug\net8.0\refint\Domain.dll
 C:\Proyectos\MicroservicioStock\MicroservicioStock\MicroservicioStock\Domain\obj\Debug\net8.0\Domain.pdb
 C:\Proyectos\MicroservicioStock\MicroservicioStock\MicroservicioStock\Domain\obj\Debug\net8.0\ref\Domain.dll
->>>>>>> main
