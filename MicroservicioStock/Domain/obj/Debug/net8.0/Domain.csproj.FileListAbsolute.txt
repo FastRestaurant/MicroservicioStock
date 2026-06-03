@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:\Users\nicos\Documents\GitHub\MicroservicioStock\MicroservicioStock\Domain\bin\Debug\net8.0\Domain.deps.json
 C:\Users\nicos\Documents\GitHub\MicroservicioStock\MicroservicioStock\Domain\bin\Debug\net8.0\Domain.dll
 C:\Users\nicos\Documents\GitHub\MicroservicioStock\MicroservicioStock\Domain\bin\Debug\net8.0\Domain.pdb
@@ -10,3 +11,17 @@ C:\Users\nicos\Documents\GitHub\MicroservicioStock\MicroservicioStock\Domain\obj
 C:\Users\nicos\Documents\GitHub\MicroservicioStock\MicroservicioStock\Domain\obj\Debug\net8.0\refint\Domain.dll
 C:\Users\nicos\Documents\GitHub\MicroservicioStock\MicroservicioStock\Domain\obj\Debug\net8.0\Domain.pdb
 C:\Users\nicos\Documents\GitHub\MicroservicioStock\MicroservicioStock\Domain\obj\Debug\net8.0\ref\Domain.dll
+=======
+C:\Proyectos\MicroservicioStock\MicroservicioStock\MicroservicioStock\Domain\bin\Debug\net8.0\Domain.deps.json
+C:\Proyectos\MicroservicioStock\MicroservicioStock\MicroservicioStock\Domain\bin\Debug\net8.0\Domain.dll
+C:\Proyectos\MicroservicioStock\MicroservicioStock\MicroservicioStock\Domain\bin\Debug\net8.0\Domain.pdb
+C:\Proyectos\MicroservicioStock\MicroservicioStock\MicroservicioStock\Domain\obj\Debug\net8.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Proyectos\MicroservicioStock\MicroservicioStock\MicroservicioStock\Domain\obj\Debug\net8.0\Domain.AssemblyInfoInputs.cache
+C:\Proyectos\MicroservicioStock\MicroservicioStock\MicroservicioStock\Domain\obj\Debug\net8.0\Domain.AssemblyInfo.cs
+C:\Proyectos\MicroservicioStock\MicroservicioStock\MicroservicioStock\Domain\obj\Debug\net8.0\Domain.csproj.CoreCompileInputs.cache
+C:\Proyectos\MicroservicioStock\MicroservicioStock\MicroservicioStock\Domain\obj\Debug\net8.0\Domain.sourcelink.json
+C:\Proyectos\MicroservicioStock\MicroservicioStock\MicroservicioStock\Domain\obj\Debug\net8.0\Domain.dll
+C:\Proyectos\MicroservicioStock\MicroservicioStock\MicroservicioStock\Domain\obj\Debug\net8.0\refint\Domain.dll
+C:\Proyectos\MicroservicioStock\MicroservicioStock\MicroservicioStock\Domain\obj\Debug\net8.0\Domain.pdb
+C:\Proyectos\MicroservicioStock\MicroservicioStock\MicroservicioStock\Domain\obj\Debug\net8.0\ref\Domain.dll
+>>>>>>> main

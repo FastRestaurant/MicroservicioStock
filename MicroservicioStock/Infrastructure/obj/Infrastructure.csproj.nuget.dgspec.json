@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\nicos\\Documents\\GitHub\\MicroservicioStock\\MicroservicioStock\\Infrastructure\\Infrastructure.csproj": {}
+    "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Infrastructure\\Infrastructure.csproj": {}
   },
   "projects": {
-    "C:\\Users\\nicos\\Documents\\GitHub\\MicroservicioStock\\MicroservicioStock\\Application\\Application.csproj": {
+    "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nicos\\Documents\\GitHub\\MicroservicioStock\\MicroservicioStock\\Application\\Application.csproj",
+        "projectUniqueName": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "C:\\Users\\nicos\\Documents\\GitHub\\MicroservicioStock\\MicroservicioStock\\Application\\Application.csproj",
-        "packagesPath": "C:\\Users\\nicos\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nicos\\Documents\\GitHub\\MicroservicioStock\\MicroservicioStock\\Application\\obj\\",
+        "projectPath": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Application\\Application.csproj",
+        "packagesPath": "C:\\Users\\naguc\\.nuget\\packages\\",
+        "outputPath": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\nicos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\naguc\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -33,8 +34,8 @@
             "framework": "net8.0",
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\nicos\\Documents\\GitHub\\MicroservicioStock\\MicroservicioStock\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\nicos\\Documents\\GitHub\\MicroservicioStock\\MicroservicioStock\\Domain\\Domain.csproj"
+              "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Domain\\Domain.csproj"
               }
             }
           }
@@ -75,20 +76,20 @@
         }
       }
     },
-    "C:\\Users\\nicos\\Documents\\GitHub\\MicroservicioStock\\MicroservicioStock\\Domain\\Domain.csproj": {
+    "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nicos\\Documents\\GitHub\\MicroservicioStock\\MicroservicioStock\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\nicos\\Documents\\GitHub\\MicroservicioStock\\MicroservicioStock\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\nicos\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nicos\\Documents\\GitHub\\MicroservicioStock\\MicroservicioStock\\Domain\\obj\\",
+        "projectPath": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\naguc\\.nuget\\packages\\",
+        "outputPath": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\nicos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\naguc\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -97,6 +98,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -142,20 +144,20 @@
         }
       }
     },
-    "C:\\Users\\nicos\\Documents\\GitHub\\MicroservicioStock\\MicroservicioStock\\Infrastructure\\Infrastructure.csproj": {
+    "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nicos\\Documents\\GitHub\\MicroservicioStock\\MicroservicioStock\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "C:\\Users\\nicos\\Documents\\GitHub\\MicroservicioStock\\MicroservicioStock\\Infrastructure\\Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\nicos\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nicos\\Documents\\GitHub\\MicroservicioStock\\MicroservicioStock\\Infrastructure\\obj\\",
+        "projectPath": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Infrastructure\\Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\naguc\\.nuget\\packages\\",
+        "outputPath": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\nicos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\naguc\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -164,6 +166,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -171,8 +174,8 @@
             "framework": "net8.0",
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\nicos\\Documents\\GitHub\\MicroservicioStock\\MicroservicioStock\\Application\\Application.csproj": {
-                "projectPath": "C:\\Users\\nicos\\Documents\\GitHub\\MicroservicioStock\\MicroservicioStock\\Application\\Application.csproj"
+              "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Application\\Application.csproj": {
+                "projectPath": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Application\\Application.csproj"
               }
             }
           }
