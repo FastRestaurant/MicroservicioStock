@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{1942BF81-3CCD-FDAA-E494-A300CB31F4A0}|MicroservicioStock\\MicroservicioStock.csproj|solutionrelative:microserviciostock\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+<<<<<<< HEAD
+      "AbsoluteMoniker": "D:0:0:{1942BF81-3CCD-FDAA-E494-A300CB31F4A0}|MicroservicioStock\\MicroservicioStock.csproj|c:\\users\\nicos\\documents\\github\\microserviciostock\\microserviciostock\\microserviciostock\\controllers\\stockcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1942BF81-3CCD-FDAA-E494-A300CB31F4A0}|MicroservicioStock\\MicroservicioStock.csproj|solutionrelative:microserviciostock\\controllers\\stockcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+=======
       "AbsoluteMoniker": "D:0:0:{1942BF81-3CCD-FDAA-E494-A300CB31F4A0}|MicroservicioStock\\MicroservicioStock.csproj|c:\\proyectos\\microserviciostock\\microserviciostock\\microserviciostock\\microserviciostock\\controllers\\ingredientdishcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1942BF81-3CCD-FDAA-E494-A300CB31F4A0}|MicroservicioStock\\MicroservicioStock.csproj|solutionrelative:microserviciostock\\controllers\\ingredientdishcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -153,6 +157,7 @@
     {
       "AbsoluteMoniker": "D:0:0:{E528BBC3-1C26-8C35-F682-23718816ADCD}|Domain\\Domain.csproj|c:\\proyectos\\microserviciostock\\microserviciostock\\microserviciostock\\domain\\entities\\ingredient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E528BBC3-1C26-8C35-F682-23718816ADCD}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\ingredient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+>>>>>>> main
     },
     {
       "AbsoluteMoniker": "D:0:0:{1942BF81-3CCD-FDAA-E494-A300CB31F4A0}|MicroservicioStock\\MicroservicioStock.csproj|c:\\proyectos\\microserviciostock\\microserviciostock\\microserviciostock\\microserviciostock\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -175,8 +180,89 @@
       "RelativeMoniker": "D:0:0:{E528BBC3-1C26-8C35-F682-23718816ADCD}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\stock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+<<<<<<< HEAD
+      "AbsoluteMoniker": "D:0:0:{E528BBC3-1C26-8C35-F682-23718816ADCD}|Domain\\Domain.csproj|c:\\users\\nicos\\documents\\github\\microserviciostock\\microserviciostock\\domain\\entities\\ingredient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E528BBC3-1C26-8C35-F682-23718816ADCD}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\ingredient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E528BBC3-1C26-8C35-F682-23718816ADCD}|Domain\\Domain.csproj|c:\\users\\nicos\\documents\\github\\microserviciostock\\microserviciostock\\domain\\entities\\ingredientdish.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E528BBC3-1C26-8C35-F682-23718816ADCD}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\ingredientdish.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\users\\nicos\\documents\\github\\microserviciostock\\microserviciostock\\application\\usecases\\stock\\handlers\\getallstockhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\usecases\\stock\\handlers\\getallstockhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\users\\nicos\\documents\\github\\microserviciostock\\microserviciostock\\application\\interfaces\\handlers\\stock\\igetallstockhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\interfaces\\handlers\\stock\\igetallstockhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1942BF81-3CCD-FDAA-E494-A300CB31F4A0}|MicroservicioStock\\MicroservicioStock.csproj|c:\\users\\nicos\\documents\\github\\microserviciostock\\microserviciostock\\microserviciostock\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1942BF81-3CCD-FDAA-E494-A300CB31F4A0}|MicroservicioStock\\MicroservicioStock.csproj|solutionrelative:microserviciostock\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\users\\nicos\\documents\\github\\microserviciostock\\microserviciostock\\application\\usecases\\stock\\handlers\\updatestockhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\usecases\\stock\\handlers\\updatestockhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\users\\nicos\\documents\\github\\microserviciostock\\microserviciostock\\application\\interfaces\\handlers\\stock\\iupdatestockhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\interfaces\\handlers\\stock\\iupdatestockhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\users\\nicos\\documents\\github\\microserviciostock\\microserviciostock\\application\\usecases\\stock\\commands\\updatestockcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\usecases\\stock\\commands\\updatestockcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\users\\nicos\\documents\\github\\microserviciostock\\microserviciostock\\application\\usecases\\stock\\handlers\\getbyidstockhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\usecases\\stock\\handlers\\getbyidstockhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\users\\nicos\\documents\\github\\microserviciostock\\microserviciostock\\application\\interfaces\\handlers\\stock\\icreatestockhander.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\interfaces\\handlers\\stock\\icreatestockhander.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\users\\nicos\\documents\\github\\microserviciostock\\microserviciostock\\application\\interfaces\\handlers\\stock\\igetbyidstockhandler.cs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\interfaces\\handlers\\stock\\igetbyidstockhandler.cs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\users\\nicos\\documents\\github\\microserviciostock\\microserviciostock\\application\\interfaces\\handlers\\stock\\ideletestockhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\interfaces\\handlers\\stock\\ideletestockhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|Infrastructure\\Infrastructure.csproj|c:\\users\\nicos\\documents\\github\\microserviciostock\\microserviciostock\\infrastructure\\repositories\\stockrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\repositories\\stockrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\users\\nicos\\documents\\github\\microserviciostock\\microserviciostock\\application\\usecases\\stock\\handlers\\createstockhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\usecases\\stock\\handlers\\createstockhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\users\\nicos\\documents\\github\\microserviciostock\\microserviciostock\\application\\usecases\\stock\\handlers\\deletestockhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\usecases\\stock\\handlers\\deletestockhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\users\\nicos\\documents\\github\\microserviciostock\\microserviciostock\\application\\usecases\\stock\\queries\\getbyidstockquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\usecases\\stock\\queries\\getbyidstockquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\users\\nicos\\documents\\github\\microserviciostock\\microserviciostock\\application\\usecases\\stock\\queries\\getallstockquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\usecases\\stock\\queries\\getallstockquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\users\\nicos\\documents\\github\\microserviciostock\\microserviciostock\\application\\usecases\\stock\\commands\\deletestockcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\usecases\\stock\\commands\\deletestockcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\users\\nicos\\documents\\github\\microserviciostock\\microserviciostock\\application\\usecases\\stock\\commands\\createstockcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\usecases\\stock\\commands\\createstockcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\users\\nicos\\documents\\github\\microserviciostock\\microserviciostock\\application\\interfaces\\repositories\\istockrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\interfaces\\repositories\\istockrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+=======
       "AbsoluteMoniker": "D:0:0:{1942BF81-3CCD-FDAA-E494-A300CB31F4A0}|MicroservicioStock\\MicroservicioStock.csproj|c:\\proyectos\\microserviciostock\\microserviciostock\\microserviciostock\\microserviciostock\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{1942BF81-3CCD-FDAA-E494-A300CB31F4A0}|MicroservicioStock\\MicroservicioStock.csproj|solutionrelative:microserviciostock\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+>>>>>>> main
     }
   ],
   "DocumentGroupContainers": [
@@ -186,7 +272,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 190,
+<<<<<<< HEAD
+          "SelectedChildIndex": 11,
+=======
           "SelectedChildIndex": 10,
+>>>>>>> main
           "Children": [
             {
               "$type": "Bookmark",
@@ -206,6 +296,106 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
+              "DocumentIndex": 4,
+              "Title": "IngredientDish.cs",
+              "DocumentMoniker": "C:\\Users\\nicos\\Documents\\GitHub\\MicroservicioStock\\MicroservicioStock\\Domain\\Entities\\IngredientDish.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\IngredientDish.cs",
+              "ToolTip": "C:\\Users\\nicos\\Documents\\GitHub\\MicroservicioStock\\MicroservicioStock\\Domain\\Entities\\IngredientDish.cs",
+              "RelativeToolTip": "Domain\\Entities\\IngredientDish.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-03T00:37:06.981Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Ingredient.cs",
+              "DocumentMoniker": "C:\\Users\\nicos\\Documents\\GitHub\\MicroservicioStock\\MicroservicioStock\\Domain\\Entities\\Ingredient.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\Ingredient.cs",
+              "ToolTip": "C:\\Users\\nicos\\Documents\\GitHub\\MicroservicioStock\\MicroservicioStock\\Domain\\Entities\\Ingredient.cs",
+              "RelativeToolTip": "Domain\\Entities\\Ingredient.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-03T00:37:03.483Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "StockController.cs",
+              "DocumentMoniker": "C:\\Users\\nicos\\Documents\\GitHub\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Controllers\\StockController.cs",
+              "RelativeDocumentMoniker": "MicroservicioStock\\Controllers\\StockController.cs",
+              "ToolTip": "C:\\Users\\nicos\\Documents\\GitHub\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Controllers\\StockController.cs",
+              "RelativeToolTip": "MicroservicioStock\\Controllers\\StockController.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAkwCoAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-02T19:44:54.094Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "UpdateStockCommand.cs",
+              "DocumentMoniker": "C:\\Users\\nicos\\Documents\\GitHub\\MicroservicioStock\\MicroservicioStock\\Application\\UseCases\\Stock\\Commands\\UpdateStockCommand.cs",
+              "RelativeDocumentMoniker": "Application\\UseCases\\Stock\\Commands\\UpdateStockCommand.cs",
+              "ToolTip": "C:\\Users\\nicos\\Documents\\GitHub\\MicroservicioStock\\MicroservicioStock\\Application\\UseCases\\Stock\\Commands\\UpdateStockCommand.cs",
+              "RelativeToolTip": "Application\\UseCases\\Stock\\Commands\\UpdateStockCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA8AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-01T00:05:27.376Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Stock.cs",
+              "DocumentMoniker": "C:\\Users\\nicos\\Documents\\GitHub\\MicroservicioStock\\MicroservicioStock\\Domain\\Entities\\Stock.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\Stock.cs",
+              "ToolTip": "C:\\Users\\nicos\\Documents\\GitHub\\MicroservicioStock\\MicroservicioStock\\Domain\\Entities\\Stock.cs",
+              "RelativeToolTip": "Domain\\Entities\\Stock.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-01T00:05:56.867Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "GetAllStockHandler.cs",
+              "DocumentMoniker": "C:\\Users\\nicos\\Documents\\GitHub\\MicroservicioStock\\MicroservicioStock\\Application\\UseCases\\Stock\\Handlers\\GetAllStockHandler.cs",
+              "RelativeDocumentMoniker": "Application\\UseCases\\Stock\\Handlers\\GetAllStockHandler.cs",
+              "ToolTip": "C:\\Users\\nicos\\Documents\\GitHub\\MicroservicioStock\\MicroservicioStock\\Application\\UseCases\\Stock\\Handlers\\GetAllStockHandler.cs",
+              "RelativeToolTip": "Application\\UseCases\\Stock\\Handlers\\GetAllStockHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBAAAABpAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-01T00:27:39.578Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "GetByIdStockHandler.cs",
+              "DocumentMoniker": "C:\\Users\\nicos\\Documents\\GitHub\\MicroservicioStock\\MicroservicioStock\\Application\\UseCases\\Stock\\Handlers\\GetByIdStockHandler.cs",
+              "RelativeDocumentMoniker": "Application\\UseCases\\Stock\\Handlers\\GetByIdStockHandler.cs",
+              "ToolTip": "C:\\Users\\nicos\\Documents\\GitHub\\MicroservicioStock\\MicroservicioStock\\Application\\UseCases\\Stock\\Handlers\\GetByIdStockHandler.cs",
+              "RelativeToolTip": "Application\\UseCases\\Stock\\Handlers\\GetByIdStockHandler.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAAACQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-01T00:27:06.776Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\nicos\\Documents\\GitHub\\MicroservicioStock\\MicroservicioStock\\Infrastructure\\Persistence\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Persistence\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\nicos\\Documents\\GitHub\\MicroservicioStock\\MicroservicioStock\\Infrastructure\\Persistence\\AppDbContext.cs",
+              "RelativeToolTip": "Infrastructure\\Persistence\\AppDbContext.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwCEAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-02T19:42:17.307Z",
+=======
               "DocumentIndex": 1,
               "Title": "IngredientDishController.cs",
               "DocumentMoniker": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Controllers\\IngredientDishController.cs",
@@ -215,10 +405,20 @@
               "ViewState": "AgIAABUAAAAAAAAAAAAhwCYAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-02T00:34:48.793Z",
+>>>>>>> main
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
+              "DocumentIndex": 8,
+              "Title": "UpdateStockHandler.cs",
+              "DocumentMoniker": "C:\\Users\\nicos\\Documents\\GitHub\\MicroservicioStock\\MicroservicioStock\\Application\\UseCases\\Stock\\Handlers\\UpdateStockHandler.cs",
+              "RelativeDocumentMoniker": "Application\\UseCases\\Stock\\Handlers\\UpdateStockHandler.cs",
+              "ToolTip": "C:\\Users\\nicos\\Documents\\GitHub\\MicroservicioStock\\MicroservicioStock\\Application\\UseCases\\Stock\\Handlers\\UpdateStockHandler.cs",
+              "RelativeToolTip": "Application\\UseCases\\Stock\\Handlers\\UpdateStockHandler.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAQwCYAAAArAAAAAAAAAA==",
+=======
               "DocumentIndex": 4,
               "Title": "IngredientDishRepository.cs",
               "DocumentMoniker": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Infrastructure\\Repositories\\IngredientDishRepository.cs",
@@ -473,12 +673,33 @@
               "ToolTip": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Domain\\Entities\\IngredientDish.cs",
               "RelativeToolTip": "Domain\\Entities\\IngredientDish.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAsAAAAIAAAAAAAAAA==",
+>>>>>>> main
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-29T02:31:37.385Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-01T00:07:03.351Z"
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
+              "DocumentIndex": 6,
+              "Title": "IGetAllStockHandler.cs",
+              "DocumentMoniker": "C:\\Users\\nicos\\Documents\\GitHub\\MicroservicioStock\\MicroservicioStock\\Application\\Interfaces\\Handlers\\Stock\\IGetAllStockHandler.cs",
+              "RelativeDocumentMoniker": "Application\\Interfaces\\Handlers\\Stock\\IGetAllStockHandler.cs",
+              "ToolTip": "C:\\Users\\nicos\\Documents\\GitHub\\MicroservicioStock\\MicroservicioStock\\Application\\Interfaces\\Handlers\\Stock\\IGetAllStockHandler.cs",
+              "RelativeToolTip": "Application\\Interfaces\\Handlers\\Stock\\IGetAllStockHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAwAAABdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-02T19:47:36.8Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\nicos\\Documents\\GitHub\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Program.cs",
+              "RelativeDocumentMoniker": "MicroservicioStock\\Program.cs",
+              "ToolTip": "C:\\Users\\nicos\\Documents\\GitHub\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Program.cs",
+              "RelativeToolTip": "MicroservicioStock\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABCAAAAAAAAAA==",
+=======
               "DocumentIndex": 21,
               "Title": "DeleteIngredientDishCommand.cs",
               "DocumentMoniker": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Application\\UseCases\\IngredientDish\\Commands\\DeleteIngredientDishCommand.cs",
@@ -694,12 +915,155 @@
               "ToolTip": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Domain\\Entities\\Ingredient.cs",
               "RelativeToolTip": "Domain\\Entities\\Ingredient.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAABCAAAAAAAAAA==",
+>>>>>>> main
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-29T02:29:44.269Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-02T20:06:29.6Z"
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
+              "DocumentIndex": 9,
+              "Title": "IUpdateStockHandler.cs",
+              "DocumentMoniker": "C:\\Users\\nicos\\Documents\\GitHub\\MicroservicioStock\\MicroservicioStock\\Application\\Interfaces\\Handlers\\Stock\\IUpdateStockHandler.cs",
+              "RelativeDocumentMoniker": "Application\\Interfaces\\Handlers\\Stock\\IUpdateStockHandler.cs",
+              "ToolTip": "C:\\Users\\nicos\\Documents\\GitHub\\MicroservicioStock\\MicroservicioStock\\Application\\Interfaces\\Handlers\\Stock\\IUpdateStockHandler.cs",
+              "RelativeToolTip": "Application\\Interfaces\\Handlers\\Stock\\IUpdateStockHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAwAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-01T00:07:39.702Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ICreateStockHander.cs",
+              "DocumentMoniker": "C:\\Users\\nicos\\Documents\\GitHub\\MicroservicioStock\\MicroservicioStock\\Application\\Interfaces\\Handlers\\Stock\\ICreateStockHander.cs",
+              "RelativeDocumentMoniker": "Application\\Interfaces\\Handlers\\Stock\\ICreateStockHander.cs",
+              "ToolTip": "C:\\Users\\nicos\\Documents\\GitHub\\MicroservicioStock\\MicroservicioStock\\Application\\Interfaces\\Handlers\\Stock\\ICreateStockHander.cs",
+              "RelativeToolTip": "Application\\Interfaces\\Handlers\\Stock\\ICreateStockHander.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-01T00:08:38.672Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "IGetByIdStockHandler.cs.cs",
+              "DocumentMoniker": "C:\\Users\\nicos\\Documents\\GitHub\\MicroservicioStock\\MicroservicioStock\\Application\\Interfaces\\Handlers\\Stock\\IGetByIdStockHandler.cs.cs",
+              "RelativeDocumentMoniker": "Application\\Interfaces\\Handlers\\Stock\\IGetByIdStockHandler.cs.cs",
+              "ToolTip": "C:\\Users\\nicos\\Documents\\GitHub\\MicroservicioStock\\MicroservicioStock\\Application\\Interfaces\\Handlers\\Stock\\IGetByIdStockHandler.cs.cs",
+              "RelativeToolTip": "Application\\Interfaces\\Handlers\\Stock\\IGetByIdStockHandler.cs.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-02T19:48:09.171Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "IDeleteStockHandler.cs",
+              "DocumentMoniker": "C:\\Users\\nicos\\Documents\\GitHub\\MicroservicioStock\\MicroservicioStock\\Application\\Interfaces\\Handlers\\Stock\\IDeleteStockHandler.cs",
+              "RelativeDocumentMoniker": "Application\\Interfaces\\Handlers\\Stock\\IDeleteStockHandler.cs",
+              "ToolTip": "C:\\Users\\nicos\\Documents\\GitHub\\MicroservicioStock\\MicroservicioStock\\Application\\Interfaces\\Handlers\\Stock\\IDeleteStockHandler.cs",
+              "RelativeToolTip": "Application\\Interfaces\\Handlers\\Stock\\IDeleteStockHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-01T00:19:32.863Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "StockRepository.cs",
+              "DocumentMoniker": "C:\\Users\\nicos\\Documents\\GitHub\\MicroservicioStock\\MicroservicioStock\\Infrastructure\\Repositories\\StockRepository.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Repositories\\StockRepository.cs",
+              "ToolTip": "C:\\Users\\nicos\\Documents\\GitHub\\MicroservicioStock\\MicroservicioStock\\Infrastructure\\Repositories\\StockRepository.cs",
+              "RelativeToolTip": "Infrastructure\\Repositories\\StockRepository.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-02T19:42:20.774Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "DeleteStockHandler.cs",
+              "DocumentMoniker": "C:\\Users\\nicos\\Documents\\GitHub\\MicroservicioStock\\MicroservicioStock\\Application\\UseCases\\Stock\\Handlers\\DeleteStockHandler.cs",
+              "RelativeDocumentMoniker": "Application\\UseCases\\Stock\\Handlers\\DeleteStockHandler.cs",
+              "ToolTip": "C:\\Users\\nicos\\Documents\\GitHub\\MicroservicioStock\\MicroservicioStock\\Application\\UseCases\\Stock\\Handlers\\DeleteStockHandler.cs",
+              "RelativeToolTip": "Application\\UseCases\\Stock\\Handlers\\DeleteStockHandler.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAiwBYAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-01T00:15:56.785Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "CreateStockHandler.cs",
+              "DocumentMoniker": "C:\\Users\\nicos\\Documents\\GitHub\\MicroservicioStock\\MicroservicioStock\\Application\\UseCases\\Stock\\Handlers\\CreateStockHandler.cs",
+              "RelativeDocumentMoniker": "Application\\UseCases\\Stock\\Handlers\\CreateStockHandler.cs",
+              "ToolTip": "C:\\Users\\nicos\\Documents\\GitHub\\MicroservicioStock\\MicroservicioStock\\Application\\UseCases\\Stock\\Handlers\\CreateStockHandler.cs",
+              "RelativeToolTip": "Application\\UseCases\\Stock\\Handlers\\CreateStockHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-31T23:52:10.789Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "GetAllStockQuery.cs",
+              "DocumentMoniker": "C:\\Users\\nicos\\Documents\\GitHub\\MicroservicioStock\\MicroservicioStock\\Application\\UseCases\\Stock\\Queries\\GetAllStockQuery.cs",
+              "RelativeDocumentMoniker": "Application\\UseCases\\Stock\\Queries\\GetAllStockQuery.cs",
+              "ToolTip": "C:\\Users\\nicos\\Documents\\GitHub\\MicroservicioStock\\MicroservicioStock\\Application\\UseCases\\Stock\\Queries\\GetAllStockQuery.cs",
+              "RelativeToolTip": "Application\\UseCases\\Stock\\Queries\\GetAllStockQuery.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-01T00:24:33.013Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "GetByIdStockQuery.cs",
+              "DocumentMoniker": "C:\\Users\\nicos\\Documents\\GitHub\\MicroservicioStock\\MicroservicioStock\\Application\\UseCases\\Stock\\Queries\\GetByIdStockQuery.cs",
+              "RelativeDocumentMoniker": "Application\\UseCases\\Stock\\Queries\\GetByIdStockQuery.cs",
+              "ToolTip": "C:\\Users\\nicos\\Documents\\GitHub\\MicroservicioStock\\MicroservicioStock\\Application\\UseCases\\Stock\\Queries\\GetByIdStockQuery.cs",
+              "RelativeToolTip": "Application\\UseCases\\Stock\\Queries\\GetByIdStockQuery.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-01T00:25:08.44Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "DeleteStockCommand.cs",
+              "DocumentMoniker": "C:\\Users\\nicos\\Documents\\GitHub\\MicroservicioStock\\MicroservicioStock\\Application\\UseCases\\Stock\\Commands\\DeleteStockCommand.cs",
+              "RelativeDocumentMoniker": "Application\\UseCases\\Stock\\Commands\\DeleteStockCommand.cs",
+              "ToolTip": "C:\\Users\\nicos\\Documents\\GitHub\\MicroservicioStock\\MicroservicioStock\\Application\\UseCases\\Stock\\Commands\\DeleteStockCommand.cs",
+              "RelativeToolTip": "Application\\UseCases\\Stock\\Commands\\DeleteStockCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-01T00:04:46.876Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "IStockRepository.cs",
+              "DocumentMoniker": "C:\\Users\\nicos\\Documents\\GitHub\\MicroservicioStock\\MicroservicioStock\\Application\\Interfaces\\Repositories\\IStockRepository.cs",
+              "RelativeDocumentMoniker": "Application\\Interfaces\\Repositories\\IStockRepository.cs",
+              "ToolTip": "C:\\Users\\nicos\\Documents\\GitHub\\MicroservicioStock\\MicroservicioStock\\Application\\Interfaces\\Repositories\\IStockRepository.cs",
+              "RelativeToolTip": "Application\\Interfaces\\Repositories\\IStockRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-31T23:38:42.91Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "CreateStockCommand.cs",
+              "DocumentMoniker": "C:\\Users\\nicos\\Documents\\GitHub\\MicroservicioStock\\MicroservicioStock\\Application\\UseCases\\Stock\\Commands\\CreateStockCommand.cs",
+              "RelativeDocumentMoniker": "Application\\UseCases\\Stock\\Commands\\CreateStockCommand.cs",
+              "ToolTip": "C:\\Users\\nicos\\Documents\\GitHub\\MicroservicioStock\\MicroservicioStock\\Application\\UseCases\\Stock\\Commands\\CreateStockCommand.cs",
+              "RelativeToolTip": "Application\\UseCases\\Stock\\Commands\\CreateStockCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-31T23:36:46.046Z"
+=======
               "DocumentIndex": 41,
               "Title": "UpdateIngredientCommand.cs",
               "DocumentMoniker": "C:\\Proyectos\\MicroservicioStock\\MicroservicioStock\\MicroservicioStock\\Application\\UseCases\\Ingredient\\Commands\\UpdateIngredientCommand.cs",
@@ -769,6 +1133,7 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2026-05-29T02:03:08.393Z"
+>>>>>>> main
             }
           ]
         }
