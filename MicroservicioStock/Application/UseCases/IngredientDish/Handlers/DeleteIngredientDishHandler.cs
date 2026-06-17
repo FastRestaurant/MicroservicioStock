@@ -1,6 +1,7 @@
 ﻿using Application.Interfaces.Handlers.IngredientDish;
 using Application.Interfaces.Repositories;
 using Application.UseCases.IngredientDish.Commands;
+using Domain.Exceptions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,11 +22,11 @@ namespace Application.UseCases.IngredientDish.Handlers
         public async Task<string> Handle(DeleteIngredientDishCommand command)
         {
             if(command == null)
-                return "Datos invalidos";
+                throw new ValidationException("Datos invalidos");
 
             var ingredientDish = await _IngredientDishRepository.GetByIdAsync(command.Id);
             if (ingredientDish == null)
-                return "El ingrediente del plato no existe";
+                throw new NotFoundException("El ingrediente del plato no existe");
             await _IngredientDishRepository.DeleteAsync(ingredientDish);
             return "OK";
         }

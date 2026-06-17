@@ -11,6 +11,6 @@ namespace Application.DTOs.Stock
 
         public int Count { get; set; }
 
-        public Guid Id_Drink { get; set; }
+        public Guid? Id_Drink { get; set; }
     }
 }

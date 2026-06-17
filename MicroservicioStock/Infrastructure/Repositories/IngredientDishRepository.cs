@@ -20,6 +20,7 @@ namespace Infrastructure.Repositories
 
         public async Task AddAsync(IngredientDish ingredientDish)
         {
+            await _context.IngredientDish.AddAsync(ingredientDish);
             await _context.SaveChangesAsync();
         }
 
@@ -31,12 +32,16 @@ namespace Infrastructure.Repositories
 
         public async Task<List<IngredientDish>> GetAllAsync()
         {
-            return await _context.IngredientDish.ToListAsync();
+            return await _context.IngredientDish
+                .Include(x => x.Ingredient)
+                .ToListAsync();
         }
 
-        public async Task<IngredientDish> GetByIdAsync(Guid id)
+        public async Task<IngredientDish?> GetByIdAsync(Guid id)
         {
-            return await _context.IngredientDish.FindAsync(id);
+            return await _context.IngredientDish
+                .Include(x => x.Ingredient)
+                .FirstOrDefaultAsync(x => x.IdIngredientDish == id);
         }
     }
 }

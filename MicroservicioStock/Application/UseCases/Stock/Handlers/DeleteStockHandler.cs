@@ -1,6 +1,7 @@
 ﻿using Application.Interfaces.Handlers.Stock;
 using Application.Interfaces.Repositories;
 using Application.UseCases.Stock.Commands;
+using Domain.Exceptions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,11 +22,11 @@ namespace Application.UseCases.Stock.Handlers
         {
             
             if (command == null)
-                return "Stock no encontrado";
+                throw new ValidationException("Datos inválidos");
 
             var stock = await _stockRepository.GetByIdAsync(command.Id);
             if(stock == null)
-                return "Stock no encontrado";
+                throw new NotFoundException("Stock no encontrado");
 
             await _stockRepository.DeleteAsync(command.Id);
             return "Stock eliminado correctamente";

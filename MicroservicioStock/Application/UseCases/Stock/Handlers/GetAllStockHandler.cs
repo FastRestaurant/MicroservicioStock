@@ -2,6 +2,7 @@
 using Application.Interfaces.Handlers.Stock;
 using Application.Interfaces.Repositories;
 using Application.UseCases.Stock.Queries;
+using Domain.Exceptions;
 
 namespace Application.UseCases.Stock.Handlers
 {
@@ -19,7 +20,7 @@ namespace Application.UseCases.Stock.Handlers
             var stocks = await _stockRepository.GetAllAsync();
 
             if (stocks == null || !stocks.Any())
-                return (new List<StockResponseDTO>(), "No hay productos en stock");
+                throw new NotFoundException("No hay productos en stock");
 
             var stockDtos = stocks.Select(stockEntity => new StockResponseDTO
             {

@@ -17,6 +17,7 @@ namespace Infrastructure.Persistence
         public DbSet<Domain.Entities.Ingredient> Ingredient { get; set; }
         public DbSet<Domain.Entities.Stock> Stock { get; set; }
         public DbSet<Domain.Entities.IngredientDish> IngredientDish { get; set; }
+        public DbSet<Domain.Entities.StockMovement> StockMovements { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -24,6 +25,8 @@ namespace Infrastructure.Persistence
             {
                 entity.HasKey(e => e.Id);
                 entity.Property(t => t.Id).ValueGeneratedOnAdd();
+                entity.Property(t => t.Name).IsRequired().HasMaxLength(150);
+                entity.HasIndex(t => t.Name).IsUnique();
 
                 entity.HasOne<Domain.Entities.Stock>(s => s.Stock)
                     .WithMany(g => g.Ingredients)
@@ -34,6 +37,7 @@ namespace Infrastructure.Persistence
             {
                 entity.HasKey(e => e.Id);
                 entity.Property(t => t.Id).ValueGeneratedOnAdd();
+                entity.HasIndex(t => t.Id_Drink);
 
 
             });
@@ -41,16 +45,31 @@ namespace Infrastructure.Persistence
             {
 
                 entity.HasKey(x => x.IdIngredientDish);
+                entity.Property(x => x.IdIngredientDish).ValueGeneratedOnAdd();
+                entity.Property(x => x.RequiredQuantity).IsRequired();
+                entity.HasIndex(x => new { x.Id_Dish, x.Id_Ingredient }).IsUnique();
 
                 entity.HasOne(x => x.Ingredient)
                     .WithMany(x => x.IngredientDishes)
                     .HasForeignKey(x => x.Id_Ingredient)
                     .OnDelete(DeleteBehavior.Cascade);
+            });
 
-                //entity.HasOne(x => x.Dish)
-                //    .WithMany(x => x.IngredientDishes)
-                //    .HasForeignKey(x => x.Id_Dish)
-                //    .OnDelete(DeleteBehavior.Cascade);
+            modelBuilder.Entity<Domain.Entities.StockMovement>(entity =>
+            {
+                entity.HasKey(x => x.Id);
+                entity.Property(x => x.Id).ValueGeneratedOnAdd();
+                entity.Property(x => x.ProductType).IsRequired().HasMaxLength(20);
+                entity.Property(x => x.MovementType).IsRequired().HasMaxLength(20);
+                entity.Property(x => x.Quantity).IsRequired();
+                entity.Property(x => x.CreatedAt).IsRequired();
+                entity.HasIndex(x => new { x.OrderItemId, x.StockId, x.MovementType }).IsUnique();
+                entity.HasIndex(x => new { x.OrderId, x.OrderItemId });
+
+                entity.HasOne(x => x.Stock)
+                    .WithMany(x => x.Movements)
+                    .HasForeignKey(x => x.StockId)
+                    .OnDelete(DeleteBehavior.Restrict);
             });
 
         }

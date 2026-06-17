@@ -2,6 +2,7 @@
 using Application.Interfaces.Handlers.Stock;
 using Application.Interfaces.Repositories;
 using Application.UseCases.Stock.Commands;
+using Domain.Exceptions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,28 +14,22 @@ namespace Application.UseCases.Stock.Handlers
     public class UpdateStockHandler : IUpdateStockHandler
     {
         private readonly IStockRepository _stockRepository;
-        //private readonly IDrinkRepository _drinkRepository;
 
-        public UpdateStockHandler(IStockRepository stockRepository/*, IDrinkRepository drinkRepository*/)
+        public UpdateStockHandler(IStockRepository stockRepository)
         {
             _stockRepository = stockRepository;
-            //_drinkRepository = drinkRepository;
         }
         public async Task<string> Handle(Guid id, UpdateStockCommand command)
         {
             if (command == null)
-                return "Datos inválidos";
+                throw new ValidationException("Datos inválidos");
 
-            if (command.Count <= 0)
-                return "Cantidad inválida";
+            if (command.Count < 0)
+                throw new ValidationException("Cantidad inválida");
 
-            //if(command.Id_Drink == null)
-            //    return "ID de bebida inválido";
-            //var drinkExists = await _drinkRepository.GetByIdAsync(command.Id_Drink);
-
-            //if (drinkExists==null)
-            //    return "Bebida no encontrada";
             var existing = await _stockRepository.GetByIdAsync(id);
+            if (existing == null)
+                throw new NotFoundException("Stock no encontrado");
 
             existing.Count = command.Count;
 

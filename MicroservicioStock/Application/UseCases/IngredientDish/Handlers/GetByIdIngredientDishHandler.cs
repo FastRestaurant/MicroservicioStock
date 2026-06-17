@@ -3,6 +3,7 @@ using Application.DTOs.IngredientsDTO;
 using Application.Interfaces.Handlers.IngredientDish;
 using Application.Interfaces.Repositories;
 using Application.UseCases.IngredientDish.Queries;
+using Domain.Exceptions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,20 +24,21 @@ namespace Application.UseCases.IngredientDish.Handlers
         public async Task<(IngredientDishResponseDTO ingredientDish, string message)> Handle(GetByIdIngredientDishQuery query)
         {
             if (query == null)
-                return (new IngredientDishResponseDTO(), "Datos inválidos");
+                throw new ValidationException("Datos inválidos");
             if (query.Id == Guid.Empty)
-                return (new IngredientDishResponseDTO(), "Id inválido");
+                throw new ValidationException("Id inválido");
 
 
             var ingredientDish = await _IngredientDishRepository.GetByIdAsync(query.Id);
             if (ingredientDish == null)
-                return (new IngredientDishResponseDTO(), "El ingrediente del plato no existe");
+                throw new NotFoundException("El ingrediente del plato no existe");
 
             return ( new IngredientDishResponseDTO
             {
                 IdIngredientDish = ingredientDish.IdIngredientDish,
                 Id_Ingredient = ingredientDish.Id_Ingredient,
-                Id_Dish = ingredientDish.Id_Dish
+                Id_Dish = ingredientDish.Id_Dish,
+                RequiredQuantity = ingredientDish.RequiredQuantity
             }, "OK");
         }
     }

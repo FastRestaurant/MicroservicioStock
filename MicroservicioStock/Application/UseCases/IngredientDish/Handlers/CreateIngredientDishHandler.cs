@@ -1,6 +1,7 @@
 ﻿using Application.Interfaces.Handlers.IngredientDish;
 using Application.Interfaces.Repositories;
 using Application.UseCases.IngredientDish.Commands;
+using Domain.Exceptions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,42 +14,40 @@ namespace Application.UseCases.IngredientDish.Handlers
     {
         private readonly IIngredientDishRepository _IngredientDishRepository;
         private readonly IIngredientRepository _IngredientRepository;
-        //private readonly IDishRepository _DishRepository;
 
-        public CreateIngredientDishHandler(IIngredientDishRepository IngredientDishRepository, IIngredientRepository IngredientRepository/*, IDishRepository DishRepository*/)
+        public CreateIngredientDishHandler(IIngredientDishRepository IngredientDishRepository, IIngredientRepository IngredientRepository)
         {
             _IngredientDishRepository = IngredientDishRepository;
             _IngredientRepository = IngredientRepository;
-            // _DishRepository = DishRepository;
         }
 
         public async Task<string> Handle(CreateIngredientDishCommand command)
         {
             if (command == null)
-                return "Datos invalidos";
+                throw new ValidationException("Datos invalidos");
             if(command.Id_Dish == Guid.Empty || command.Id_Ingredient== Guid.Empty)
-                return "Los IDs son requeridos";
+                throw new ValidationException("Los IDs son requeridos");
+
+            if (command.RequiredQuantity <= 0)
+                throw new ValidationException("La cantidad requerida debe ser mayor a cero");
 
 
             var ingredientExists = await _IngredientRepository.GetByIdAsync(command.Id_Ingredient);
             if (ingredientExists == null)
-                return "El ingrediente no existe";
+                throw new NotFoundException("El ingrediente no existe");
 
-            //var dishExists = await _DishRepository.GetByIdAsync(command.Id_Dish);
-            //if (dishExists == null)
-            //    return "El plato no existe";
-            
             var existingIngredientDish = await _IngredientDishRepository.GetAllAsync();
             foreach (var ingredientDish2 in existingIngredientDish)
             {
                 if (ingredientDish2.Id_Ingredient == command.Id_Ingredient && ingredientDish2.Id_Dish == command.Id_Dish)
-                    return "El ingrediente ya está asociado al plato";
+                    throw new ConflictException("El ingrediente ya está asociado al plato");
             }
 
             var ingredientDish = new Domain.Entities.IngredientDish
             {
                 Id_Ingredient = command.Id_Ingredient,
-                Id_Dish = command.Id_Dish
+                Id_Dish = command.Id_Dish,
+                RequiredQuantity = command.RequiredQuantity
             };
 
             await _IngredientDishRepository.AddAsync(ingredientDish);

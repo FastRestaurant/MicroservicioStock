@@ -11,9 +11,11 @@ namespace Domain.Entities
         public Guid Id { get; set; }
         public int Count { get; set; }
 
-        public Guid Id_Drink { get; set; }  
+        public Guid? Id_Drink { get; set; }
 
-        public List<Ingredient> Ingredients { get; set; }
+        public List<Ingredient> Ingredients { get; set; } = new();
+
+        public List<StockMovement> Movements { get; set; } = new();
 
         
     }

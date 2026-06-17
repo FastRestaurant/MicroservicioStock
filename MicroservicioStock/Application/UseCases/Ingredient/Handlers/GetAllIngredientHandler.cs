@@ -2,6 +2,7 @@
 using Application.Interfaces.Handlers.Ingredient;
 using Application.Interfaces.Repositories;
 using Application.UseCases.Ingredient.Queries;
+using Domain.Exceptions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,12 +25,14 @@ namespace Application.UseCases.Ingredient.Handlers
         {
             var ingredients = await _IngredientRepository.GetAllAsync();
             if( ingredients == null || ingredients.Count == 0)
-                return (new  List<IngredientResponseDTO>(), "No hay ingredientes");
+                throw new NotFoundException("No hay ingredientes");
 
             var ingredientsDTO = ingredients.Select(ingredientEntity => new IngredientResponseDTO
             {
                 Id = ingredientEntity.Id,
-                Name = ingredientEntity.Name
+                Name = ingredientEntity.Name,
+                StockId = ingredientEntity.Id_Stock,
+                StockCount = ingredientEntity.Stock?.Count ?? 0
             }).ToList();
             return (ingredientsDTO, "OK");
         }

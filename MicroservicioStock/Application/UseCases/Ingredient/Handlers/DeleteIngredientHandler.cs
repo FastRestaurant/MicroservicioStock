@@ -1,6 +1,7 @@
 ﻿using Application.Interfaces.Handlers.Ingredient;
 using Application.Interfaces.Repositories;
 using Application.UseCases.Ingredient.Commands;
+using Domain.Exceptions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,10 +22,10 @@ namespace Application.UseCases.Ingredient.Handlers
         public async Task<string> Handle(DeleteIngredientCommand command)
         {
             if (command == null)
-                return "Datos invalidos";
+                throw new ValidationException("Datos invalidos");
             var ingredient = await _IngredientRepository.GetByIdAsync(command.Id);
             if (ingredient == null)
-                return "El ingrediente no existe";
+                throw new NotFoundException("El ingrediente no existe");
             await _IngredientRepository.DeleteAsync(ingredient);
             return "OK";
         }

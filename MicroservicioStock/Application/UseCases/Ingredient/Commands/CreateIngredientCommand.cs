@@ -10,11 +10,13 @@ namespace Application.UseCases.Ingredient.Commands
     {
        
         public string Name { get; }
+        public int InitialStock { get; }
 
-        public CreateIngredientCommand(string name)
+        public CreateIngredientCommand(string name, int initialStock)
         {
-            
+             
             Name = name;
+            InitialStock = initialStock;
         }
     }
 }

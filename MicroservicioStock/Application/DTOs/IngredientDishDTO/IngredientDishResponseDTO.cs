@@ -11,5 +11,6 @@ namespace Application.DTOs.IngredientDishDTO
         public Guid IdIngredientDish { get; set; }
         public Guid Id_Ingredient { get; set; }
         public Guid Id_Dish { get; set; }
+        public int RequiredQuantity { get; set; }
     }
 }

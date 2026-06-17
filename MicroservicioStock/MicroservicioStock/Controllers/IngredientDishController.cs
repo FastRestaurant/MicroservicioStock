@@ -1,9 +1,11 @@
 ﻿using Application.Interfaces.Handlers.Ingredient;
 using Application.Interfaces.Handlers.IngredientDish;
+using Application.DTOs.IngredientDishDTO;
 using Application.UseCases.Ingredient.Commands;
 using Application.UseCases.Ingredient.Queries;
 using Application.UseCases.IngredientDish.Commands;
 using Application.UseCases.IngredientDish.Queries;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -11,6 +13,7 @@ namespace MicroservicioStock.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize(Roles = "Admin")]
     public class IngredientDishController : ControllerBase
     {
         private readonly ICreateIngredientDishHandler _createIngredientDishHandler;
@@ -27,23 +30,19 @@ namespace MicroservicioStock.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreateIngredientDish([FromBody] Guid id_ingredient, Guid id_dish)
+        public async Task<IActionResult> CreateIngredientDish([FromBody] IngredientDishRequestDTO dto)
         {
-            var command = new CreateIngredientDishCommand(id_ingredient, id_dish);
-            var result = await _createIngredientDishHandler.Handle(command);
-            if (result != "OK")
-                return BadRequest(result);
-            return StatusCode(201, result);
+            var command = new CreateIngredientDishCommand(dto.Id_Ingredient, dto.Id_Dish, dto.RequiredQuantity);
+            await _createIngredientDishHandler.Handle(command);
+            return Created(string.Empty, null);
         }
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteIngredientDish(Guid id)
         {
             var command = new DeleteIngredientDishCommand(id);
-            var result = await _deleteIngredientDishHandler.Handle(command);
-            if (result != "OK")
-                return NotFound(result);
-            return StatusCode(204, result);
+            await _deleteIngredientDishHandler.Handle(command);
+            return NoContent();
         }
 
 
@@ -51,9 +50,7 @@ namespace MicroservicioStock.Controllers
         public async Task<IActionResult> GetAllIngredientDishes()
         {
             var query = new GetAllIngredientDishQuery();
-            var (ingredientDishes, message) = await _getAllIngredientDishHandler.Handle(query);
-            if (message != "OK")
-                return NotFound(message);
+            var (ingredientDishes, _) = await _getAllIngredientDishHandler.Handle(query);
             return Ok(ingredientDishes);
         }
 
@@ -61,9 +58,7 @@ namespace MicroservicioStock.Controllers
         public async Task<IActionResult> GetByIdIngredientDish(Guid id)
         {
             var query = new GetByIdIngredientDishQuery(id);
-            var (ingredientDish, message) = await _getByIdIngredientDishHandler.Handle(query);
-            if (message != "OK")
-                return NotFound(message);
+            var (ingredientDish, _) = await _getByIdIngredientDishHandler.Handle(query);
             return Ok(ingredientDish);
         }
     }

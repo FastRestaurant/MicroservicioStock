@@ -2,6 +2,7 @@
 using Application.Interfaces.Handlers.Ingredient;
 using Application.UseCases.Ingredient.Commands;
 using Application.UseCases.Ingredient.Queries;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -9,6 +10,7 @@ namespace MicroservicioStock.Controllers
 {
     [Route("api/v1/[controller]")]
     [ApiController]
+    [Authorize(Roles = "Admin")]
     public class IngredientController : ControllerBase
     {
         private readonly ICreateIngredientHandler _createIngredientHandler;
@@ -27,42 +29,34 @@ namespace MicroservicioStock.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreateIngredient([FromBody] string ingredient)
+        public async Task<IActionResult> CreateIngredient([FromBody] IngredientRequestDTO ingredient)
         {
-            var command = new CreateIngredientCommand(ingredient);
-            var result = await _createIngredientHandler.Handle(command);
-            if (result != "OK")
-                return BadRequest(result);
-            return StatusCode(201, result);
+            var command = new CreateIngredientCommand(ingredient.Name, ingredient.InitialStock);
+            await _createIngredientHandler.Handle(command);
+            return Created(string.Empty, null);
         }
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteIngredient(Guid id)
         {
             var command = new DeleteIngredientCommand(id);
-            var result = await _deleteIngredientHandler.Handle(command);
-            if (result != "OK")
-                return NotFound(result);
-            return StatusCode(204, result);
+            await _deleteIngredientHandler.Handle(command);
+            return NoContent();
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateIngredient(Guid id, [FromBody] string ingredient)
+        public async Task<IActionResult> UpdateIngredient(Guid id, [FromBody] IngredientRequestDTO ingredient)
         {
-            var command = new UpdateIngredientCommand(ingredient);
-            var result = await _updateIngredientHandler.Handle(id, command);
-            if (result != "OK")
-                return NotFound(result);
-            return StatusCode(204, result);
+            var command = new UpdateIngredientCommand(ingredient.Name);
+            await _updateIngredientHandler.Handle(id, command);
+            return NoContent();
         }
 
         [HttpGet]
         public async Task<IActionResult> GetAllIngredients()
         {
             var query = new GetAllIngredientsQuery();
-            var (ingredients, message) = await _getAllIngredientHandler.Handle(query);
-            if (message != "OK")
-                return NotFound(message);
+            var (ingredients, _) = await _getAllIngredientHandler.Handle(query);
             return Ok(ingredients);
         }
 
@@ -70,9 +64,7 @@ namespace MicroservicioStock.Controllers
         public async Task<IActionResult> GetByIdIngredient(Guid id)
         {
             var query = new GetByIdIngredientQuery(id);
-            var (ingredient, message) = await _getByIdIngredientHandler.Handle(query);
-            if (message != "OK")
-                return NotFound(message);
+            var (ingredient, _) = await _getByIdIngredientHandler.Handle(query);
             return Ok(ingredient);
         }
 

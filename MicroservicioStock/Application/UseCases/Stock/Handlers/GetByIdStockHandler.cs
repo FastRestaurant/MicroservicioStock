@@ -2,6 +2,7 @@
 using Application.Interfaces.Handlers.Stock;
 using Application.Interfaces.Repositories;
 using Application.UseCases.Stock.Queries;
+using Domain.Exceptions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,15 +23,15 @@ namespace Application.UseCases.Stock.Handlers
         public async Task<(StockResponseDTO stock, string message)> Handle(GetByIdStockQuery query)
         {
             if (query == null)
-                return (new StockResponseDTO(), "Consulta inválida");
+                throw new ValidationException("Consulta inválida");
 
             if (query.Id == Guid.Empty)
-                return (new StockResponseDTO(), "ID de stock inválido");
+                throw new ValidationException("ID de stock inválido");
 
             var stock = await _stockRepository.GetByIdAsync(query.Id);
 
             if (stock == null)
-                return (new StockResponseDTO(), "Stock no encontrado");
+                throw new NotFoundException("Stock no encontrado");
 
             return (new StockResponseDTO
             {

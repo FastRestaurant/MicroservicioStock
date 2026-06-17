@@ -10,7 +10,7 @@ namespace Application.Interfaces.Repositories
     public interface IIngredientDishRepository
     {
         Task AddAsync(IngredientDish ingredientDish);
-        Task<IngredientDish> GetByIdAsync(Guid id);
+        Task<IngredientDish?> GetByIdAsync(Guid id);
         Task<List<IngredientDish>> GetAllAsync();
         Task DeleteAsync(IngredientDish ingredientDish);
 

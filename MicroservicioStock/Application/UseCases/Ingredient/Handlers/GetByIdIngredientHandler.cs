@@ -2,6 +2,7 @@
 using Application.Interfaces.Handlers.Ingredient;
 using Application.Interfaces.Repositories;
 using Application.UseCases.Ingredient.Queries;
+using Domain.Exceptions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,18 +23,20 @@ namespace Application.UseCases.Ingredient.Handlers
         public async Task<(IngredientResponseDTO ingredient, string message)> Handle(GetByIdIngredientQuery query)
         {
             if(query == null)
-                return (new IngredientResponseDTO(), "Datos inválidos");
+                throw new ValidationException("Datos inválidos");
             if (query.Id == Guid.Empty)
-                return (new IngredientResponseDTO(), "Id inválido");
+                throw new ValidationException("Id inválido");
 
             var ingredient = await _IngredientRepository.GetByIdAsync(query.Id);
 
             if (ingredient == null)
-                return (new IngredientResponseDTO(), "Ingrediente no encontrado");
+                throw new NotFoundException("Ingrediente no encontrado");
             return (new IngredientResponseDTO
             {
                 Id = ingredient.Id,
-                Name = ingredient.Name
+                Name = ingredient.Name,
+                StockId = ingredient.Id_Stock,
+                StockCount = ingredient.Stock?.Count ?? 0
             }, "OK");
         }
     }

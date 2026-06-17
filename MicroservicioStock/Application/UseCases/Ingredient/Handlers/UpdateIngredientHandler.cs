@@ -2,6 +2,7 @@
 using Application.Interfaces.Handlers.Ingredient;
 using Application.Interfaces.Repositories;
 using Application.UseCases.Ingredient.Commands;
+using Domain.Exceptions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,13 +23,13 @@ namespace Application.UseCases.Ingredient.Handlers
         public async Task<string> Handle(Guid id, UpdateIngredientCommand command)
         {
             if (command == null)
-                return "Datos inválidos";
+                throw new ValidationException("Datos inválidos");
             if (string.IsNullOrEmpty(command.Name))
-                return "El nombre del ingrediente es requerido";
+                throw new ValidationException("El nombre del ingrediente es requerido");
 
             var existingIngredient = await _IngredientRepository.GetByIdAsync(id);
             if (existingIngredient == null)
-                return "Ingrediente no encontrado";
+                throw new NotFoundException("Ingrediente no encontrado");
             
             existingIngredient.Name = command.Name;
 

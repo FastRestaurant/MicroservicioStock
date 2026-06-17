@@ -10,9 +10,9 @@ namespace Application.UseCases.Stock.Commands
     {
         public int Count { get;}
 
-        public Guid Id_Drink { get; }
+        public Guid? Id_Drink { get; }
 
-        public CreateStockCommand(int count, Guid id_Drink)
+        public CreateStockCommand(int count, Guid? id_Drink)
         {
             Count = count;
             Id_Drink = id_Drink;
