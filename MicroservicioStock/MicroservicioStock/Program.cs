@@ -6,6 +6,7 @@ using Application.UseCases.Ingredient.Handlers;
 using Application.UseCases.IngredientDish.Handlers;
 using Application.UseCases.Stock.Handlers;
 using Infrastructure.Persistence;
+using Infrastructure.Persistence.Seed;
 using Infrastructure.Repositories;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
@@ -113,6 +114,7 @@ using (var scope = app.Services.CreateScope())
 {
     var dbContext = scope.ServiceProvider.GetRequiredService<AppDbContext>();
     await dbContext.Database.MigrateAsync();
+    await StockDbSeeder.SeedAsync(dbContext);
 }
 
 // Configure the HTTP request pipeline.
