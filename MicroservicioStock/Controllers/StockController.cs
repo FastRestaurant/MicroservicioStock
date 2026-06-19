@@ -8,7 +8,6 @@ using Microsoft.AspNetCore.Mvc;
 namespace MicroservicioStock.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
     [Route("api/v1/[controller]")]
     public class StockController : ControllerBase
     {
