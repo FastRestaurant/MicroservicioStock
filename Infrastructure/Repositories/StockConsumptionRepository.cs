@@ -79,6 +79,7 @@ namespace Infrastructure.Repositories
             await using var transaction = await _context.Database.BeginTransactionAsync(IsolationLevel.Serializable, cancellationToken);
 
             var consumeMovements = await _context.StockMovements
+                .AsNoTracking()
                 .Where(m => m.OrderId == command.OrderId &&
                             m.OrderItemId == command.OrderItemId &&
                             m.MovementType == ConsumeMovement)
@@ -91,6 +92,7 @@ namespace Infrastructure.Repositories
             }
 
             var releasedStockIds = await _context.StockMovements
+                .AsNoTracking()
                 .Where(m => m.OrderId == command.OrderId &&
                             m.OrderItemId == command.OrderItemId &&
                             m.MovementType == ReleaseMovement)
@@ -144,26 +146,22 @@ namespace Infrastructure.Repositories
 
         private async Task<List<StockRequirement>> GetDishRequirementsAsync(ConsumeStockForOrderCommand command, CancellationToken cancellationToken)
         {
-            var recipeItems = await _context.IngredientDish
-                .Include(x => x.Ingredient)
-                .ThenInclude(x => x.Stock)
+            return await _context.IngredientDish
+                .AsNoTracking()
                 .Where(x => x.Id_Dish == command.ProductId)
-                .ToListAsync(cancellationToken);
-
-            return recipeItems
-                .Where(x => x.Ingredient.Stock != null)
                 .Select(x => new StockRequirement(
                     x.Ingredient.Id_Stock,
                     x.Id_Ingredient,
                     x.Ingredient.Name,
                     x.RequiredQuantity * command.Quantity,
                     x.Ingredient.Stock.Count))
-                .ToList();
+                .ToListAsync(cancellationToken);
         }
 
         private async Task<List<StockRequirement>> GetDrinkRequirementsAsync(ConsumeStockForOrderCommand command, CancellationToken cancellationToken)
         {
             var stock = await _context.Stock
+                .AsNoTracking()
                 .FirstOrDefaultAsync(x => x.Id_Drink == command.ProductId, cancellationToken);
 
             if (stock == null)

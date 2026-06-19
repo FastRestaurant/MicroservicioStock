@@ -27,7 +27,9 @@ namespace Infrastructure.Repositories
 
         public async Task<IEnumerable<Stock>> GetAllAsync()
         {
-            return await _context.Stock.ToListAsync();
+            return await _context.Stock
+                .AsNoTracking()
+                .ToListAsync();
         }
 
         public async Task AddAsync(Stock stock)

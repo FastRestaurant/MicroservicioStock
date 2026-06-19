@@ -33,7 +33,7 @@ namespace Infrastructure.Repositories
         public async Task<List<IngredientDish>> GetAllAsync()
         {
             return await _context.IngredientDish
-                .Include(x => x.Ingredient)
+                .AsNoTracking()
                 .ToListAsync();
         }
 

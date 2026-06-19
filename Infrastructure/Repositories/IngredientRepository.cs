@@ -34,6 +34,7 @@ namespace Infrastructure.Repositories
         public async Task<List<Ingredient>> GetAllAsync()
         {
             return await _context.Ingredient
+                .AsNoTracking()
                 .Include(i => i.Stock)
                 .ToListAsync();
         }
