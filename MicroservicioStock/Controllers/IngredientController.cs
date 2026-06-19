@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace MicroservicioStock.Controllers
 {
-    [Route("api/v1/[controller]")]
+    [Route("api/v1/ingredients")]
     [ApiController]
     [Authorize(Roles = "Admin")]
     public class IngredientController : ControllerBase

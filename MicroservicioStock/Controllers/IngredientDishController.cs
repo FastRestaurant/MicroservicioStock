@@ -11,7 +11,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace MicroservicioStock.Controllers
 {
-    [Route("api/v1/[controller]")]
+    [Route("api/v1/ingredient-dishes")]
     [ApiController]
     [Authorize(Roles = "Admin")]
     public class IngredientDishController : ControllerBase

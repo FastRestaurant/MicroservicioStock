@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace MicroservicioStock.Controllers
 {
     [ApiController]
-    [Route("api/v1/[controller]")]
+    [Route("api/v1/stocks")]
     public class StockController : ControllerBase
     {
         private readonly ICreateStockHandler _createStockHandler;
@@ -67,7 +67,7 @@ namespace MicroservicioStock.Controllers
             return Created(string.Empty, null);
         }
 
-        [HttpPost("consume-for-order")]
+        [HttpPost("consumptions")]
         [Authorize(Roles = "Admin,Waitress")]
         public async Task<IActionResult> ConsumeForOrder(
             [FromBody] ConsumeStockForOrderCommand command,
@@ -77,7 +77,7 @@ namespace MicroservicioStock.Controllers
             return Ok(result);
         }
 
-        [HttpPost("release-for-order")]
+        [HttpPost("releases")]
         [Authorize(Roles = "Admin,Waitress,Kitchen")]
         public async Task<IActionResult> ReleaseForOrder(
             [FromBody] ReleaseStockForOrderCommand command,
