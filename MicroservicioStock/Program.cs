@@ -103,6 +103,7 @@ builder.Services.AddScoped<ICreateIngredientDishHandler, CreateIngredientDishHan
 builder.Services.AddScoped<IDeleteIngredientDishHandler, DeleteIngredientDishHandler>();
 builder.Services.AddScoped<IGetAllIngredientDishHandler, GetAllIngredientDishHandler>();
 builder.Services.AddScoped<IGetByIdIngredientDishHandler, GetByIdIngredientDishHandler>();
+builder.Services.AddScoped<IUpdateIngredientDishHandler, UpdateIngredientDishHandler>();
 
 
 

@@ -1,9 +1,12 @@
-﻿using Application.Interfaces.Handlers.Ingredient;
+﻿using Application.DTOs.IngredientDishDTO;
+using Application.DTOs.IngredientsDTO;
+using Application.Interfaces.Handlers.Ingredient;
 using Application.Interfaces.Handlers.IngredientDish;
-using Application.DTOs.IngredientDishDTO;
 using Application.UseCases.Ingredient.Commands;
+using Application.UseCases.Ingredient.Handlers;
 using Application.UseCases.Ingredient.Queries;
 using Application.UseCases.IngredientDish.Commands;
+using Application.UseCases.IngredientDish.Handlers;
 using Application.UseCases.IngredientDish.Queries;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -20,13 +23,15 @@ namespace MicroservicioStock.Controllers
         private readonly IDeleteIngredientDishHandler _deleteIngredientDishHandler;
         private readonly IGetAllIngredientDishHandler _getAllIngredientDishHandler;
         private readonly IGetByIdIngredientDishHandler _getByIdIngredientDishHandler;
+        private readonly IUpdateIngredientDishHandler _updateIngredientDishHandler;
 
-        public IngredientDishController(ICreateIngredientDishHandler createIngredientDishHandler, IDeleteIngredientDishHandler deleteIngredientDishHandler, IGetAllIngredientDishHandler getAllIngredientDishHandler, IGetByIdIngredientDishHandler getByIdIngredientDishHandler)
+        public IngredientDishController(ICreateIngredientDishHandler createIngredientDishHandler, IDeleteIngredientDishHandler deleteIngredientDishHandler, IGetAllIngredientDishHandler getAllIngredientDishHandler, IGetByIdIngredientDishHandler getByIdIngredientDishHandler, IUpdateIngredientDishHandler updateIngredientDishHandler)
         {
             _createIngredientDishHandler = createIngredientDishHandler;
             _deleteIngredientDishHandler = deleteIngredientDishHandler;
             _getAllIngredientDishHandler = getAllIngredientDishHandler;
             _getByIdIngredientDishHandler = getByIdIngredientDishHandler;
+            _updateIngredientDishHandler = updateIngredientDishHandler;
         }
 
         [HttpPost]
@@ -60,6 +65,14 @@ namespace MicroservicioStock.Controllers
             var query = new GetByIdIngredientDishQuery(id);
             var (ingredientDish, _) = await _getByIdIngredientDishHandler.Handle(query);
             return Ok(ingredientDish);
+        }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateIngredientDish(Guid id, [FromBody] IngredientDishRequestDTO ingredientDish)
+        {
+            var command = new UpdateIngredientDishCommand(ingredientDish.RequiredQuantity);
+            await _updateIngredientDishHandler.Handle(id, command);
+            return NoContent();
         }
     }
 }

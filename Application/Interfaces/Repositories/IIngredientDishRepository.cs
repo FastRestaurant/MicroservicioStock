@@ -13,6 +13,7 @@ namespace Application.Interfaces.Repositories
         Task<IngredientDish?> GetByIdAsync(Guid id);
         Task<List<IngredientDish>> GetAllAsync();
         Task DeleteAsync(IngredientDish ingredientDish);
+        Task UpdateAsync(IngredientDish ingredientDish);
 
     }
 }
