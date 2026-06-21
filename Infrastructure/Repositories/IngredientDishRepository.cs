@@ -43,6 +43,12 @@ namespace Infrastructure.Repositories
                 .Include(x => x.Ingredient)
                 .FirstOrDefaultAsync(x => x.IdIngredientDish == id);
         }
+
+        public async Task UpdateAsync(IngredientDish ingredientDish)
+        {
+            _context.IngredientDish.Update(ingredientDish);
+            await _context.SaveChangesAsync();
+        }
     }
 }
 
