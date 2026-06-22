@@ -18,6 +18,7 @@ namespace MicroservicioStock.Controllers
         private readonly IGetByIdStockHandler _getByIdStockHandler;
         private readonly IConsumeStockForOrderHandler _consumeStockForOrderHandler;
         private readonly IReleaseStockForOrderHandler _releaseStockForOrderHandler;
+        private readonly IReplenishStockHandler _replenishStockHandler;
 
         public StockController(
             ICreateStockHandler createStockHandler,
@@ -26,7 +27,8 @@ namespace MicroservicioStock.Controllers
             IGetAllStockHandler getAllStockHandler,
             IGetByIdStockHandler getByIdStockHandler,
             IConsumeStockForOrderHandler consumeStockForOrderHandler,
-            IReleaseStockForOrderHandler releaseStockForOrderHandler)
+            IReleaseStockForOrderHandler releaseStockForOrderHandler,
+            IReplenishStockHandler replenishStockHandler)
         {
             _createStockHandler = createStockHandler;
             _updateStockHandler = updateStockHandler;
@@ -35,6 +37,7 @@ namespace MicroservicioStock.Controllers
             _getByIdStockHandler = getByIdStockHandler;
             _consumeStockForOrderHandler = consumeStockForOrderHandler;
             _releaseStockForOrderHandler = releaseStockForOrderHandler;
+            _replenishStockHandler = replenishStockHandler;
         }
 
         [HttpGet]
@@ -108,6 +111,17 @@ namespace MicroservicioStock.Controllers
                 new DeleteStockCommand(id));
 
             return NoContent();
+        }
+
+        [HttpPost("{id}/replenishments")]
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> Replenish(Guid id, [FromBody] ReplenishStockDTO dto)
+        {
+            var command = new ReplenishStockCommand(id, dto.Quantity);
+
+            var resultMessage = await _replenishStockHandler.Handle(command);
+
+            return Ok(new { message = resultMessage });
         }
     }
 }

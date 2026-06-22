@@ -29,6 +29,8 @@ builder.Services.AddScoped<IReleaseStockForOrderHandler, ReleaseStockForOrderHan
 builder.Services.AddScoped<IStockRepository, StockRepository>();
 builder.Services.AddScoped<IStockConsumptionRepository, StockConsumptionRepository>();
 
+builder.Services.AddScoped<IReplenishStockHandler, ReplenishStockHandler>();
+
 // Add services to the container.
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
