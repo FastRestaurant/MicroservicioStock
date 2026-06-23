@@ -41,7 +41,7 @@ namespace MicroservicioStock.Controllers
         [Authorize(Roles = "Admin")]
         public async Task<IActionResult> GetAll()
         {
-            var (stocks, _) = await _getAllStockHandler.Handle(
+            var stocks = await _getAllStockHandler.Handle(
                 new GetAllStockQuery());
 
             return Ok(stocks);
@@ -51,7 +51,7 @@ namespace MicroservicioStock.Controllers
         [Authorize(Roles = "Admin")]
         public async Task<IActionResult> GetById(Guid id)
         {
-            var (stock, _) = await _getByIdStockHandler.Handle(
+            var stock = await _getByIdStockHandler.Handle(
                 new GetByIdStockQuery(id));
 
             return Ok(stock);

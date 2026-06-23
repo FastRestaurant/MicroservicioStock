@@ -14,7 +14,7 @@ namespace Application.UseCases.Ingredient.Handlers
             _IngredientRepository = IngredientRepository;
         }
 
-        public async Task<(List<IngredientResponseDTO> ingredientsList, string message)> Handle(GetAllIngredientsQuery query)
+        public async Task<List<IngredientResponseDTO>> Handle(GetAllIngredientsQuery query)
         {
             var ingredients = await _IngredientRepository.GetAllAsync();
 
@@ -25,7 +25,7 @@ namespace Application.UseCases.Ingredient.Handlers
                 StockId = ingredientEntity.Id_Stock,
                 StockCount = ingredientEntity.Stock?.Count ?? 0
             }).ToList();
-            return (ingredientsDTO, "OK");
+            return ingredientsDTO;
         }
     }
 }

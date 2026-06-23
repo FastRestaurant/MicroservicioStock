@@ -56,7 +56,7 @@ namespace MicroservicioStock.Controllers
         public async Task<IActionResult> GetAllIngredients()
         {
             var query = new GetAllIngredientsQuery();
-            var (ingredients, _) = await _getAllIngredientHandler.Handle(query);
+            var ingredients = await _getAllIngredientHandler.Handle(query);
             return Ok(ingredients);
         }
 
@@ -64,7 +64,7 @@ namespace MicroservicioStock.Controllers
         public async Task<IActionResult> GetByIdIngredient(Guid id)
         {
             var query = new GetByIdIngredientQuery(id);
-            var (ingredient, _) = await _getByIdIngredientHandler.Handle(query);
+            var ingredient = await _getByIdIngredientHandler.Handle(query);
             return Ok(ingredient);
         }
 

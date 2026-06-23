@@ -12,6 +12,6 @@ namespace Application.Interfaces.Handlers.IngredientDish
 {
     public interface IGetAllIngredientDishHandler
     {
-        Task<(List<IngredientDishResponseDTO> ingredientDishList, string message)> Handle(GetAllIngredientDishQuery query);
+        Task<List<IngredientDishResponseDTO>> Handle(GetAllIngredientDishQuery query);
     }
 }

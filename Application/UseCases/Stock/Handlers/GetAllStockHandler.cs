@@ -15,7 +15,7 @@ namespace Application.UseCases.Stock.Handlers
             _stockRepository = stockRepository;
         }
 
-        public async Task<(List<StockResponseDTO> Stocks, string message)> Handle(GetAllStockQuery query)
+        public async Task<List<StockResponseDTO>> Handle(GetAllStockQuery query)
         {
             var stocks = await _stockRepository.GetAllAsync();
 
@@ -26,7 +26,7 @@ namespace Application.UseCases.Stock.Handlers
                 Id_Drink = stockEntity.Id_Drink
             }).ToList();
 
-            return (stockDtos, "OK");
+            return stockDtos;
         }
     }
 }

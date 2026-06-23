@@ -21,7 +21,7 @@ namespace Application.UseCases.IngredientDish.Handlers
             _IngredientDishRepository = IngredientDishRepository;
         }
 
-        public async Task<(List<IngredientDishResponseDTO> ingredientDishList, string message)> Handle(GetAllIngredientDishQuery query)
+        public async Task<List<IngredientDishResponseDTO>> Handle(GetAllIngredientDishQuery query)
         {
             var ingredientDishes = await _IngredientDishRepository.GetAllAsync();
 
@@ -32,7 +32,7 @@ namespace Application.UseCases.IngredientDish.Handlers
                 Id_Dish = ingredientDishEntity.Id_Dish,
                 RequiredQuantity = ingredientDishEntity.RequiredQuantity
             }).ToList();
-            return (ingredientDishesDTO, "OK");
+            return ingredientDishesDTO;
         }
     }
 }

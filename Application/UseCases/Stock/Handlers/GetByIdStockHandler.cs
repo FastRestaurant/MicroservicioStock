@@ -20,7 +20,7 @@ namespace Application.UseCases.Stock.Handlers
             _stockRepository = stockRepository;
         }
 
-        public async Task<(StockResponseDTO stock, string message)> Handle(GetByIdStockQuery query)
+        public async Task<StockResponseDTO> Handle(GetByIdStockQuery query)
         {
             if (query == null)
                 throw new ValidationException("Consulta inválida");
@@ -33,13 +33,12 @@ namespace Application.UseCases.Stock.Handlers
             if (stock == null)
                 throw new NotFoundException("Stock no encontrado");
 
-            return (new StockResponseDTO
+            return new StockResponseDTO
             {
                 Id = stock.Id,
                 Count = stock.Count,
                 Id_Drink = stock.Id_Drink
-
-            }, "OK");
+            };
         }
     }
 }

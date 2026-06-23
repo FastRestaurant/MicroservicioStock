@@ -20,7 +20,7 @@ namespace Application.UseCases.Ingredient.Handlers
             _IngredientRepository = IngredientRepository;
         }
 
-        public async Task<(IngredientResponseDTO ingredient, string message)> Handle(GetByIdIngredientQuery query)
+        public async Task<IngredientResponseDTO> Handle(GetByIdIngredientQuery query)
         {
             if(query == null)
                 throw new ValidationException("Datos inválidos");
@@ -31,13 +31,13 @@ namespace Application.UseCases.Ingredient.Handlers
 
             if (ingredient == null)
                 throw new NotFoundException("Ingrediente no encontrado");
-            return (new IngredientResponseDTO
+            return new IngredientResponseDTO
             {
                 Id = ingredient.Id,
                 Name = ingredient.Name,
                 StockId = ingredient.Id_Stock,
                 StockCount = ingredient.Stock?.Count ?? 0
-            }, "OK");
+            };
         }
     }
 }

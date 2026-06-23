@@ -10,6 +10,6 @@ namespace Application.Interfaces.Handlers.Ingredient
 {
     public interface IGetByIdIngredientHandler
     {
-        Task<(IngredientResponseDTO ingredient, string message)> Handle(GetByIdIngredientQuery query);
+        Task<IngredientResponseDTO> Handle(GetByIdIngredientQuery query);
     }
 }

@@ -21,7 +21,7 @@ namespace Application.UseCases.IngredientDish.Handlers
             _IngredientDishRepository = IngredientDishRepository;
         }
 
-        public async Task<(IngredientDishResponseDTO ingredientDish, string message)> Handle(GetByIdIngredientDishQuery query)
+        public async Task<IngredientDishResponseDTO> Handle(GetByIdIngredientDishQuery query)
         {
             if (query == null)
                 throw new ValidationException("Datos inválidos");
@@ -33,13 +33,13 @@ namespace Application.UseCases.IngredientDish.Handlers
             if (ingredientDish == null)
                 throw new NotFoundException("El ingrediente del plato no existe");
 
-            return ( new IngredientDishResponseDTO
+            return new IngredientDishResponseDTO
             {
                 IdIngredientDish = ingredientDish.IdIngredientDish,
                 Id_Ingredient = ingredientDish.Id_Ingredient,
                 Id_Dish = ingredientDish.Id_Dish,
                 RequiredQuantity = ingredientDish.RequiredQuantity
-            }, "OK");
+            };
         }
     }
 }
