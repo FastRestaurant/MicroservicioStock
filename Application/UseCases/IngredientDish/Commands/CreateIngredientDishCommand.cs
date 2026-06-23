@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Linq;
-
-namespace Application.UseCases.IngredientDish.Commands
+﻿namespace Application.UseCases.IngredientDish.Commands
 {
     public class CreateIngredientDishCommand
     {

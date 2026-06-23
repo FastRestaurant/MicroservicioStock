@@ -34,7 +34,7 @@ namespace Application.UseCases.Stock.Handlers
             };
 
             await _stockRepository.AddAsync(stock);
-            return "OK";
+            return "Stock creado correctamente";
         }
     }
 }

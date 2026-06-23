@@ -1,6 +1,21 @@
 @MicroservicioStock_HostAddress = http://localhost:5093
 
-GET {{MicroservicioStock_HostAddress}}/weatherforecast/
+### Obtener todos los stocks (requiere JWT de Admin)
+GET {{MicroservicioStock_HostAddress}}/api/v1/stocks
 Accept: application/json
+
+###
+
+### Consumir stock para un item de orden (roles Admin, Waitress)
+POST {{MicroservicioStock_HostAddress}}/api/v1/stocks/consumptions
+Content-Type: application/json
+
+{
+  "orderId": "00000000-0000-0000-0000-000000000001",
+  "orderItemId": "00000000-0000-0000-0000-000000000002",
+  "productId": "00000000-0000-0000-0000-000000000003",
+  "productType": "Drink",
+  "quantity": 2
+}
 
 ###
