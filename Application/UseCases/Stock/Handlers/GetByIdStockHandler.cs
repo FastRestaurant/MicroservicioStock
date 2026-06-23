@@ -35,6 +35,7 @@ namespace Application.UseCases.Stock.Handlers
 
             return (new StockResponseDTO
             {
+                Id = stock.Id,
                 Count = stock.Count,
                 Id_Drink = stock.Id_Drink
 

@@ -1,5 +1,6 @@
 using Application.DTOs;
 using Domain.Exceptions;
+using Microsoft.EntityFrameworkCore;
 
 namespace MicroservicioStock.Middlewares
 {
@@ -39,6 +40,10 @@ namespace MicroservicioStock.Middlewares
             catch (DomainException exception)
             {
                 await WriteErrorAsync(context, StatusCodes.Status400BadRequest, exception.Message);
+            }
+            catch (DbUpdateException)
+            {
+                await WriteErrorAsync(context, StatusCodes.Status409Conflict, "El recurso no se pudo modificar debido a un conflicto de datos.");
             }
             catch (Exception exception)
             {

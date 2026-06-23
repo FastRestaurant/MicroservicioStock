@@ -2,13 +2,6 @@
 using Application.Interfaces.Handlers.Ingredient;
 using Application.Interfaces.Repositories;
 using Application.UseCases.Ingredient.Queries;
-using Domain.Exceptions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Application.UseCases.Ingredient.Handlers
 {
@@ -24,8 +17,6 @@ namespace Application.UseCases.Ingredient.Handlers
         public async Task<(List<IngredientResponseDTO> ingredientsList, string message)> Handle(GetAllIngredientsQuery query)
         {
             var ingredients = await _IngredientRepository.GetAllAsync();
-            if( ingredients == null || ingredients.Count == 0)
-                throw new NotFoundException("No hay ingredientes");
 
             var ingredientsDTO = ingredients.Select(ingredientEntity => new IngredientResponseDTO
             {

@@ -24,8 +24,6 @@ namespace Application.UseCases.IngredientDish.Handlers
         public async Task<(List<IngredientDishResponseDTO> ingredientDishList, string message)> Handle(GetAllIngredientDishQuery query)
         {
             var ingredientDishes = await _IngredientDishRepository.GetAllAsync();
-            if (ingredientDishes == null || ingredientDishes.Count == 0)
-                throw new NotFoundException("No hay ingredientes en los platos");
 
             var ingredientDishesDTO = ingredientDishes.Select(ingredientDishEntity => new IngredientDishResponseDTO
             {

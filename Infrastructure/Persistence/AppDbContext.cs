@@ -37,9 +37,8 @@ namespace Infrastructure.Persistence
             {
                 entity.HasKey(e => e.Id);
                 entity.Property(t => t.Id).ValueGeneratedOnAdd();
-                entity.HasIndex(t => t.Id_Drink);
-
-
+                entity.HasIndex(t => t.Id_Drink)
+                    .IsUnique();
             });
             modelBuilder.Entity<Domain.Entities.IngredientDish>(entity =>
             {

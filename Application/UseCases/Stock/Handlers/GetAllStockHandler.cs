@@ -19,11 +19,9 @@ namespace Application.UseCases.Stock.Handlers
         {
             var stocks = await _stockRepository.GetAllAsync();
 
-            if (stocks == null || !stocks.Any())
-                throw new NotFoundException("No hay productos en stock");
-
             var stockDtos = stocks.Select(stockEntity => new StockResponseDTO
             {
+                Id = stockEntity.Id,
                 Count = stockEntity.Count,
                 Id_Drink = stockEntity.Id_Drink
             }).ToList();

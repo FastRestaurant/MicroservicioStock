@@ -2,10 +2,12 @@ using System.Data;
 using Application.DTOs.Stock;
 using Application.Interfaces.Repositories;
 using Application.UseCases.Stock.Commands;
+using Domain.Constants;
 using Domain.Entities;
 using Domain.Exceptions;
 using Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 
 namespace Infrastructure.Repositories
 {
@@ -13,14 +15,14 @@ namespace Infrastructure.Repositories
     {
         private const string ConsumeMovement = "Consume";
         private const string ReleaseMovement = "Release";
-        private const string DishProductType = "Dish";
-        private const string DrinkProductType = "Drink";
 
         private readonly AppDbContext _context;
+        private readonly ILogger<StockConsumptionRepository> _logger;
 
-        public StockConsumptionRepository(AppDbContext context)
+        public StockConsumptionRepository(AppDbContext context, ILogger<StockConsumptionRepository> logger)
         {
             _context = context;
+            _logger = logger;
         }
 
         public async Task<StockOperationResultDTO> ConsumeForOrderAsync(ConsumeStockForOrderCommand command, CancellationToken cancellationToken = default)
@@ -34,6 +36,7 @@ namespace Infrastructure.Repositories
 
             if (alreadyConsumed)
             {
+                _logger.LogDebug("Item {OrderItemId} ya tenia stock descontado; consume idempotente.", command.OrderItemId);
                 await transaction.CommitAsync(cancellationToken);
                 return StockOperationResultDTO.Ok("El stock ya fue descontado para este item.");
             }
@@ -41,8 +44,27 @@ namespace Infrastructure.Repositories
             var requirements = await GetRequirementsAsync(command, cancellationToken);
             if (requirements.Count == 0)
             {
-                await transaction.CommitAsync(cancellationToken);
-                throw new DomainException("No hay stock configurado para el producto solicitado.");
+                _logger.LogWarning("No hay stock configurado para el producto {ProductId} ({ProductType}).", command.ProductId, command.ProductType);
+                await transaction.RollbackAsync(cancellationToken);
+                return StockOperationResultDTO.Fail("No hay stock configurado para el producto solicitado.");
+            }
+
+            var missingItems = requirements
+                .Where(r => r.RequiredQuantity > r.AvailableQuantity)
+                .Select(r => new StockMissingItemDTO
+                {
+                    IngredientId = r.IngredientId,
+                    Name = r.Name,
+                    RequiredQuantity = r.RequiredQuantity,
+                    AvailableQuantity = r.AvailableQuantity
+                })
+                .ToList();
+
+            if (missingItems.Count > 0)
+            {
+                _logger.LogWarning("Stock insuficiente para el item {OrderItemId}: {MissingCount} ingrediente(s) faltante(s).", command.OrderItemId, missingItems.Count);
+                await transaction.RollbackAsync(cancellationToken);
+                return StockOperationResultDTO.Fail("No hay stock suficiente para uno o mas ingredientes.", missingItems);
             }
 
             foreach (var requirement in requirements)
@@ -51,7 +73,7 @@ namespace Infrastructure.Repositories
                 if (!updated)
                 {
                     await transaction.RollbackAsync(cancellationToken);
-                    throw new DomainException($"Stock insuficiente para {requirement.Name}.");
+                    return StockOperationResultDTO.Fail($"Stock insuficiente para {requirement.Name}.");
                 }
 
                 _context.StockMovements.Add(new StockMovement
@@ -87,6 +109,7 @@ namespace Infrastructure.Repositories
 
             if (consumeMovements.Count == 0)
             {
+                _logger.LogDebug("Item {OrderItemId} no tenia stock consumido para liberar.", command.OrderItemId);
                 await transaction.CommitAsync(cancellationToken);
                 return StockOperationResultDTO.Ok("No habia stock consumido para liberar.");
             }
@@ -105,13 +128,19 @@ namespace Infrastructure.Repositories
 
             if (pendingReleaseMovements.Count == 0)
             {
+                _logger.LogDebug("Item {OrderItemId} ya tenia su stock liberado; release idempotente.", command.OrderItemId);
                 await transaction.CommitAsync(cancellationToken);
                 return StockOperationResultDTO.Ok("El stock ya habia sido liberado para este item.");
             }
 
             foreach (var movement in pendingReleaseMovements)
             {
-                await IncreaseStockAsync(movement.StockId, movement.Quantity, cancellationToken);
+                var increased = await TryIncreaseStockAsync(movement.StockId, movement.Quantity, cancellationToken);
+                if (!increased)
+                {
+                    await transaction.RollbackAsync(cancellationToken);
+                    throw new NotFoundException($"El stock asociado a la orden ya no existe y no se puede liberar.");
+                }
 
                 _context.StockMovements.Add(new StockMovement
                 {
@@ -135,10 +164,10 @@ namespace Infrastructure.Repositories
 
         private async Task<List<StockRequirement>> GetRequirementsAsync(ConsumeStockForOrderCommand command, CancellationToken cancellationToken)
         {
-            if (command.ProductType.Equals(DishProductType, StringComparison.OrdinalIgnoreCase))
+            if (command.ProductType.Equals(ProductTypes.Dish, StringComparison.OrdinalIgnoreCase))
                 return await GetDishRequirementsAsync(command, cancellationToken);
 
-            if (command.ProductType.Equals(DrinkProductType, StringComparison.OrdinalIgnoreCase))
+            if (command.ProductType.Equals(ProductTypes.Drink, StringComparison.OrdinalIgnoreCase))
                 return await GetDrinkRequirementsAsync(command, cancellationToken);
 
             return new List<StockRequirement>();
@@ -182,11 +211,13 @@ namespace Infrastructure.Repositories
             return affectedRows == 1;
         }
 
-        private async Task IncreaseStockAsync(Guid stockId, int quantity, CancellationToken cancellationToken)
+        private async Task<bool> TryIncreaseStockAsync(Guid stockId, int quantity, CancellationToken cancellationToken)
         {
-            await _context.Database.ExecuteSqlInterpolatedAsync(
+            var affectedRows = await _context.Database.ExecuteSqlInterpolatedAsync(
                 $"UPDATE [Stock] SET [Count] = [Count] + {quantity} WHERE [Id] = {stockId}",
                 cancellationToken);
+
+            return affectedRows == 1;
         }
 
         private sealed record StockRequirement(Guid StockId, Guid? IngredientId, string Name, int RequiredQuantity, int AvailableQuantity);

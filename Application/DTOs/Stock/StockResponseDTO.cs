@@ -8,6 +8,7 @@ namespace Application.DTOs.Stock
 {
     public class StockResponseDTO
     {
+        public Guid Id { get; set; }
 
         public int Count { get; set; }
 

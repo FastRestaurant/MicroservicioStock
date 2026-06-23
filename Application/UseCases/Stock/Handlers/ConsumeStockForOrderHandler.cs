@@ -2,6 +2,7 @@ using Application.DTOs.Stock;
 using Application.Interfaces.Handlers.Stock;
 using Application.Interfaces.Repositories;
 using Application.UseCases.Stock.Commands;
+using Domain.Constants;
 using Domain.Exceptions;
 
 namespace Application.UseCases.Stock.Handlers
@@ -25,6 +26,9 @@ namespace Application.UseCases.Stock.Handlers
 
             if (string.IsNullOrWhiteSpace(command.ProductType))
                 throw new ValidationException("El tipo de producto es obligatorio");
+
+            if (!ProductTypes.IsValid(command.ProductType))
+                throw new ValidationException("El tipo de producto debe ser 'Dish' o 'Drink'.");
 
             if (command.Quantity <= 0)
                 throw new ValidationException("La cantidad debe ser mayor a cero");
