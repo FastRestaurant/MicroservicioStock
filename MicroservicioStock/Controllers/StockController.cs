@@ -43,10 +43,13 @@ namespace MicroservicioStock.Controllers
 
         [HttpGet]
         [Authorize(Roles = "Admin")]
-        public async Task<IActionResult> GetAll()
+        public async Task<IActionResult> GetAll(
+            [FromQuery] int page = 1,
+            [FromQuery] int pageSize = 10,
+            [FromQuery] bool onlyDrinks = false)
         {
             var stocks = await _getAllStockHandler.Handle(
-                new GetAllStockQuery());
+                new GetAllStockQuery(page, pageSize, onlyDrinks));
 
             return Ok(stocks);
         }
@@ -61,7 +64,7 @@ namespace MicroservicioStock.Controllers
             return Ok(stock);
         }
         [HttpGet("drink/{drinkId}")]
-        //[Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> GetByDrinkId(Guid drinkId)
         {
             var stock = await _getByDrinkIdStockHandler.Handle(

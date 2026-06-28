@@ -10,6 +10,6 @@ namespace Application.Interfaces.Handlers.Ingredient
 {
     public interface IGetAllIngredientHandler
     {
-        Task<List<IngredientResponseDTO>> Handle(GetAllIngredientsQuery query);
+        Task<Application.DTOs.PagedResponseDTO<IngredientResponseDTO>> Handle(GetAllIngredientsQuery query);
     }
 }

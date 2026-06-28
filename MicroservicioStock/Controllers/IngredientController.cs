@@ -53,9 +53,11 @@ namespace MicroservicioStock.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAllIngredients()
+        public async Task<IActionResult> GetAllIngredients(
+            [FromQuery] int page = 1,
+            [FromQuery] int pageSize = 10)
         {
-            var query = new GetAllIngredientsQuery();
+            var query = new GetAllIngredientsQuery(page, pageSize);
             var ingredients = await _getAllIngredientHandler.Handle(query);
             return Ok(ingredients);
         }

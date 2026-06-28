@@ -10,6 +10,6 @@ namespace Application.Interfaces.Handlers.Stock
 {
     public interface IGetAllStockHandler
     {
-        Task<List<StockResponseDTO>> Handle(GetAllStockQuery query);
+        Task<Application.DTOs.PagedResponseDTO<StockResponseDTO>> Handle(GetAllStockQuery query);
     }
 }

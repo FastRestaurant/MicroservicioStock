@@ -25,11 +25,25 @@ namespace Infrastructure.Repositories
                 .FirstOrDefaultAsync(s => s.Id == id);
         }
 
-        public async Task<IEnumerable<Stock>> GetAllAsync()
+        public async Task<List<Stock>> GetAllAsync(int page, int pageSize, bool onlyDrinks = false)
         {
-            return await _context.Stock
-                .AsNoTracking()
+            var query = _context.Stock.AsNoTracking();
+
+            if (onlyDrinks)
+                query = query.Where(stock => stock.Id_Drink != null);
+
+            return await query
+                .OrderBy(stock => stock.Id)
+                .Skip((page - 1) * pageSize)
+                .Take(pageSize)
                 .ToListAsync();
+        }
+
+        public async Task<int> CountAsync(bool onlyDrinks = false)
+        {
+            return onlyDrinks
+                ? await _context.Stock.CountAsync(stock => stock.Id_Drink != null)
+                : await _context.Stock.CountAsync();
         }
 
         public async Task AddAsync(Stock stock)

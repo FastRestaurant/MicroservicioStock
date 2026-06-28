@@ -10,7 +10,8 @@ namespace Application.Interfaces.Repositories
     public interface IStockRepository
     {
         Task<Stock?> GetByIdAsync(Guid id);
-        Task<IEnumerable<Stock>> GetAllAsync();
+        Task<List<Stock>> GetAllAsync(int page, int pageSize, bool onlyDrinks = false);
+        Task<int> CountAsync(bool onlyDrinks = false);
         Task AddAsync(Stock stock);
         Task UpdateAsync(Stock stock);
         Task DeleteAsync(Guid id);

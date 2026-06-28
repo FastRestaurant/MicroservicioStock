@@ -31,12 +31,20 @@ namespace Infrastructure.Repositories
             await _context.SaveChangesAsync();
         }
 
-        public async Task<List<Ingredient>> GetAllAsync()
+        public async Task<List<Ingredient>> GetAllAsync(int page, int pageSize)
         {
             return await _context.Ingredient
                 .AsNoTracking()
                 .Include(i => i.Stock)
+                .OrderBy(i => i.Name)
+                .Skip((page - 1) * pageSize)
+                .Take(pageSize)
                 .ToListAsync();
+        }
+
+        public async Task<int> CountAsync()
+        {
+            return await _context.Ingredient.CountAsync();
         }
 
         public async Task<Ingredient?> GetByIdAsync(Guid id)

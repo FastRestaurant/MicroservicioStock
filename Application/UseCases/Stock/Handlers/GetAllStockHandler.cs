@@ -15,9 +15,13 @@ namespace Application.UseCases.Stock.Handlers
             _stockRepository = stockRepository;
         }
 
-        public async Task<List<StockResponseDTO>> Handle(GetAllStockQuery query)
+        public async Task<Application.DTOs.PagedResponseDTO<StockResponseDTO>> Handle(GetAllStockQuery query)
         {
-            var stocks = await _stockRepository.GetAllAsync();
+            var stocks = await _stockRepository.GetAllAsync(
+                query.Page,
+                query.PageSize,
+                query.OnlyDrinks);
+            var totalItems = await _stockRepository.CountAsync(query.OnlyDrinks);
 
             var stockDtos = stocks.Select(stockEntity => new StockResponseDTO
             {
@@ -26,7 +30,14 @@ namespace Application.UseCases.Stock.Handlers
                 Id_Drink = stockEntity.Id_Drink
             }).ToList();
 
-            return stockDtos;
+            return new Application.DTOs.PagedResponseDTO<StockResponseDTO>
+            {
+                Items = stockDtos,
+                Page = query.Page,
+                PageSize = query.PageSize,
+                TotalItems = totalItems,
+                TotalPages = (int)Math.Ceiling(totalItems / (double)query.PageSize)
+            };
         }
     }
 }
