@@ -1,6 +1,7 @@
 ﻿using Application.DTOs.Stock;
 using Application.Interfaces.Handlers.Stock;
 using Application.UseCases.Stock.Commands;
+using Application.UseCases.Stock.Handlers;
 using Application.UseCases.Stock.Queries;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -16,6 +17,7 @@ namespace MicroservicioStock.Controllers
         private readonly IDeleteStockHandler _deleteStockHandler;
         private readonly IGetAllStockHandler _getAllStockHandler;
         private readonly IGetByIdStockHandler _getByIdStockHandler;
+        private readonly IGetByDrinkIdStockHandler _getByDrinkIdStockHandler;
         private readonly IConsumeStockForOrderHandler _consumeStockForOrderHandler;
         private readonly IReleaseStockForOrderHandler _releaseStockForOrderHandler;
 
@@ -25,6 +27,7 @@ namespace MicroservicioStock.Controllers
             IDeleteStockHandler deleteStockHandler,
             IGetAllStockHandler getAllStockHandler,
             IGetByIdStockHandler getByIdStockHandler,
+            IGetByDrinkIdStockHandler getByDrinkIdStockHandler,
             IConsumeStockForOrderHandler consumeStockForOrderHandler,
             IReleaseStockForOrderHandler releaseStockForOrderHandler)
         {
@@ -33,6 +36,7 @@ namespace MicroservicioStock.Controllers
             _deleteStockHandler = deleteStockHandler;
             _getAllStockHandler = getAllStockHandler;
             _getByIdStockHandler = getByIdStockHandler;
+            _getByDrinkIdStockHandler = getByDrinkIdStockHandler;
             _consumeStockForOrderHandler = consumeStockForOrderHandler;
             _releaseStockForOrderHandler = releaseStockForOrderHandler;
         }
@@ -53,6 +57,15 @@ namespace MicroservicioStock.Controllers
         {
             var stock = await _getByIdStockHandler.Handle(
                 new GetByIdStockQuery(id));
+
+            return Ok(stock);
+        }
+        [HttpGet("drink/{drinkId}")]
+        //[Authorize(Roles = "Admin")]
+        public async Task<IActionResult> GetByDrinkId(Guid drinkId)
+        {
+            var stock = await _getByDrinkIdStockHandler.Handle(
+                new GetByDrinkIdStockQuery(drinkId));
 
             return Ok(stock);
         }

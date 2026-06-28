@@ -14,5 +14,6 @@ namespace Application.Interfaces.Repositories
         Task AddAsync(Stock stock);
         Task UpdateAsync(Stock stock);
         Task DeleteAsync(Guid id);
+        Task <Stock?> GetByDrinkIdAsync(Guid drinkId);
     }
 }

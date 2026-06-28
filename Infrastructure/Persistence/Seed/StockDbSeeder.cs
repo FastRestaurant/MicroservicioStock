@@ -12,6 +12,7 @@ public static class StockDbSeeder
         foreach (var ingredient in BuildIngredients())
             await EnsureIngredientAsync(context, ingredient.Name, ingredient.Count);
 
+        
         await context.SaveChangesAsync();
 
         var ingredientsByName = await context.Ingredient

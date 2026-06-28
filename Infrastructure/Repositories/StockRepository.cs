@@ -54,5 +54,10 @@ namespace Infrastructure.Repositories
                 await _context.SaveChangesAsync();
             }
         }
+        public async Task<Stock?> GetByDrinkIdAsync(Guid drinkId)
+        {
+            return await _context.Stock
+                .FirstOrDefaultAsync(s => s.Id_Drink == drinkId);
+        }
     }
 }
