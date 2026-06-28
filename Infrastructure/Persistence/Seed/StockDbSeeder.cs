@@ -1,5 +1,6 @@
 using System.Security.Cryptography;
 using System.Text;
+using Domain.Constants;
 using Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
@@ -10,7 +11,7 @@ public static class StockDbSeeder
     public static async Task SeedAsync(AppDbContext context)
     {
         foreach (var ingredient in BuildIngredients())
-            await EnsureIngredientAsync(context, ingredient.Name, ingredient.Count);
+            await EnsureIngredientAsync(context, ingredient.Name, ingredient.Count, ingredient.UnitType);
 
         await context.SaveChangesAsync();
 
@@ -26,7 +27,7 @@ public static class StockDbSeeder
         await context.SaveChangesAsync();
     }
 
-    private static async Task EnsureIngredientAsync(AppDbContext context, string name, int count)
+    private static async Task EnsureIngredientAsync(AppDbContext context, string name, decimal count, UnitType unitType)
     {
         var existing = await context.Ingredient
             .Include(ingredient => ingredient.Stock)
@@ -34,6 +35,7 @@ public static class StockDbSeeder
 
         if (existing is not null)
         {
+            existing.UnitType = unitType;
             if (existing.Stock.Count <= 0)
                 existing.Stock.Count = count;
 
@@ -51,11 +53,12 @@ public static class StockDbSeeder
         {
             Id = StableId($"ingredient:{name}"),
             Name = name,
-            Id_Stock = stockId
+            Id_Stock = stockId,
+            UnitType = unitType
         });
     }
 
-    private static async Task EnsureDrinkStockAsync(AppDbContext context, string name, int count)
+    private static async Task EnsureDrinkStockAsync(AppDbContext context, string name, decimal count)
     {
         var drinkId = StableId($"drink:{name}");
         var existing = await context.Stock.FirstOrDefaultAsync(stock => stock.Id_Drink == drinkId);
@@ -108,37 +111,37 @@ public static class StockDbSeeder
 
     private static List<IngredientSeed> BuildIngredients() => new()
     {
-        new("Carne vacuna", 100000),
-        new("Carne picada", 60000),
-        new("Pollo", 80000),
-        new("Jamon", 40000),
-        new("Queso", 60000),
-        new("Queso provolone", 30000),
-        new("Papa", 120000),
-        new("Calamar", 40000),
-        new("Pan rallado", 30000),
-        new("Huevo", 1000),
-        new("Pan de hamburguesa", 300),
-        new("Lechuga", 25000),
-        new("Tomate", 50000),
-        new("Harina", 80000),
-        new("Ricota", 40000),
-        new("Pure de papa", 50000),
-        new("Salsa de tomate", 60000),
-        new("Salsa blanca", 30000),
-        new("Dulce de leche", 20000),
-        new("Leche", 60000),
-        new("Azucar", 40000),
-        new("Pan", 30000),
-        new("Helado", 40000),
-        new("Queso crema", 25000),
-        new("Frutos rojos", 15000),
-        new("Cafe", 10000),
-        new("Cacao", 10000),
-        new("Vainillas", 20000),
-        new("Cebolla", 25000),
-        new("Aceite", 50000),
-        new("Limon", 20000)
+        G("Carne vacuna", 100000),
+        G("Carne picada", 60000),
+        G("Pollo", 80000),
+        G("Jamon", 40000),
+        G("Queso", 60000),
+        G("Queso provolone", 30000),
+        G("Papa", 120000),
+        G("Calamar", 40000),
+        G("Pan rallado", 30000),
+        U("Huevo", 1000),
+        U("Pan de hamburguesa", 300),
+        G("Lechuga", 25000),
+        G("Tomate", 50000),
+        G("Harina", 80000),
+        G("Ricota", 40000),
+        G("Pure de papa", 50000),
+        G("Salsa de tomate", 60000),
+        G("Salsa blanca", 30000),
+        G("Dulce de leche", 20000),
+        G("Leche", 60000),
+        G("Azucar", 40000),
+        G("Pan", 30000),
+        G("Helado", 40000),
+        G("Queso crema", 25000),
+        G("Frutos rojos", 15000),
+        G("Cafe", 10000),
+        G("Cacao", 10000),
+        G("Vainillas", 20000),
+        G("Cebolla", 25000),
+        G("Aceite", 50000),
+        G("Limon", 20000)
     };
 
     private static List<DrinkSeed> BuildDrinks() => new()
@@ -179,10 +182,13 @@ public static class StockDbSeeder
         Recipe("Tiramisú", Item("Cafe", 80), Item("Cacao", 20), Item("Vainillas", 100), Item("Queso crema", 100))
     };
 
+    private static IngredientSeed G(string name, decimal count) => new(name, count, UnitType.Gram);
+    private static IngredientSeed U(string name, decimal count) => new(name, count, UnitType.Unit);
+
     private static RecipeSeed Recipe(string dishName, params RecipeItem[] items)
         => new(dishName, items);
 
-    private static RecipeItem Item(string ingredientName, int requiredQuantity)
+    private static RecipeItem Item(string ingredientName, decimal requiredQuantity)
         => new(ingredientName, requiredQuantity);
 
     private static Guid StableId(string key)
@@ -191,8 +197,8 @@ public static class StockDbSeeder
         return new Guid(bytes);
     }
 
-    private sealed record IngredientSeed(string Name, int Count);
-    private sealed record DrinkSeed(string Name, int Count);
+    private sealed record IngredientSeed(string Name, decimal Count, UnitType UnitType);
+    private sealed record DrinkSeed(string Name, decimal Count);
     private sealed record RecipeSeed(string DishName, IReadOnlyCollection<RecipeItem> Items);
-    private sealed record RecipeItem(string IngredientName, int RequiredQuantity);
+    private sealed record RecipeItem(string IngredientName, decimal RequiredQuantity);
 }

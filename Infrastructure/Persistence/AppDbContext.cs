@@ -26,6 +26,7 @@ namespace Infrastructure.Persistence
                 entity.HasKey(e => e.Id);
                 entity.Property(t => t.Id).ValueGeneratedOnAdd();
                 entity.Property(t => t.Name).IsRequired().HasMaxLength(150);
+                entity.Property(t => t.UnitType).HasConversion<string>().IsRequired();
                 entity.HasIndex(t => t.Name).IsUnique();
 
                 entity.HasOne<Domain.Entities.Stock>(s => s.Stock)
@@ -37,6 +38,7 @@ namespace Infrastructure.Persistence
             {
                 entity.HasKey(e => e.Id);
                 entity.Property(t => t.Id).ValueGeneratedOnAdd();
+                entity.Property(t => t.Count).HasPrecision(18, 3);
                 entity.HasIndex(t => t.Id_Drink)
                     .IsUnique();
             });
@@ -45,7 +47,7 @@ namespace Infrastructure.Persistence
 
                 entity.HasKey(x => x.IdIngredientDish);
                 entity.Property(x => x.IdIngredientDish).ValueGeneratedOnAdd();
-                entity.Property(x => x.RequiredQuantity).IsRequired();
+                entity.Property(x => x.RequiredQuantity).HasPrecision(18, 3);
                 entity.HasIndex(x => new { x.Id_Dish, x.Id_Ingredient }).IsUnique();
 
                 entity.HasOne(x => x.Ingredient)
@@ -60,7 +62,7 @@ namespace Infrastructure.Persistence
                 entity.Property(x => x.Id).ValueGeneratedOnAdd();
                 entity.Property(x => x.ProductType).IsRequired().HasMaxLength(20);
                 entity.Property(x => x.MovementType).IsRequired().HasMaxLength(20);
-                entity.Property(x => x.Quantity).IsRequired();
+                entity.Property(x => x.Quantity).HasPrecision(18, 3);
                 entity.Property(x => x.CreatedAt).IsRequired();
                 entity.HasIndex(x => new { x.OrderItemId, x.StockId, x.MovementType }).IsUnique();
                 entity.HasIndex(x => new { x.OrderId, x.OrderItemId });

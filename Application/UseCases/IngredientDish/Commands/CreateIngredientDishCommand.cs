@@ -4,9 +4,9 @@
     {
         public Guid Id_Ingredient { get; }
         public Guid Id_Dish { get; }
-        public int RequiredQuantity { get; }
+        public decimal RequiredQuantity { get; }
 
-        public CreateIngredientDishCommand(Guid id_ingredient, Guid id_dish, int requiredQuantity)
+        public CreateIngredientDishCommand(Guid id_ingredient, Guid id_dish, decimal requiredQuantity)
         {
             Id_Ingredient = id_ingredient;
             Id_Dish = id_dish;

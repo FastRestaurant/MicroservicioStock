@@ -1,12 +1,8 @@
-﻿using Application.Interfaces.Handlers.IngredientDish;
+using Application.Interfaces.Handlers.IngredientDish;
 using Application.Interfaces.Repositories;
 using Application.UseCases.IngredientDish.Commands;
+using Domain.Constants;
 using Domain.Exceptions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Application.UseCases.IngredientDish.Handlers
 {
@@ -25,16 +21,18 @@ namespace Application.UseCases.IngredientDish.Handlers
         {
             if (command == null)
                 throw new ValidationException("Datos invalidos");
-            if(command.Id_Dish == Guid.Empty || command.Id_Ingredient== Guid.Empty)
+            if (command.Id_Dish == Guid.Empty || command.Id_Ingredient == Guid.Empty)
                 throw new ValidationException("Los IDs son requeridos");
 
             if (command.RequiredQuantity <= 0)
                 throw new ValidationException("La cantidad requerida debe ser mayor a cero");
 
-
-            var ingredientExists = await _IngredientRepository.GetByIdAsync(command.Id_Ingredient);
-            if (ingredientExists == null)
+            var ingredient = await _IngredientRepository.GetByIdAsync(command.Id_Ingredient);
+            if (ingredient == null)
                 throw new NotFoundException("El ingrediente no existe");
+
+            if (ingredient.UnitType == UnitType.Unit && command.RequiredQuantity != Math.Truncate(command.RequiredQuantity))
+                throw new ValidationException("El ingrediente se mide por unidad; la cantidad requerida debe ser entera");
 
             var existingIngredientDish = await _IngredientDishRepository.GetAllAsync();
             foreach (var ingredientDish2 in existingIngredientDish)

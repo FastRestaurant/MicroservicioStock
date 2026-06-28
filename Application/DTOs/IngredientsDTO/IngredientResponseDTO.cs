@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Domain.Constants;
 
 namespace Application.DTOs.IngredientsDTO
 {
@@ -11,7 +7,7 @@ namespace Application.DTOs.IngredientsDTO
         public Guid Id { get; set; }
         public string Name { get; set; } = string.Empty;
         public Guid StockId { get; set; }
-        public int StockCount { get; set; }
-
+        public decimal StockCount { get; set; }
+        public UnitType UnitType { get; set; } = UnitType.Unit;
     }
 }

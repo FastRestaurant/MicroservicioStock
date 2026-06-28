@@ -8,11 +8,11 @@ namespace Application.UseCases.Stock.Commands
 {
     public class CreateStockCommand
     {
-        public int Count { get;}
+        public decimal Count { get;}
 
         public Guid? Id_Drink { get; }
 
-        public CreateStockCommand(int count, Guid? id_Drink)
+        public CreateStockCommand(decimal count, Guid? id_Drink)
         {
             Count = count;
             Id_Drink = id_Drink;

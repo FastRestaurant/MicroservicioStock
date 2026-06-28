@@ -1,4 +1,4 @@
-﻿using Application.DTOs.IngredientsDTO;
+using Application.DTOs.IngredientsDTO;
 using Application.Interfaces.Handlers.Ingredient;
 using Application.Interfaces.Repositories;
 using Application.UseCases.Ingredient.Queries;
@@ -23,7 +23,8 @@ namespace Application.UseCases.Ingredient.Handlers
                 Id = ingredientEntity.Id,
                 Name = ingredientEntity.Name,
                 StockId = ingredientEntity.Id_Stock,
-                StockCount = ingredientEntity.Stock?.Count ?? 0
+                StockCount = ingredientEntity.Stock?.Count ?? 0,
+                UnitType = ingredientEntity.UnitType
             }).ToList();
             return ingredientsDTO;
         }

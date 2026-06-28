@@ -1,13 +1,8 @@
-﻿using Application.DTOs.IngredientsDTO;
+using Application.DTOs.IngredientsDTO;
 using Application.Interfaces.Handlers.Ingredient;
 using Application.Interfaces.Repositories;
 using Application.UseCases.Ingredient.Queries;
 using Domain.Exceptions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Application.UseCases.Ingredient.Handlers
 {
@@ -22,7 +17,7 @@ namespace Application.UseCases.Ingredient.Handlers
 
         public async Task<IngredientResponseDTO> Handle(GetByIdIngredientQuery query)
         {
-            if(query == null)
+            if (query == null)
                 throw new ValidationException("Datos inválidos");
             if (query.Id == Guid.Empty)
                 throw new ValidationException("Id inválido");
@@ -31,12 +26,14 @@ namespace Application.UseCases.Ingredient.Handlers
 
             if (ingredient == null)
                 throw new NotFoundException("Ingrediente no encontrado");
+
             return new IngredientResponseDTO
             {
                 Id = ingredient.Id,
                 Name = ingredient.Name,
                 StockId = ingredient.Id_Stock,
-                StockCount = ingredient.Stock?.Count ?? 0
+                StockCount = ingredient.Stock?.Count ?? 0,
+                UnitType = ingredient.UnitType
             };
         }
     }

@@ -8,9 +8,9 @@ namespace Application.UseCases.Stock.Commands
 {
     public class UpdateStockCommand
     {
-        public int Count { get; }
+        public decimal Count { get; }
 
-        public UpdateStockCommand(int count)
+        public UpdateStockCommand(decimal count)
         {
             Count = count;
             

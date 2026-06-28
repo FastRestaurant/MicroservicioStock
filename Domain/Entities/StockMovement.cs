@@ -9,7 +9,7 @@ namespace Domain.Entities
         public string ProductType { get; set; } = string.Empty;
         public Guid StockId { get; set; }
         public Guid? IngredientId { get; set; }
-        public int Quantity { get; set; }
+        public decimal Quantity { get; set; }
         public string MovementType { get; set; } = string.Empty;
         public DateTime CreatedAt { get; set; }
 

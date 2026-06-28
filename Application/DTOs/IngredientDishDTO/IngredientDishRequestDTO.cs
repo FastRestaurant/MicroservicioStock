@@ -10,6 +10,6 @@ namespace Application.DTOs.IngredientDishDTO
     {
         public Guid Id_Ingredient { get; set; }
         public Guid Id_Dish { get; set; }
-        public int RequiredQuantity { get; set; }
+        public decimal RequiredQuantity { get; set; }
     }
 }

@@ -31,7 +31,7 @@ namespace MicroservicioStock.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateIngredient([FromBody] IngredientRequestDTO ingredient)
         {
-            var command = new CreateIngredientCommand(ingredient.Name, ingredient.InitialStock);
+            var command = new CreateIngredientCommand(ingredient.Name, ingredient.InitialStock, ingredient.UnitType);
             await _createIngredientHandler.Handle(command);
             return Created(string.Empty, null);
         }

@@ -8,9 +8,9 @@ namespace Application.UseCases.IngredientDish.Commands
 {
     public class UpdateIngredientDishCommand
     {
-        public int RequiredQuantity { get; }
+        public decimal RequiredQuantity { get; }
 
-        public UpdateIngredientDishCommand(int requiredQuantity)
+        public UpdateIngredientDishCommand(decimal requiredQuantity)
         {
             RequiredQuantity = requiredQuantity;
         }

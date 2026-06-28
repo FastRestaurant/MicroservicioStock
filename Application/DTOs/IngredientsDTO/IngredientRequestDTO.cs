@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Domain.Constants;
 
 namespace Application.DTOs.IngredientsDTO
 {
     public class IngredientRequestDTO
     {
         public string Name { get; set; } = string.Empty;
-        public int InitialStock { get; set; }
+        public decimal InitialStock { get; set; }
+        public UnitType UnitType { get; set; } = UnitType.Unit;
     }
 }

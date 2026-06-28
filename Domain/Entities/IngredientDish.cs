@@ -11,7 +11,7 @@ namespace Domain.Entities
         public Guid IdIngredientDish { get; set; }
         public Guid Id_Ingredient { get; set;  } 
         public Guid Id_Dish { get; set; }
-        public int RequiredQuantity { get; set; } = 1;
+        public decimal RequiredQuantity { get; set; } = 1;
 
         public Ingredient Ingredient{ get; set; } = null!;
 

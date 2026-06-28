@@ -202,7 +202,7 @@ namespace Infrastructure.Repositories
             };
         }
 
-        private async Task<bool> TryDecreaseStockAsync(Guid stockId, int quantity, CancellationToken cancellationToken)
+        private async Task<bool> TryDecreaseStockAsync(Guid stockId, decimal quantity, CancellationToken cancellationToken)
         {
             var affectedRows = await _context.Database.ExecuteSqlInterpolatedAsync(
                 $"UPDATE [Stock] SET [Count] = [Count] - {quantity} WHERE [Id] = {stockId} AND [Count] >= {quantity}",
@@ -211,7 +211,7 @@ namespace Infrastructure.Repositories
             return affectedRows == 1;
         }
 
-        private async Task<bool> TryIncreaseStockAsync(Guid stockId, int quantity, CancellationToken cancellationToken)
+        private async Task<bool> TryIncreaseStockAsync(Guid stockId, decimal quantity, CancellationToken cancellationToken)
         {
             var affectedRows = await _context.Database.ExecuteSqlInterpolatedAsync(
                 $"UPDATE [Stock] SET [Count] = [Count] + {quantity} WHERE [Id] = {stockId}",
@@ -220,6 +220,6 @@ namespace Infrastructure.Repositories
             return affectedRows == 1;
         }
 
-        private sealed record StockRequirement(Guid StockId, Guid? IngredientId, string Name, int RequiredQuantity, int AvailableQuantity);
+        private sealed record StockRequirement(Guid StockId, Guid? IngredientId, string Name, decimal RequiredQuantity, decimal AvailableQuantity);
     }
 }

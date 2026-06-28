@@ -1,22 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Domain.Constants;
 
 namespace Application.UseCases.Ingredient.Commands
 {
     public class CreateIngredientCommand
     {
-       
         public string Name { get; }
-        public int InitialStock { get; }
+        public decimal InitialStock { get; }
+        public UnitType UnitType { get; }
 
-        public CreateIngredientCommand(string name, int initialStock)
+        public CreateIngredientCommand(string name, decimal initialStock, UnitType unitType)
         {
-             
             Name = name;
             InitialStock = initialStock;
+            UnitType = unitType;
         }
     }
 }
