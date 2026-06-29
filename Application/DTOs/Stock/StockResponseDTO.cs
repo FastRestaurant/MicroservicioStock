@@ -12,6 +12,8 @@ namespace Application.DTOs.Stock
 
         public decimal Count { get; set; }
 
+        public string RowVersion { get; set; } = string.Empty;
+
         public Guid? Id_Drink { get; set; }
     }
 }

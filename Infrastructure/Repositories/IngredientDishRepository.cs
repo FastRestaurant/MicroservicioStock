@@ -44,10 +44,32 @@ namespace Infrastructure.Repositories
                 .FirstOrDefaultAsync(x => x.IdIngredientDish == id);
         }
 
+        public async Task<List<IngredientDish>> GetByDishIdAsync(Guid dishId)
+        {
+            return await _context.IngredientDish
+                .AsNoTracking()
+                .Where(x => x.Id_Dish == dishId)
+                .ToListAsync();
+        }
+
         public async Task UpdateAsync(IngredientDish ingredientDish)
         {
             _context.IngredientDish.Update(ingredientDish);
             await _context.SaveChangesAsync();
+        }
+
+        public async Task ReplaceByDishIdAsync(Guid dishId, IReadOnlyCollection<IngredientDish> ingredientDishes)
+        {
+            await using var transaction = await _context.Database.BeginTransactionAsync();
+
+            var currentItems = await _context.IngredientDish
+                .Where(x => x.Id_Dish == dishId)
+                .ToListAsync();
+
+            _context.IngredientDish.RemoveRange(currentItems);
+            await _context.IngredientDish.AddRangeAsync(ingredientDishes);
+            await _context.SaveChangesAsync();
+            await transaction.CommitAsync();
         }
     }
 }

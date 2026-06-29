@@ -11,6 +11,8 @@ namespace Domain.Entities
         public Guid Id { get; set; }
         public decimal Count { get; set; }
 
+        public byte[] RowVersion { get; set; } = Array.Empty<byte>();
+
         public Guid? Id_Drink { get; set; }
 
         public List<Ingredient> Ingredients { get; set; } = new();

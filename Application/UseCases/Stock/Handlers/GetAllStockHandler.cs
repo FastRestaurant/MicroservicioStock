@@ -23,6 +23,7 @@ namespace Application.UseCases.Stock.Handlers
             {
                 Id = stockEntity.Id,
                 Count = stockEntity.Count,
+                RowVersion = Convert.ToBase64String(stockEntity.RowVersion),
                 Id_Drink = stockEntity.Id_Drink
             }).ToList();
 

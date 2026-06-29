@@ -37,6 +37,7 @@ namespace Application.UseCases.Stock.Handlers
             {
                 Id = stock.Id,
                 Count = stock.Count,
+                RowVersion = Convert.ToBase64String(stock.RowVersion),
                 Id_Drink = stock.Id_Drink
             };
         }

@@ -12,6 +12,7 @@ namespace Application.Interfaces.Repositories
         Task AddAsync(Ingredient ingredient);
         Task<Ingredient?> GetByIdAsync(Guid id);
         Task<List<Ingredient>> GetAllAsync();
+        Task<(List<Ingredient> Items, int TotalCount, int PageNumber)> GetPageAsync(int pageNumber, int pageSize, string? search);
         Task UpdateAsync(Ingredient ingredient);
         Task DeleteAsync(Ingredient ingredient);
 

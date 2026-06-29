@@ -12,4 +12,15 @@ namespace Application.DTOs.IngredientDishDTO
         public Guid Id_Dish { get; set; }
         public decimal RequiredQuantity { get; set; }
     }
+
+    public class DishIngredientRequestDTO
+    {
+        public Guid Id_Ingredient { get; set; }
+        public decimal RequiredQuantity { get; set; }
+    }
+
+    public class ReplaceDishIngredientsRequestDTO
+    {
+        public List<DishIngredientRequestDTO> Items { get; set; } = new();
+    }
 }

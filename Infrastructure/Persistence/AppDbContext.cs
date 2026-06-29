@@ -39,6 +39,7 @@ namespace Infrastructure.Persistence
                 entity.HasKey(e => e.Id);
                 entity.Property(t => t.Id).ValueGeneratedOnAdd();
                 entity.Property(t => t.Count).HasPrecision(18, 3);
+                entity.Property(t => t.RowVersion).IsRowVersion();
                 entity.HasIndex(t => t.Id_Drink)
                     .IsUnique();
             });

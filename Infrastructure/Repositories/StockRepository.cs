@@ -38,9 +38,12 @@ namespace Infrastructure.Repositories
             await _context.SaveChangesAsync();
         }
 
-        public async Task UpdateAsync(Stock stock)
+        public async Task UpdateAsync(Stock stock, byte[] rowVersion)
         {
-            _context.Stock.Update(stock);
+            _context.Entry(stock)
+                .Property(s => s.RowVersion)
+                .OriginalValue = rowVersion;
+
             await _context.SaveChangesAsync();
         }
 

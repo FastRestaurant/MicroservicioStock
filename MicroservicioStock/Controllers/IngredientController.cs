@@ -47,15 +47,15 @@ namespace MicroservicioStock.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateIngredient(Guid id, [FromBody] IngredientRequestDTO ingredient)
         {
-            var command = new UpdateIngredientCommand(ingredient.Name);
+            var command = new UpdateIngredientCommand(ingredient.Name, ingredient.UnitType);
             await _updateIngredientHandler.Handle(id, command);
             return NoContent();
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAllIngredients()
+        public async Task<IActionResult> GetAllIngredients(int pageNumber = 1, int pageSize = 10, string? search = null)
         {
-            var query = new GetAllIngredientsQuery();
+            var query = new GetAllIngredientsQuery(pageNumber, pageSize, search);
             var ingredients = await _getAllIngredientHandler.Handle(query);
             return Ok(ingredients);
         }

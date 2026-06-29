@@ -1,3 +1,4 @@
+using Application.DTOs;
 using Application.DTOs.IngredientsDTO;
 using Application.Interfaces.Handlers.Ingredient;
 using Application.Interfaces.Repositories;
@@ -14,9 +15,13 @@ namespace Application.UseCases.Ingredient.Handlers
             _IngredientRepository = IngredientRepository;
         }
 
-        public async Task<List<IngredientResponseDTO>> Handle(GetAllIngredientsQuery query)
+        public async Task<PagedResponseDTO<IngredientResponseDTO>> Handle(GetAllIngredientsQuery query)
         {
-            var ingredients = await _IngredientRepository.GetAllAsync();
+            var pageNumber = query.PageNumber < 1 ? 1 : query.PageNumber;
+            var pageSize = query.PageSize < 1 ? 10 : query.PageSize;
+            if (pageSize > 50) pageSize = 50;
+
+            var (ingredients, totalCount, currentPage) = await _IngredientRepository.GetPageAsync(pageNumber, pageSize, query.Search);
 
             var ingredientsDTO = ingredients.Select(ingredientEntity => new IngredientResponseDTO
             {
@@ -26,7 +31,15 @@ namespace Application.UseCases.Ingredient.Handlers
                 StockCount = ingredientEntity.Stock?.Count ?? 0,
                 UnitType = ingredientEntity.UnitType
             }).ToList();
-            return ingredientsDTO;
+
+            return new PagedResponseDTO<IngredientResponseDTO>
+            {
+                Items = ingredientsDTO,
+                Page = currentPage,
+                PageSize = pageSize,
+                TotalItems = totalCount,
+                TotalPages = (int)Math.Ceiling(totalCount / (double)pageSize)
+            };
         }
     }
 }

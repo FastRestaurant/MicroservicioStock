@@ -27,13 +27,26 @@ namespace Application.UseCases.Stock.Handlers
             if (command.Count < 0)
                 throw new ValidationException("Cantidad inválida");
 
+            if (string.IsNullOrWhiteSpace(command.RowVersion))
+                throw new ValidationException("La version del stock es obligatoria");
+
+            byte[] rowVersion;
+            try
+            {
+                rowVersion = Convert.FromBase64String(command.RowVersion);
+            }
+            catch (FormatException)
+            {
+                throw new ValidationException("La version del stock es invalida");
+            }
+
             var existing = await _stockRepository.GetByIdAsync(id);
             if (existing == null)
                 throw new NotFoundException("Stock no encontrado");
 
             existing.Count = command.Count;
 
-            await _stockRepository.UpdateAsync(existing);
+            await _stockRepository.UpdateAsync(existing, rowVersion);
 
             return "Stock actualizado correctamente";
         }

@@ -24,14 +24,25 @@ namespace MicroservicioStock.Controllers
         private readonly IGetAllIngredientDishHandler _getAllIngredientDishHandler;
         private readonly IGetByIdIngredientDishHandler _getByIdIngredientDishHandler;
         private readonly IUpdateIngredientDishHandler _updateIngredientDishHandler;
+        private readonly IGetIngredientDishesByDishHandler _getIngredientDishesByDishHandler;
+        private readonly IReplaceDishIngredientsHandler _replaceDishIngredientsHandler;
 
-        public IngredientDishController(ICreateIngredientDishHandler createIngredientDishHandler, IDeleteIngredientDishHandler deleteIngredientDishHandler, IGetAllIngredientDishHandler getAllIngredientDishHandler, IGetByIdIngredientDishHandler getByIdIngredientDishHandler, IUpdateIngredientDishHandler updateIngredientDishHandler)
+        public IngredientDishController(
+            ICreateIngredientDishHandler createIngredientDishHandler,
+            IDeleteIngredientDishHandler deleteIngredientDishHandler,
+            IGetAllIngredientDishHandler getAllIngredientDishHandler,
+            IGetByIdIngredientDishHandler getByIdIngredientDishHandler,
+            IUpdateIngredientDishHandler updateIngredientDishHandler,
+            IGetIngredientDishesByDishHandler getIngredientDishesByDishHandler,
+            IReplaceDishIngredientsHandler replaceDishIngredientsHandler)
         {
             _createIngredientDishHandler = createIngredientDishHandler;
             _deleteIngredientDishHandler = deleteIngredientDishHandler;
             _getAllIngredientDishHandler = getAllIngredientDishHandler;
             _getByIdIngredientDishHandler = getByIdIngredientDishHandler;
             _updateIngredientDishHandler = updateIngredientDishHandler;
+            _getIngredientDishesByDishHandler = getIngredientDishesByDishHandler;
+            _replaceDishIngredientsHandler = replaceDishIngredientsHandler;
         }
 
         [HttpPost]
@@ -65,6 +76,22 @@ namespace MicroservicioStock.Controllers
             var query = new GetByIdIngredientDishQuery(id);
             var ingredientDish = await _getByIdIngredientDishHandler.Handle(query);
             return Ok(ingredientDish);
+        }
+
+        [HttpGet("dish/{dishId}")]
+        public async Task<IActionResult> GetByDish(Guid dishId)
+        {
+            var query = new GetIngredientDishesByDishQuery(dishId);
+            var ingredientDishes = await _getIngredientDishesByDishHandler.Handle(query);
+            return Ok(ingredientDishes);
+        }
+
+        [HttpPut("dish/{dishId}")]
+        public async Task<IActionResult> ReplaceByDish(Guid dishId, [FromBody] ReplaceDishIngredientsRequestDTO request)
+        {
+            var command = new ReplaceDishIngredientsCommand(dishId, request.Items);
+            await _replaceDishIngredientsHandler.Handle(command);
+            return NoContent();
         }
 
         [HttpPut("{id}")]

@@ -2,6 +2,7 @@
 using Application.Interfaces.Handlers.Ingredient;
 using Application.Interfaces.Repositories;
 using Application.UseCases.Ingredient.Commands;
+using Domain.Constants;
 using Domain.Exceptions;
 using System;
 using System.Collections.Generic;
@@ -30,8 +31,12 @@ namespace Application.UseCases.Ingredient.Handlers
             var existingIngredient = await _IngredientRepository.GetByIdAsync(id);
             if (existingIngredient == null)
                 throw new NotFoundException("Ingrediente no encontrado");
+
+            if (command.UnitType == UnitType.Unit && existingIngredient.Stock?.Count != Math.Truncate(existingIngredient.Stock?.Count ?? 0))
+                throw new ValidationException("Los ingredientes por unidad no admiten cantidades decimales");
             
             existingIngredient.Name = command.Name;
+            existingIngredient.UnitType = command.UnitType;
 
             await _IngredientRepository.UpdateAsync(existingIngredient);
             return "OK";

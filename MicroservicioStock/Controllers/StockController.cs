@@ -93,7 +93,7 @@ namespace MicroservicioStock.Controllers
             Guid id,
             [FromBody] StockRequestDTO dto)
         {
-            var command = new UpdateStockCommand(dto.Count);
+            var command = new UpdateStockCommand(dto.Count, dto.RowVersion);
 
             await _updateStockHandler.Handle(id, command);
 

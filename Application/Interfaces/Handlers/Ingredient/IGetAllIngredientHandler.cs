@@ -1,4 +1,5 @@
 ﻿using Application.DTOs.IngredientsDTO;
+using Application.DTOs;
 using Application.UseCases.Ingredient.Queries;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,6 @@ namespace Application.Interfaces.Handlers.Ingredient
 {
     public interface IGetAllIngredientHandler
     {
-        Task<List<IngredientResponseDTO>> Handle(GetAllIngredientsQuery query);
+        Task<PagedResponseDTO<IngredientResponseDTO>> Handle(GetAllIngredientsQuery query);
     }
 }

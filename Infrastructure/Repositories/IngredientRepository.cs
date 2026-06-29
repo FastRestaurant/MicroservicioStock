@@ -39,6 +39,33 @@ namespace Infrastructure.Repositories
                 .ToListAsync();
         }
 
+        public async Task<(List<Ingredient> Items, int TotalCount, int PageNumber)> GetPageAsync(int pageNumber, int pageSize, string? search)
+        {
+            var query = _context.Ingredient
+                .AsNoTracking()
+                .Include(i => i.Stock)
+                .AsQueryable();
+
+            if (!string.IsNullOrWhiteSpace(search))
+            {
+                var term = search.Trim();
+                query = query.Where(i => i.Name.Contains(term));
+            }
+
+            var totalCount = await query.CountAsync();
+            var totalPages = (int)Math.Ceiling(totalCount / (double)pageSize);
+            if (totalPages > 0 && pageNumber > totalPages)
+                pageNumber = totalPages;
+
+            var items = await query
+                .OrderBy(i => i.Name)
+                .Skip((pageNumber - 1) * pageSize)
+                .Take(pageSize)
+                .ToListAsync();
+
+            return (items, totalCount, pageNumber);
+        }
+
         public async Task<Ingredient?> GetByIdAsync(Guid id)
         {
             return await _context.Ingredient

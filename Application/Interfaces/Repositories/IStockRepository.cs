@@ -12,7 +12,7 @@ namespace Application.Interfaces.Repositories
         Task<Stock?> GetByIdAsync(Guid id);
         Task<IEnumerable<Stock>> GetAllAsync();
         Task AddAsync(Stock stock);
-        Task UpdateAsync(Stock stock);
+        Task UpdateAsync(Stock stock, byte[] rowVersion);
         Task DeleteAsync(Guid id);
     }
 }

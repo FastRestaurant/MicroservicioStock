@@ -34,13 +34,7 @@ public static class StockDbSeeder
             .FirstOrDefaultAsync(ingredient => ingredient.Name == name);
 
         if (existing is not null)
-        {
-            existing.UnitType = unitType;
-            if (existing.Stock.Count <= 0)
-                existing.Stock.Count = count;
-
             return;
-        }
 
         var stockId = StableId($"stock:ingredient:{name}");
         context.Stock.Add(new Stock
@@ -63,12 +57,7 @@ public static class StockDbSeeder
         var drinkId = StableId($"drink:{name}");
         var existing = await context.Stock.FirstOrDefaultAsync(stock => stock.Id_Drink == drinkId);
         if (existing is not null)
-        {
-            if (existing.Count <= 0)
-                existing.Count = count;
-
             return;
-        }
 
         context.Stock.Add(new Stock
         {
@@ -92,20 +81,16 @@ public static class StockDbSeeder
             var existing = await context.IngredientDish
                 .FirstOrDefaultAsync(recipe => recipe.Id_Dish == dishId && recipe.Id_Ingredient == ingredientId);
 
-            if (existing is null)
-            {
-                context.IngredientDish.Add(new IngredientDish
-                {
-                    IdIngredientDish = StableId($"recipe:{dishName}:{item.IngredientName}"),
-                    Id_Dish = dishId,
-                    Id_Ingredient = ingredientId,
-                    RequiredQuantity = item.RequiredQuantity
-                });
-
+            if (existing is not null)
                 continue;
-            }
 
-            existing.RequiredQuantity = item.RequiredQuantity;
+            context.IngredientDish.Add(new IngredientDish
+            {
+                IdIngredientDish = StableId($"recipe:{dishName}:{item.IngredientName}"),
+                Id_Dish = dishId,
+                Id_Ingredient = ingredientId,
+                RequiredQuantity = item.RequiredQuantity
+            });
         }
     }
 

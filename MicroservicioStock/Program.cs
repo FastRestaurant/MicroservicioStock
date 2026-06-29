@@ -61,6 +61,10 @@ builder.Services.AddSwaggerGen(options =>
     });
 });
 
+var jwtKey = builder.Configuration["Jwt:Key"];
+if (string.IsNullOrWhiteSpace(jwtKey))
+    throw new InvalidOperationException("Falta la configuracion Jwt:Key.");
+
 builder.Services
     .AddAuthentication(options =>
     {
@@ -78,7 +82,7 @@ builder.Services
             ValidIssuer = builder.Configuration["Jwt:Issuer"],
             ValidAudience = builder.Configuration["Jwt:Audience"],
             IssuerSigningKey = new SymmetricSecurityKey(
-                Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"] ?? string.Empty)),
+                Encoding.UTF8.GetBytes(jwtKey)),
             RoleClaimType = ClaimTypes.Role
         };
     });
@@ -106,6 +110,8 @@ builder.Services.AddScoped<IDeleteIngredientDishHandler, DeleteIngredientDishHan
 builder.Services.AddScoped<IGetAllIngredientDishHandler, GetAllIngredientDishHandler>();
 builder.Services.AddScoped<IGetByIdIngredientDishHandler, GetByIdIngredientDishHandler>();
 builder.Services.AddScoped<IUpdateIngredientDishHandler, UpdateIngredientDishHandler>();
+builder.Services.AddScoped<IGetIngredientDishesByDishHandler, GetIngredientDishesByDishHandler>();
+builder.Services.AddScoped<IReplaceDishIngredientsHandler, ReplaceDishIngredientsHandler>();
 
 
 
@@ -141,7 +147,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
+if (!string.Equals(Environment.GetEnvironmentVariable("DOTNET_RUNNING_IN_CONTAINER"), "true", StringComparison.OrdinalIgnoreCase))
+    app.UseHttpsRedirection();
 
 app.UseAuthentication();
 app.UseAuthorization();
