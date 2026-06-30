@@ -23,6 +23,18 @@ namespace Application.UseCases.IngredientDish.Handlers
                 throw new ValidationException("Datos inválidos");
             if (command.RequiredQuantity <= 0)
                 throw new ValidationException("La cantidad requerida es obligatoria");
+            if (string.IsNullOrWhiteSpace(command.RowVersion))
+                throw new ValidationException("La version del ingrediente del plato es obligatoria");
+
+            byte[] rowVersion;
+            try
+            {
+                rowVersion = Convert.FromBase64String(command.RowVersion);
+            }
+            catch (FormatException)
+            {
+                throw new ValidationException("La version del ingrediente del plato es invalida");
+            }
 
             var existingIngredientDish = await _IngredientDishRepository.GetByIdAsync(id);
             if (existingIngredientDish == null)
@@ -37,7 +49,7 @@ namespace Application.UseCases.IngredientDish.Handlers
 
             existingIngredientDish.RequiredQuantity = command.RequiredQuantity;
 
-            await _IngredientDishRepository.UpdateAsync(existingIngredientDish);
+            await _IngredientDishRepository.UpdateAsync(existingIngredientDish, rowVersion);
 
             return "OK";
         }

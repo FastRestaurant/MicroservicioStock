@@ -97,7 +97,7 @@ namespace MicroservicioStock.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateIngredientDish(Guid id, [FromBody] IngredientDishRequestDTO ingredientDish)
         {
-            var command = new UpdateIngredientDishCommand(ingredientDish.RequiredQuantity);
+            var command = new UpdateIngredientDishCommand(ingredientDish.RequiredQuantity, ingredientDish.RowVersion);
             await _updateIngredientDishHandler.Handle(id, command);
             return NoContent();
         }

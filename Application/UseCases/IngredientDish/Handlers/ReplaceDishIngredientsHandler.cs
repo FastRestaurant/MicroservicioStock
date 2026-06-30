@@ -35,8 +35,6 @@ namespace Application.UseCases.IngredientDish.Handlers
             if (duplicatedIngredient is not null)
                 throw new ConflictException("No se puede repetir el mismo ingrediente en el plato");
 
-            var recipeItems = new List<Domain.Entities.IngredientDish>();
-
             foreach (var item in command.Items)
             {
                 if (item.Id_Ingredient == Guid.Empty)
@@ -44,9 +42,17 @@ namespace Application.UseCases.IngredientDish.Handlers
 
                 if (item.RequiredQuantity <= 0)
                     throw new ValidationException("La cantidad requerida debe ser mayor a cero");
+            }
 
-                var ingredient = await _ingredientRepository.GetByIdAsync(item.Id_Ingredient);
-                if (ingredient == null)
+            var ingredientIds = command.Items.Select(item => item.Id_Ingredient).ToArray();
+            var ingredientsById = (await _ingredientRepository.GetByIdsAsync(ingredientIds))
+                .ToDictionary(ingredient => ingredient.Id);
+
+            var recipeItems = new List<Domain.Entities.IngredientDish>();
+
+            foreach (var item in command.Items)
+            {
+                if (!ingredientsById.TryGetValue(item.Id_Ingredient, out var ingredient))
                     throw new NotFoundException("El ingrediente no existe");
 
                 if (ingredient.UnitType == UnitType.Unit && item.RequiredQuantity != Math.Truncate(item.RequiredQuantity))

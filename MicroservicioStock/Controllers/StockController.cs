@@ -39,10 +39,10 @@ namespace MicroservicioStock.Controllers
 
         [HttpGet]
         [Authorize(Roles = "Admin")]
-        public async Task<IActionResult> GetAll()
+        public async Task<IActionResult> GetAll(int pageNumber = 1, int pageSize = 10)
         {
             var stocks = await _getAllStockHandler.Handle(
-                new GetAllStockQuery());
+                new GetAllStockQuery(pageNumber, pageSize));
 
             return Ok(stocks);
         }

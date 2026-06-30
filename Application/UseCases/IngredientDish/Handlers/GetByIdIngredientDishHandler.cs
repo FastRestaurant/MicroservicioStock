@@ -38,7 +38,8 @@ namespace Application.UseCases.IngredientDish.Handlers
                 IdIngredientDish = ingredientDish.IdIngredientDish,
                 Id_Ingredient = ingredientDish.Id_Ingredient,
                 Id_Dish = ingredientDish.Id_Dish,
-                RequiredQuantity = ingredientDish.RequiredQuantity
+                RequiredQuantity = ingredientDish.RequiredQuantity,
+                RowVersion = Convert.ToBase64String(ingredientDish.RowVersion)
             };
         }
     }

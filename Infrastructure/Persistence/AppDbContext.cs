@@ -27,6 +27,7 @@ namespace Infrastructure.Persistence
                 entity.Property(t => t.Id).ValueGeneratedOnAdd();
                 entity.Property(t => t.Name).IsRequired().HasMaxLength(150);
                 entity.Property(t => t.UnitType).HasConversion<string>().IsRequired();
+                entity.Property(t => t.RowVersion).IsRowVersion();
                 entity.HasIndex(t => t.Name).IsUnique();
 
                 entity.HasOne<Domain.Entities.Stock>(s => s.Stock)
@@ -49,6 +50,7 @@ namespace Infrastructure.Persistence
                 entity.HasKey(x => x.IdIngredientDish);
                 entity.Property(x => x.IdIngredientDish).ValueGeneratedOnAdd();
                 entity.Property(x => x.RequiredQuantity).HasPrecision(18, 3);
+                entity.Property(x => x.RowVersion).IsRowVersion();
                 entity.HasIndex(x => new { x.Id_Dish, x.Id_Ingredient }).IsUnique();
 
                 entity.HasOne(x => x.Ingredient)

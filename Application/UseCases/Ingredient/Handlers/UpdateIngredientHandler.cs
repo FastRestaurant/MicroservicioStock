@@ -27,6 +27,18 @@ namespace Application.UseCases.Ingredient.Handlers
                 throw new ValidationException("Datos inválidos");
             if (string.IsNullOrEmpty(command.Name))
                 throw new ValidationException("El nombre del ingrediente es requerido");
+            if (string.IsNullOrWhiteSpace(command.RowVersion))
+                throw new ValidationException("La version del ingrediente es obligatoria");
+
+            byte[] rowVersion;
+            try
+            {
+                rowVersion = Convert.FromBase64String(command.RowVersion);
+            }
+            catch (FormatException)
+            {
+                throw new ValidationException("La version del ingrediente es invalida");
+            }
 
             var existingIngredient = await _IngredientRepository.GetByIdAsync(id);
             if (existingIngredient == null)
@@ -38,7 +50,7 @@ namespace Application.UseCases.Ingredient.Handlers
             existingIngredient.Name = command.Name;
             existingIngredient.UnitType = command.UnitType;
 
-            await _IngredientRepository.UpdateAsync(existingIngredient);
+            await _IngredientRepository.UpdateAsync(existingIngredient, rowVersion);
             return "OK";
 
 

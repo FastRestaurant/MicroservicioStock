@@ -29,7 +29,8 @@ namespace Application.UseCases.Ingredient.Handlers
                 Name = ingredientEntity.Name,
                 StockId = ingredientEntity.Id_Stock,
                 StockCount = ingredientEntity.Stock?.Count ?? 0,
-                UnitType = ingredientEntity.UnitType
+                UnitType = ingredientEntity.UnitType,
+                RowVersion = Convert.ToBase64String(ingredientEntity.RowVersion)
             }).ToList();
 
             return new PagedResponseDTO<IngredientResponseDTO>

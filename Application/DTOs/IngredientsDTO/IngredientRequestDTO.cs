@@ -7,5 +7,6 @@ namespace Application.DTOs.IngredientsDTO
         public string Name { get; set; } = string.Empty;
         public decimal InitialStock { get; set; }
         public UnitType UnitType { get; set; } = UnitType.Unit;
+        public string RowVersion { get; set; } = string.Empty;
     }
 }

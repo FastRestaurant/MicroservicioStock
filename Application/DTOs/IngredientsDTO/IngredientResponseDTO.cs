@@ -9,5 +9,6 @@ namespace Application.DTOs.IngredientsDTO
         public Guid StockId { get; set; }
         public decimal StockCount { get; set; }
         public UnitType UnitType { get; set; } = UnitType.Unit;
+        public string RowVersion { get; set; } = string.Empty;
     }
 }

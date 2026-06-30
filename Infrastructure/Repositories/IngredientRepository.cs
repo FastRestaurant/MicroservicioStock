@@ -73,6 +73,16 @@ namespace Infrastructure.Repositories
                 .FirstOrDefaultAsync(i => i.Id == id);
         }
 
+        public async Task<List<Ingredient>> GetByIdsAsync(IEnumerable<Guid> ids)
+        {
+            var ingredientIds = ids.Distinct().ToArray();
+
+            return await _context.Ingredient
+                .AsNoTracking()
+                .Where(i => ingredientIds.Contains(i.Id))
+                .ToListAsync();
+        }
+
         public async Task<Ingredient?> GetByNameAsync(string name)
         {
             return await _context.Ingredient
@@ -80,8 +90,12 @@ namespace Infrastructure.Repositories
                 .FirstOrDefaultAsync(i => i.Name == name);
         }
 
-        public async Task UpdateAsync(Ingredient ingredient)
+        public async Task UpdateAsync(Ingredient ingredient, byte[] rowVersion)
         {
+            _context.Entry(ingredient)
+                .Property(i => i.RowVersion)
+                .OriginalValue = rowVersion;
+
             _context.Ingredient.Update(ingredient);
             await _context.SaveChangesAsync();
         }

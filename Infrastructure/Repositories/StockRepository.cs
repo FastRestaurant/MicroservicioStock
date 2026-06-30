@@ -32,6 +32,26 @@ namespace Infrastructure.Repositories
                 .ToListAsync();
         }
 
+        public async Task<(List<Stock> Items, int TotalCount, int PageNumber)> GetPageAsync(int pageNumber, int pageSize)
+        {
+            var query = _context.Stock
+                .AsNoTracking()
+                .OrderBy(s => s.Id)
+                .AsQueryable();
+
+            var totalCount = await query.CountAsync();
+            var totalPages = (int)Math.Ceiling(totalCount / (double)pageSize);
+            if (totalPages > 0 && pageNumber > totalPages)
+                pageNumber = totalPages;
+
+            var items = await query
+                .Skip((pageNumber - 1) * pageSize)
+                .Take(pageSize)
+                .ToListAsync();
+
+            return (items, totalCount, pageNumber);
+        }
+
         public async Task AddAsync(Stock stock)
         {
             await _context.Stock.AddAsync(stock);

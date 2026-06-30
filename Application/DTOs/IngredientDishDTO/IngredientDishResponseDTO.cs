@@ -12,5 +12,6 @@ namespace Application.DTOs.IngredientDishDTO
         public Guid Id_Ingredient { get; set; }
         public Guid Id_Dish { get; set; }
         public decimal RequiredQuantity { get; set; }
+        public string RowVersion { get; set; } = string.Empty;
     }
 }

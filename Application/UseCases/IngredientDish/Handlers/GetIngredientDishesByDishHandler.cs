@@ -26,7 +26,8 @@ namespace Application.UseCases.IngredientDish.Handlers
                 IdIngredientDish = item.IdIngredientDish,
                 Id_Ingredient = item.Id_Ingredient,
                 Id_Dish = item.Id_Dish,
-                RequiredQuantity = item.RequiredQuantity
+                RequiredQuantity = item.RequiredQuantity,
+                RowVersion = Convert.ToBase64String(item.RowVersion)
             }).ToList();
         }
     }

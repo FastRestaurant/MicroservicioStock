@@ -33,7 +33,8 @@ namespace Application.UseCases.Ingredient.Handlers
                 Name = ingredient.Name,
                 StockId = ingredient.Id_Stock,
                 StockCount = ingredient.Stock?.Count ?? 0,
-                UnitType = ingredient.UnitType
+                UnitType = ingredient.UnitType,
+                RowVersion = Convert.ToBase64String(ingredient.RowVersion)
             };
         }
     }

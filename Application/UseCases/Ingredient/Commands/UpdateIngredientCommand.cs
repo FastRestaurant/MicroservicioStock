@@ -12,12 +12,14 @@ namespace Application.UseCases.Ingredient.Commands
     {
         public string Name { get; }
         public UnitType UnitType { get; }
+        public string RowVersion { get; }
 
-        public UpdateIngredientCommand(string name, UnitType unitType)
+        public UpdateIngredientCommand(string name, UnitType unitType, string rowVersion)
         {
 
             Name = name;
             UnitType = unitType;
+            RowVersion = rowVersion;
         }
     }
 }

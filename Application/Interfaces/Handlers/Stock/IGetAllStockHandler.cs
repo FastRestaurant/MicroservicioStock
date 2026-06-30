@@ -1,4 +1,5 @@
 ﻿using Application.DTOs.Stock;
+using Application.DTOs;
 using Application.UseCases.Stock.Queries;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,6 @@ namespace Application.Interfaces.Handlers.Stock
 {
     public interface IGetAllStockHandler
     {
-        Task<List<StockResponseDTO>> Handle(GetAllStockQuery query);
+        Task<PagedResponseDTO<StockResponseDTO>> Handle(GetAllStockQuery query);
     }
 }

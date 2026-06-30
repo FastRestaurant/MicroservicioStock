@@ -52,8 +52,12 @@ namespace Infrastructure.Repositories
                 .ToListAsync();
         }
 
-        public async Task UpdateAsync(IngredientDish ingredientDish)
+        public async Task UpdateAsync(IngredientDish ingredientDish, byte[] rowVersion)
         {
+            _context.Entry(ingredientDish)
+                .Property(i => i.RowVersion)
+                .OriginalValue = rowVersion;
+
             _context.IngredientDish.Update(ingredientDish);
             await _context.SaveChangesAsync();
         }

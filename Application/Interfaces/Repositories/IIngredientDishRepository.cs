@@ -14,7 +14,7 @@ namespace Application.Interfaces.Repositories
         Task<List<IngredientDish>> GetByDishIdAsync(Guid dishId);
         Task<List<IngredientDish>> GetAllAsync();
         Task DeleteAsync(IngredientDish ingredientDish);
-        Task UpdateAsync(IngredientDish ingredientDish);
+        Task UpdateAsync(IngredientDish ingredientDish, byte[] rowVersion);
         Task ReplaceByDishIdAsync(Guid dishId, IReadOnlyCollection<IngredientDish> ingredientDishes);
 
     }
