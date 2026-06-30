@@ -83,6 +83,13 @@ namespace Infrastructure.Repositories
                 .ToListAsync();
         }
 
+        public async Task<bool> HasAssignedDishesAsync(Guid ingredientId)
+        {
+            return await _context.IngredientDish
+                .AsNoTracking()
+                .AnyAsync(ingredientDish => ingredientDish.Id_Ingredient == ingredientId);
+        }
+
         public async Task<Ingredient?> GetByNameAsync(string name)
         {
             return await _context.Ingredient

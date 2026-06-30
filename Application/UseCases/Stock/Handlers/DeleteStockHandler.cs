@@ -28,6 +28,9 @@ namespace Application.UseCases.Stock.Handlers
             if(stock == null)
                 throw new NotFoundException("Stock no encontrado");
 
+            if (await _stockRepository.HasAssignedDishesAsync(command.Id))
+                throw new ConflictException("No se puede eliminar el stock porque tiene platos asignados.");
+
             await _stockRepository.DeleteAsync(command.Id);
             return "Stock eliminado correctamente";
         }

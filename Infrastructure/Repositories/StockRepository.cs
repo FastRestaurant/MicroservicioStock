@@ -52,6 +52,13 @@ namespace Infrastructure.Repositories
             return (items, totalCount, pageNumber);
         }
 
+        public async Task<bool> HasAssignedDishesAsync(Guid stockId)
+        {
+            return await _context.IngredientDish
+                .AsNoTracking()
+                .AnyAsync(ingredientDish => ingredientDish.Ingredient.Id_Stock == stockId);
+        }
+
         public async Task AddAsync(Stock stock)
         {
             await _context.Stock.AddAsync(stock);

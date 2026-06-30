@@ -26,6 +26,10 @@ namespace Application.UseCases.Ingredient.Handlers
             var ingredient = await _IngredientRepository.GetByIdAsync(command.Id);
             if (ingredient == null)
                 throw new NotFoundException("El ingrediente no existe");
+
+            if (await _IngredientRepository.HasAssignedDishesAsync(command.Id))
+                throw new ConflictException("No se puede eliminar el ingrediente porque tiene platos asignados.");
+
             await _IngredientRepository.DeleteAsync(ingredient);
             return "OK";
         }

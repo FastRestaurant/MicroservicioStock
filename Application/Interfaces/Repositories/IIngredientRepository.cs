@@ -14,6 +14,7 @@ namespace Application.Interfaces.Repositories
         Task<List<Ingredient>> GetAllAsync();
         Task<List<Ingredient>> GetByIdsAsync(IEnumerable<Guid> ids);
         Task<(List<Ingredient> Items, int TotalCount, int PageNumber)> GetPageAsync(int pageNumber, int pageSize, string? search);
+        Task<bool> HasAssignedDishesAsync(Guid ingredientId);
         Task UpdateAsync(Ingredient ingredient, byte[] rowVersion);
         Task DeleteAsync(Ingredient ingredient);
 

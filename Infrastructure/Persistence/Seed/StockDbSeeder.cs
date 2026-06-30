@@ -37,11 +37,15 @@ public static class StockDbSeeder
             return;
 
         var stockId = StableId($"stock:ingredient:{name}");
-        context.Stock.Add(new Stock
+        var stockExists = await context.Stock.AnyAsync(stock => stock.Id == stockId);
+        if (!stockExists)
         {
-            Id = stockId,
-            Count = count
-        });
+            context.Stock.Add(new Stock
+            {
+                Id = stockId,
+                Count = count
+            });
+        }
 
         context.Ingredient.Add(new Ingredient
         {
@@ -55,13 +59,14 @@ public static class StockDbSeeder
     private static async Task EnsureDrinkStockAsync(AppDbContext context, string name, decimal count)
     {
         var drinkId = StableId($"drink:{name}");
-        var existing = await context.Stock.FirstOrDefaultAsync(stock => stock.Id_Drink == drinkId);
+        var stockId = StableId($"stock:drink:{name}");
+        var existing = await context.Stock.FirstOrDefaultAsync(stock => stock.Id_Drink == drinkId || stock.Id == stockId);
         if (existing is not null)
             return;
 
         context.Stock.Add(new Stock
         {
-            Id = StableId($"stock:drink:{name}"),
+            Id = stockId,
             Count = count,
             Id_Drink = drinkId
         });
