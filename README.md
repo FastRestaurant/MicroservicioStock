@@ -1,6 +1,6 @@
 <div align="center">
 
-  <h1>📦 `MicroservicioStock`</h1>
+  <h1>📦 MicroservicioStock</h1>
   <h3> Controla el inventario del restaurante y los ingredientes necesarios para cada plato. </h3>
 </div>
 
