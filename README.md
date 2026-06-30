@@ -1,10 +1,7 @@
 <div align="center">
 
   <h1>🍽️ FastRestaurant</h1>
-  <h3>Sistema de Gestión Inteligente para Restaurantes</h3>
-  <p>
-    📦 `MicroservicioStock`
-  </p>
+  <h3>📦 `MicroservicioStock`</h3>
 </div>
 
 Controla el inventario del restaurante y los ingredientes necesarios para cada plato.
