@@ -62,16 +62,15 @@ namespace Infrastructure.Repositories
         public async Task AddAsync(Stock stock)
         {
             await _context.Stock.AddAsync(stock);
-            await _context.SaveChangesAsync();
         }
 
-        public async Task UpdateAsync(Stock stock, byte[] rowVersion)
+        public Task UpdateAsync(Stock stock, byte[] rowVersion)
         {
             _context.Entry(stock)
                 .Property(s => s.RowVersion)
                 .OriginalValue = rowVersion;
 
-            await _context.SaveChangesAsync();
+            return Task.CompletedTask;
         }
 
         public async Task DeleteAsync(Guid id)
@@ -81,7 +80,6 @@ namespace Infrastructure.Repositories
             if (stock != null)
             {
                 _context.Stock.Remove(stock);
-                await _context.SaveChangesAsync();
             }
         }
     }

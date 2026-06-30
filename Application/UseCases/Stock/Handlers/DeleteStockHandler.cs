@@ -1,4 +1,5 @@
-﻿using Application.Interfaces.Handlers.Stock;
+﻿using Application.Interfaces;
+using Application.Interfaces.Handlers.Stock;
 using Application.Interfaces.Repositories;
 using Application.UseCases.Stock.Commands;
 using Domain.Exceptions;
@@ -13,9 +14,12 @@ namespace Application.UseCases.Stock.Handlers
     public class DeleteStockHandler : IDeleteStockHandler
     {
         private readonly IStockRepository _stockRepository;
-        public DeleteStockHandler(IStockRepository stockRepository)
+        private readonly IUnitOfWork _unitOfWork;
+
+        public DeleteStockHandler(IStockRepository stockRepository, IUnitOfWork unitOfWork)
         {
             _stockRepository = stockRepository;
+            _unitOfWork = unitOfWork;
         }
 
         public async Task<string> Handle(DeleteStockCommand command)
@@ -32,6 +36,7 @@ namespace Application.UseCases.Stock.Handlers
                 throw new ConflictException("No se puede eliminar el stock porque tiene platos asignados.");
 
             await _stockRepository.DeleteAsync(command.Id);
+            await _unitOfWork.SaveChangesAsync();
             return "Stock eliminado correctamente";
         }
     }

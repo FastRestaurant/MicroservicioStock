@@ -1,4 +1,5 @@
-﻿using Application.DTOs.IngredientsDTO;
+﻿using Application.DTOs;
+using Application.DTOs.IngredientsDTO;
 using Application.Interfaces.Handlers.Ingredient;
 using Application.UseCases.Ingredient.Commands;
 using Application.UseCases.Ingredient.Queries;
@@ -29,6 +30,11 @@ namespace MicroservicioStock.Controllers
         }
 
         [HttpPost]
+        [ProducesResponseType(StatusCodes.Status201Created)]
+        [ProducesResponseType(typeof(ErrorResponseDTO), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+        [ProducesResponseType(StatusCodes.Status403Forbidden)]
+        [ProducesResponseType(typeof(ErrorResponseDTO), StatusCodes.Status409Conflict)]
         public async Task<IActionResult> CreateIngredient([FromBody] IngredientRequestDTO ingredient)
         {
             var command = new CreateIngredientCommand(ingredient.Name, ingredient.InitialStock, ingredient.UnitType);
@@ -37,6 +43,12 @@ namespace MicroservicioStock.Controllers
         }
 
         [HttpDelete("{id}")]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(typeof(ErrorResponseDTO), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+        [ProducesResponseType(StatusCodes.Status403Forbidden)]
+        [ProducesResponseType(typeof(ErrorResponseDTO), StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(ErrorResponseDTO), StatusCodes.Status409Conflict)]
         public async Task<IActionResult> DeleteIngredient(Guid id)
         {
             var command = new DeleteIngredientCommand(id);
@@ -45,6 +57,12 @@ namespace MicroservicioStock.Controllers
         }
 
         [HttpPut("{id}")]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(typeof(ErrorResponseDTO), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+        [ProducesResponseType(StatusCodes.Status403Forbidden)]
+        [ProducesResponseType(typeof(ErrorResponseDTO), StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(ErrorResponseDTO), StatusCodes.Status409Conflict)]
         public async Task<IActionResult> UpdateIngredient(Guid id, [FromBody] IngredientRequestDTO ingredient)
         {
             var command = new UpdateIngredientCommand(ingredient.Name, ingredient.UnitType, ingredient.RowVersion);
@@ -53,6 +71,9 @@ namespace MicroservicioStock.Controllers
         }
 
         [HttpGet]
+        [ProducesResponseType(typeof(PagedResponseDTO<IngredientResponseDTO>), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+        [ProducesResponseType(StatusCodes.Status403Forbidden)]
         public async Task<IActionResult> GetAllIngredients(int pageNumber = 1, int pageSize = 10, string? search = null)
         {
             var query = new GetAllIngredientsQuery(pageNumber, pageSize, search);
@@ -61,6 +82,11 @@ namespace MicroservicioStock.Controllers
         }
 
         [HttpGet("{id}")]
+        [ProducesResponseType(typeof(IngredientResponseDTO), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(ErrorResponseDTO), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+        [ProducesResponseType(StatusCodes.Status403Forbidden)]
+        [ProducesResponseType(typeof(ErrorResponseDTO), StatusCodes.Status404NotFound)]
         public async Task<IActionResult> GetByIdIngredient(Guid id)
         {
             var query = new GetByIdIngredientQuery(id);

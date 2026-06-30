@@ -1,3 +1,4 @@
+using Application.Interfaces;
 using Application.Interfaces.Repositories;
 using Application.Interfaces.Handlers.Ingredient;
 using Application.UseCases.Ingredient.Commands;
@@ -9,10 +10,12 @@ namespace Application.UseCases.Ingredient.Handlers
     public class CreateIngredientHandler : ICreateIngredientHandler
     {
         private readonly IIngredientRepository _IngredientRepository;
+        private readonly IUnitOfWork _unitOfWork;
 
-        public CreateIngredientHandler(IIngredientRepository IngredientRepository)
+        public CreateIngredientHandler(IIngredientRepository IngredientRepository, IUnitOfWork unitOfWork)
         {
             _IngredientRepository = IngredientRepository;
+            _unitOfWork = unitOfWork;
         }
 
         public async Task<string> Handle(CreateIngredientCommand command)
@@ -43,6 +46,7 @@ namespace Application.UseCases.Ingredient.Handlers
                 }
             };
             await _IngredientRepository.AddAsync(ingredient);
+            await _unitOfWork.SaveChangesAsync();
             return "OK";
         }
     }

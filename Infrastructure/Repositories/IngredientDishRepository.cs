@@ -21,13 +21,12 @@ namespace Infrastructure.Repositories
         public async Task AddAsync(IngredientDish ingredientDish)
         {
             await _context.IngredientDish.AddAsync(ingredientDish);
-            await _context.SaveChangesAsync();
         }
 
-        public async Task DeleteAsync(IngredientDish ingredientDish)
+        public Task DeleteAsync(IngredientDish ingredientDish)
         {
             _context.IngredientDish.Remove(ingredientDish);
-            await _context.SaveChangesAsync();
+            return Task.CompletedTask;
         }
 
         public async Task<List<IngredientDish>> GetAllAsync()
@@ -52,28 +51,24 @@ namespace Infrastructure.Repositories
                 .ToListAsync();
         }
 
-        public async Task UpdateAsync(IngredientDish ingredientDish, byte[] rowVersion)
+        public Task UpdateAsync(IngredientDish ingredientDish, byte[] rowVersion)
         {
             _context.Entry(ingredientDish)
                 .Property(i => i.RowVersion)
                 .OriginalValue = rowVersion;
 
             _context.IngredientDish.Update(ingredientDish);
-            await _context.SaveChangesAsync();
+            return Task.CompletedTask;
         }
 
         public async Task ReplaceByDishIdAsync(Guid dishId, IReadOnlyCollection<IngredientDish> ingredientDishes)
         {
-            await using var transaction = await _context.Database.BeginTransactionAsync();
-
             var currentItems = await _context.IngredientDish
                 .Where(x => x.Id_Dish == dishId)
                 .ToListAsync();
 
             _context.IngredientDish.RemoveRange(currentItems);
             await _context.IngredientDish.AddRangeAsync(ingredientDishes);
-            await _context.SaveChangesAsync();
-            await transaction.CommitAsync();
         }
     }
 }

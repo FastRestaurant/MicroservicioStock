@@ -1,4 +1,5 @@
-﻿using Application.DTOs.Stock;
+﻿using Application.DTOs;
+using Application.DTOs.Stock;
 using Application.Interfaces.Handlers.Stock;
 using Application.UseCases.Stock.Commands;
 using Application.UseCases.Stock.Queries;
@@ -39,6 +40,9 @@ namespace MicroservicioStock.Controllers
 
         [HttpGet]
         [Authorize(Roles = "Admin")]
+        [ProducesResponseType(typeof(PagedResponseDTO<StockResponseDTO>), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+        [ProducesResponseType(StatusCodes.Status403Forbidden)]
         public async Task<IActionResult> GetAll(int pageNumber = 1, int pageSize = 10)
         {
             var stocks = await _getAllStockHandler.Handle(
@@ -49,6 +53,11 @@ namespace MicroservicioStock.Controllers
 
         [HttpGet("{id}")]
         [Authorize(Roles = "Admin")]
+        [ProducesResponseType(typeof(StockResponseDTO), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(ErrorResponseDTO), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+        [ProducesResponseType(StatusCodes.Status403Forbidden)]
+        [ProducesResponseType(typeof(ErrorResponseDTO), StatusCodes.Status404NotFound)]
         public async Task<IActionResult> GetById(Guid id)
         {
             var stock = await _getByIdStockHandler.Handle(
@@ -59,6 +68,11 @@ namespace MicroservicioStock.Controllers
 
         [HttpPost]
         [Authorize(Roles = "Admin")]
+        [ProducesResponseType(StatusCodes.Status201Created)]
+        [ProducesResponseType(typeof(ErrorResponseDTO), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+        [ProducesResponseType(StatusCodes.Status403Forbidden)]
+        [ProducesResponseType(typeof(ErrorResponseDTO), StatusCodes.Status409Conflict)]
         public async Task<IActionResult> Create(
             [FromBody] CreateStockCommand command)
         {
@@ -69,6 +83,10 @@ namespace MicroservicioStock.Controllers
 
         [HttpPost("consumptions")]
         [Authorize(Roles = "Admin,Waitress")]
+        [ProducesResponseType(typeof(StockOperationResultDTO), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(ErrorResponseDTO), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+        [ProducesResponseType(StatusCodes.Status403Forbidden)]
         public async Task<IActionResult> ConsumeForOrder(
             [FromBody] ConsumeStockForOrderCommand command,
             CancellationToken cancellationToken)
@@ -79,6 +97,11 @@ namespace MicroservicioStock.Controllers
 
         [HttpPost("releases")]
         [Authorize(Roles = "Admin,Waitress,Kitchen")]
+        [ProducesResponseType(typeof(StockOperationResultDTO), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(ErrorResponseDTO), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+        [ProducesResponseType(StatusCodes.Status403Forbidden)]
+        [ProducesResponseType(typeof(ErrorResponseDTO), StatusCodes.Status404NotFound)]
         public async Task<IActionResult> ReleaseForOrder(
             [FromBody] ReleaseStockForOrderCommand command,
             CancellationToken cancellationToken)
@@ -89,6 +112,12 @@ namespace MicroservicioStock.Controllers
 
         [HttpPut("{id}")]
         [Authorize(Roles = "Admin")]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(typeof(ErrorResponseDTO), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+        [ProducesResponseType(StatusCodes.Status403Forbidden)]
+        [ProducesResponseType(typeof(ErrorResponseDTO), StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(ErrorResponseDTO), StatusCodes.Status409Conflict)]
         public async Task<IActionResult> Update(
             Guid id,
             [FromBody] StockRequestDTO dto)
@@ -102,6 +131,12 @@ namespace MicroservicioStock.Controllers
 
         [HttpDelete("{id}")]
         [Authorize(Roles = "Admin")]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(typeof(ErrorResponseDTO), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+        [ProducesResponseType(StatusCodes.Status403Forbidden)]
+        [ProducesResponseType(typeof(ErrorResponseDTO), StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(ErrorResponseDTO), StatusCodes.Status409Conflict)]
         public async Task<IActionResult> Delete(Guid id)
         {
             await _deleteStockHandler.Handle(

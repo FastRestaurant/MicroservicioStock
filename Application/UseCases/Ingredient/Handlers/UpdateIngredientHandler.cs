@@ -1,4 +1,5 @@
 ﻿using Application.DTOs.IngredientsDTO;
+using Application.Interfaces;
 using Application.Interfaces.Handlers.Ingredient;
 using Application.Interfaces.Repositories;
 using Application.UseCases.Ingredient.Commands;
@@ -15,10 +16,12 @@ namespace Application.UseCases.Ingredient.Handlers
     public class UpdateIngredientHandler : IUpdateIngredientHandler
     {
         private readonly IIngredientRepository _IngredientRepository;
+        private readonly IUnitOfWork _unitOfWork;
 
-        public UpdateIngredientHandler(IIngredientRepository IngredientRepository)
+        public UpdateIngredientHandler(IIngredientRepository IngredientRepository, IUnitOfWork unitOfWork)
         {
             _IngredientRepository = IngredientRepository;
+            _unitOfWork = unitOfWork;
         }
 
         public async Task<string> Handle(Guid id, UpdateIngredientCommand command)
@@ -51,6 +54,7 @@ namespace Application.UseCases.Ingredient.Handlers
             existingIngredient.UnitType = command.UnitType;
 
             await _IngredientRepository.UpdateAsync(existingIngredient, rowVersion);
+            await _unitOfWork.SaveChangesAsync();
             return "OK";
 
 

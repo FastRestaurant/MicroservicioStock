@@ -1,3 +1,4 @@
+using Application.Interfaces;
 using Application.Interfaces.Handlers.IngredientDish;
 using Application.Interfaces.Repositories;
 using Application.UseCases.IngredientDish.Commands;
@@ -10,11 +11,13 @@ namespace Application.UseCases.IngredientDish.Handlers
     {
         private readonly IIngredientDishRepository _IngredientDishRepository;
         private readonly IIngredientRepository _IngredientRepository;
+        private readonly IUnitOfWork _unitOfWork;
 
-        public UpdateIngredientDishHandler(IIngredientDishRepository IngredientDishRepository, IIngredientRepository IngredientRepository)
+        public UpdateIngredientDishHandler(IIngredientDishRepository IngredientDishRepository, IIngredientRepository IngredientRepository, IUnitOfWork unitOfWork)
         {
             _IngredientDishRepository = IngredientDishRepository;
             _IngredientRepository = IngredientRepository;
+            _unitOfWork = unitOfWork;
         }
 
         public async Task<string> Handle(Guid id, UpdateIngredientDishCommand command)
@@ -50,6 +53,7 @@ namespace Application.UseCases.IngredientDish.Handlers
             existingIngredientDish.RequiredQuantity = command.RequiredQuantity;
 
             await _IngredientDishRepository.UpdateAsync(existingIngredientDish, rowVersion);
+            await _unitOfWork.SaveChangesAsync();
 
             return "OK";
         }

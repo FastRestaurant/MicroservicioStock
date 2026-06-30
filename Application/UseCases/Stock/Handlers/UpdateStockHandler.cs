@@ -1,4 +1,5 @@
 ﻿using Application.DTOs.Stock;
+using Application.Interfaces;
 using Application.Interfaces.Handlers.Stock;
 using Application.Interfaces.Repositories;
 using Application.UseCases.Stock.Commands;
@@ -14,10 +15,12 @@ namespace Application.UseCases.Stock.Handlers
     public class UpdateStockHandler : IUpdateStockHandler
     {
         private readonly IStockRepository _stockRepository;
+        private readonly IUnitOfWork _unitOfWork;
 
-        public UpdateStockHandler(IStockRepository stockRepository)
+        public UpdateStockHandler(IStockRepository stockRepository, IUnitOfWork unitOfWork)
         {
             _stockRepository = stockRepository;
+            _unitOfWork = unitOfWork;
         }
         public async Task<string> Handle(Guid id, UpdateStockCommand command)
         {
@@ -47,6 +50,7 @@ namespace Application.UseCases.Stock.Handlers
             existing.Count = command.Count;
 
             await _stockRepository.UpdateAsync(existing, rowVersion);
+            await _unitOfWork.SaveChangesAsync();
 
             return "Stock actualizado correctamente";
         }

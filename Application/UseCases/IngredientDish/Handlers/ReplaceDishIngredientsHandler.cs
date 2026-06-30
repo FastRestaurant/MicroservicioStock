@@ -1,3 +1,5 @@
+using System.Data;
+using Application.Interfaces;
 using Application.Interfaces.Handlers.IngredientDish;
 using Application.Interfaces.Repositories;
 using Application.UseCases.IngredientDish.Commands;
@@ -10,11 +12,13 @@ namespace Application.UseCases.IngredientDish.Handlers
     {
         private readonly IIngredientDishRepository _ingredientDishRepository;
         private readonly IIngredientRepository _ingredientRepository;
+        private readonly IUnitOfWork _unitOfWork;
 
-        public ReplaceDishIngredientsHandler(IIngredientDishRepository ingredientDishRepository, IIngredientRepository ingredientRepository)
+        public ReplaceDishIngredientsHandler(IIngredientDishRepository ingredientDishRepository, IIngredientRepository ingredientRepository, IUnitOfWork unitOfWork)
         {
             _ingredientDishRepository = ingredientDishRepository;
             _ingredientRepository = ingredientRepository;
+            _unitOfWork = unitOfWork;
         }
 
         public async Task<string> Handle(ReplaceDishIngredientsCommand command)
@@ -66,7 +70,20 @@ namespace Application.UseCases.IngredientDish.Handlers
                 });
             }
 
-            await _ingredientDishRepository.ReplaceByDishIdAsync(command.DishId, recipeItems);
+            await _unitOfWork.BeginTransactionAsync(IsolationLevel.Serializable);
+
+            try
+            {
+                await _ingredientDishRepository.ReplaceByDishIdAsync(command.DishId, recipeItems);
+                await _unitOfWork.SaveChangesAsync();
+                await _unitOfWork.CommitTransactionAsync();
+            }
+            catch
+            {
+                await _unitOfWork.RollbackTransactionAsync();
+                throw;
+            }
+
             return "OK";
         }
     }

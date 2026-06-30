@@ -22,13 +22,12 @@ namespace Infrastructure.Repositories
         public async Task AddAsync(Ingredient ingredient)
         {
             await _context.Ingredient.AddAsync(ingredient);
-            await _context.SaveChangesAsync();
         }
 
-        public async Task DeleteAsync(Ingredient ingredient)
+        public Task DeleteAsync(Ingredient ingredient)
         {
             _context.Ingredient.Remove(ingredient);
-            await _context.SaveChangesAsync();
+            return Task.CompletedTask;
         }
 
         public async Task<List<Ingredient>> GetAllAsync()
@@ -97,14 +96,14 @@ namespace Infrastructure.Repositories
                 .FirstOrDefaultAsync(i => i.Name == name);
         }
 
-        public async Task UpdateAsync(Ingredient ingredient, byte[] rowVersion)
+        public Task UpdateAsync(Ingredient ingredient, byte[] rowVersion)
         {
             _context.Entry(ingredient)
                 .Property(i => i.RowVersion)
                 .OriginalValue = rowVersion;
 
             _context.Ingredient.Update(ingredient);
-            await _context.SaveChangesAsync();
+            return Task.CompletedTask;
         }
     }
 }
